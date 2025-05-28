@@ -1,10 +1,52 @@
-<!DOCTYPE html>
+});
+
+        // Function to determine grade based on percentage
+        function getGrade(percentage) {
+            if (percentage >= 90) return "Xuất sắc 🌟";
+            if (percentage >= 80) return "Giỏi 👍";
+            if (percentage >= 70) return "Khá 📚";
+            if (percentage >= 60) return "Trung bình 📖";
+            return "Cần cố gắng thêm 💪";
+        }
+
+        // Add progress tracking
+        function updateProgress() {
+            const totalQuestions = 20;
+            let answeredQuestions = 0;
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionName = 'q' + i;
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+                if (selectedAnswer) {
+                    answeredQuestions++;
+                }
+            }
+            
+            const progressText = `Đã trả lời: ${answeredQuestions}/${totalQuestions} câu`;
+            
+            // Update progress if element exists
+            const progressElement = document.getElementById('progress');
+            if (progressElement) {
+                progressElement.textContent = progressText;
+            }
+        }
+
+        // Add event listeners to all radio buttons for progress tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', updateProgress);
+            });
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grammar Practice - Prepositions of Time</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="test-paper">
@@ -82,15 +124,21 @@
             <h3 style="margin: 0;">⏰ Thời gian: 30 phút | 📝 Số câu: 20 | 📋 Mỗi câu: 0.5 điểm</h3>
         </div>
         
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <span id="progress">Đã trả lời: 0/20 câu</span>
+        </div>
+        
         <!-- QUESTIONS -->
+        <form id="quizForm">
         <div class="question">
             <div class="question-number">Câu 1:</div>
             <p>I usually wake up _____ 6:30 in the morning.</p>
             <div class="options">
-                <label><input type="radio" name="q1"> A. at</label>
-                <label><input type="radio" name="q1"> B. in</label>
-                <label><input type="radio" name="q1"> C. on</label>
-                <label><input type="radio" name="q1"> D. during</label>
+                <label><input type="radio" name="q1" value="A"> A. at</label>
+                <label><input type="radio" name="q1" value="B"> B. in</label>
+                <label><input type="radio" name="q1" value="C"> C. on</label>
+                <label><input type="radio" name="q1" value="D"> D. during</label>
             </div>
         </div>
         
@@ -98,10 +146,10 @@
             <div class="question-number">Câu 2:</div>
             <p>My birthday is _____ December.</p>
             <div class="options">
-                <label><input type="radio" name="q2"> A. at</label>
-                <label><input type="radio" name="q2"> B. in</label>
-                <label><input type="radio" name="q2"> C. on</label>
-                <label><input type="radio" name="q2"> D. for</label>
+                <label><input type="radio" name="q2" value="A"> A. at</label>
+                <label><input type="radio" name="q2" value="B"> B. in</label>
+                <label><input type="radio" name="q2" value="C"> C. on</label>
+                <label><input type="radio" name="q2" value="D"> D. for</label>
             </div>
         </div>
         
@@ -109,10 +157,10 @@
             <div class="question-number">Câu 3:</div>
             <p>We don't have classes _____ Sunday.</p>
             <div class="options">
-                <label><input type="radio" name="q3"> A. at</label>
-                <label><input type="radio" name="q3"> B. in</label>
-                <label><input type="radio" name="q3"> C. on</label>
-                <label><input type="radio" name="q3"> D. since</label>
+                <label><input type="radio" name="q3" value="A"> A. at</label>
+                <label><input type="radio" name="q3" value="B"> B. in</label>
+                <label><input type="radio" name="q3" value="C"> C. on</label>
+                <label><input type="radio" name="q3" value="D"> D. since</label>
             </div>
         </div>
         
@@ -120,10 +168,10 @@
             <div class="question-number">Câu 4:</div>
             <p>I like to read books _____ the evening.</p>
             <div class="options">
-                <label><input type="radio" name="q4"> A. at</label>
-                <label><input type="radio" name="q4"> B. in</label>
-                <label><input type="radio" name="q4"> C. on</label>
-                <label><input type="radio" name="q4"> D. until</label>
+                <label><input type="radio" name="q4" value="A"> A. at</label>
+                <label><input type="radio" name="q4" value="B"> B. in</label>
+                <label><input type="radio" name="q4" value="C"> C. on</label>
+                <label><input type="radio" name="q4" value="D"> D. until</label>
             </div>
         </div>
         
@@ -131,10 +179,10 @@
             <div class="question-number">Câu 5:</div>
             <p>The meeting is _____ March 15th.</p>
             <div class="options">
-                <label><input type="radio" name="q5"> A. at</label>
-                <label><input type="radio" name="q5"> B. in</label>
-                <label><input type="radio" name="q5"> C. on</label>
-                <label><input type="radio" name="q5"> D. during</label>
+                <label><input type="radio" name="q5" value="A"> A. at</label>
+                <label><input type="radio" name="q5" value="B"> B. in</label>
+                <label><input type="radio" name="q5" value="C"> C. on</label>
+                <label><input type="radio" name="q5" value="D"> D. during</label>
             </div>
         </div>
         
@@ -142,10 +190,10 @@
             <div class="question-number">Câu 6:</div>
             <p>I have been studying English _____ three years.</p>
             <div class="options">
-                <label><input type="radio" name="q6"> A. at</label>
-                <label><input type="radio" name="q6"> B. in</label>
-                <label><input type="radio" name="q6"> C. for</label>
-                <label><input type="radio" name="q6"> D. since</label>
+                <label><input type="radio" name="q6" value="A"> A. at</label>
+                <label><input type="radio" name="q6" value="B"> B. in</label>
+                <label><input type="radio" name="q6" value="C"> C. for</label>
+                <label><input type="radio" name="q6" value="D"> D. since</label>
             </div>
         </div>
         
@@ -153,10 +201,10 @@
             <div class="question-number">Câu 7:</div>
             <p>We will have a party _____ New Year's Eve.</p>
             <div class="options">
-                <label><input type="radio" name="q7"> A. at</label>
-                <label><input type="radio" name="q7"> B. in</label>
-                <label><input type="radio" name="q7"> C. on</label>
-                <label><input type="radio" name="q7"> D. for</label>
+                <label><input type="radio" name="q7" value="A"> A. at</label>
+                <label><input type="radio" name="q7" value="B"> B. in</label>
+                <label><input type="radio" name="q7" value="C"> C. on</label>
+                <label><input type="radio" name="q7" value="D"> D. for</label>
             </div>
         </div>
         
@@ -164,10 +212,10 @@
             <div class="question-number">Câu 8:</div>
             <p>She has lived here _____ 2015.</p>
             <div class="options">
-                <label><input type="radio" name="q8"> A. at</label>
-                <label><input type="radio" name="q8"> B. for</label>
-                <label><input type="radio" name="q8"> C. on</label>
-                <label><input type="radio" name="q8"> D. since</label>
+                <label><input type="radio" name="q8" value="A"> A. at</label>
+                <label><input type="radio" name="q8" value="B"> B. for</label>
+                <label><input type="radio" name="q8" value="C"> C. on</label>
+                <label><input type="radio" name="q8" value="D"> D. since</label>
             </div>
         </div>
         
@@ -175,10 +223,10 @@
             <div class="question-number">Câu 9:</div>
             <p>I love going to the beach _____ summer.</p>
             <div class="options">
-                <label><input type="radio" name="q9"> A. at</label>
-                <label><input type="radio" name="q9"> B. in</label>
-                <label><input type="radio" name="q9"> C. on</label>
-                <label><input type="radio" name="q9"> D. during</label>
+                <label><input type="radio" name="q9" value="A"> A. at</label>
+                <label><input type="radio" name="q9" value="B"> B. in</label>
+                <label><input type="radio" name="q9" value="C"> C. on</label>
+                <label><input type="radio" name="q9" value="D"> D. during</label>
             </div>
         </div>
         
@@ -186,10 +234,10 @@
             <div class="question-number">Câu 10:</div>
             <p>The store is open _____ 9 AM _____ 6 PM.</p>
             <div class="options">
-                <label><input type="radio" name="q10"> A. from / to</label>
-                <label><input type="radio" name="q10"> B. at / until</label>
-                <label><input type="radio" name="q10"> C. in / on</label>
-                <label><input type="radio" name="q10"> D. since / for</label>
+                <label><input type="radio" name="q10" value="A"> A. from / to</label>
+                <label><input type="radio" name="q10" value="B"> B. at / until</label>
+                <label><input type="radio" name="q10" value="C"> C. in / on</label>
+                <label><input type="radio" name="q10" value="D"> D. since / for</label>
             </div>
         </div>
         
@@ -197,10 +245,10 @@
             <div class="question-number">Câu 11:</div>
             <p>We stayed quiet _____ the movie.</p>
             <div class="options">
-                <label><input type="radio" name="q11"> A. at</label>
-                <label><input type="radio" name="q11"> B. in</label>
-                <label><input type="radio" name="q11"> C. during</label>
-                <label><input type="radio" name="q11"> D. until</label>
+                <label><input type="radio" name="q11" value="A"> A. at</label>
+                <label><input type="radio" name="q11" value="B"> B. in</label>
+                <label><input type="radio" name="q11" value="C"> C. during</label>
+                <label><input type="radio" name="q11" value="D"> D. until</label>
             </div>
         </div>
         
@@ -208,10 +256,10 @@
             <div class="question-number">Câu 12:</div>
             <p>I was born _____ 1995.</p>
             <div class="options">
-                <label><input type="radio" name="q12"> A. at</label>
-                <label><input type="radio" name="q12"> B. in</label>
-                <label><input type="radio" name="q12"> C. on</label>
-                <label><input type="radio" name="q12"> D. for</label>
+                <label><input type="radio" name="q12" value="A"> A. at</label>
+                <label><input type="radio" name="q12" value="B"> B. in</label>
+                <label><input type="radio" name="q12" value="C"> C. on</label>
+                <label><input type="radio" name="q12" value="D"> D. for</label>
             </div>
         </div>
         
@@ -219,10 +267,10 @@
             <div class="question-number">Câu 13:</div>
             <p>The library closes _____ 8 PM.</p>
             <div class="options">
-                <label><input type="radio" name="q13"> A. at</label>
-                <label><input type="radio" name="q13"> B. in</label>
-                <label><input type="radio" name="q13"> C. on</label>
-                <label><input type="radio" name="q13"> D. during</label>
+                <label><input type="radio" name="q13" value="A"> A. at</label>
+                <label><input type="radio" name="q13" value="B"> B. in</label>
+                <label><input type="radio" name="q13" value="C"> C. on</label>
+                <label><input type="radio" name="q13" value="D"> D. during</label>
             </div>
         </div>
         
@@ -230,10 +278,10 @@
             <div class="question-number">Câu 14:</div>
             <p>I will wait for you _____ you finish your work.</p>
             <div class="options">
-                <label><input type="radio" name="q14"> A. at</label>
-                <label><input type="radio" name="q14"> B. until</label>
-                <label><input type="radio" name="q14"> C. during</label>
-                <label><input type="radio" name="q14"> D. since</label>
+                <label><input type="radio" name="q14" value="A"> A. at</label>
+                <label><input type="radio" name="q14" value="B"> B. until</label>
+                <label><input type="radio" name="q14" value="C"> C. during</label>
+                <label><input type="radio" name="q14" value="D"> D. since</label>
             </div>
         </div>
         
@@ -241,10 +289,10 @@
             <div class="question-number">Câu 15:</div>
             <p>We usually have lunch _____ noon.</p>
             <div class="options">
-                <label><input type="radio" name="q15"> A. at</label>
-                <label><input type="radio" name="q15"> B. in</label>
-                <label><input type="radio" name="q15"> C. on</label>
-                <label><input type="radio" name="q15"> D. for</label>
+                <label><input type="radio" name="q15" value="A"> A. at</label>
+                <label><input type="radio" name="q15" value="B"> B. in</label>
+                <label><input type="radio" name="q15" value="C"> C. on</label>
+                <label><input type="radio" name="q15" value="D"> D. for</label>
             </div>
         </div>
         
@@ -252,10 +300,10 @@
             <div class="question-number">Câu 16:</div>
             <p>My grandmother always takes a nap _____ the afternoon.</p>
             <div class="options">
-                <label><input type="radio" name="q16"> A. at</label>
-                <label><input type="radio" name="q16"> B. in</label>
-                <label><input type="radio" name="q16"> C. on</label>
-                <label><input type="radio" name="q16"> D. during</label>
+                <label><input type="radio" name="q16" value="A"> A. at</label>
+                <label><input type="radio" name="q16" value="B"> B. in</label>
+                <label><input type="radio" name="q16" value="C"> C. on</label>
+                <label><input type="radio" name="q16" value="D"> D. during</label>
             </div>
         </div>
         
@@ -263,10 +311,10 @@
             <div class="question-number">Câu 17:</div>
             <p>The concert will start _____ Friday evening.</p>
             <div class="options">
-                <label><input type="radio" name="q17"> A. at</label>
-                <label><input type="radio" name="q17"> B. in</label>
-                <label><input type="radio" name="q17"> C. on</label>
-                <label><input type="radio" name="q17"> D. for</label>
+                <label><input type="radio" name="q17" value="A"> A. at</label>
+                <label><input type="radio" name="q17" value="B"> B. in</label>
+                <label><input type="radio" name="q17" value="C"> C. on</label>
+                <label><input type="radio" name="q17" value="D"> D. for</label>
             </div>
         </div>
         
@@ -274,10 +322,10 @@
             <div class="question-number">Câu 18:</div>
             <p>I haven't seen him _____ last month.</p>
             <div class="options">
-                <label><input type="radio" name="q18"> A. at</label>
-                <label><input type="radio" name="q18"> B. for</label>
-                <label><input type="radio" name="q18"> C. on</label>
-                <label><input type="radio" name="q18"> D. since</label>
+                <label><input type="radio" name="q18" value="A"> A. at</label>
+                <label><input type="radio" name="q18" value="B"> B. for</label>
+                <label><input type="radio" name="q18" value="C"> C. on</label>
+                <label><input type="radio" name="q18" value="D"> D. since</label>
             </div>
         </div>
         
@@ -285,10 +333,10 @@
             <div class="question-number">Câu 19:</div>
             <p>We celebrate Christmas _____ December 25th.</p>
             <div class="options">
-                <label><input type="radio" name="q19"> A. at</label>
-                <label><input type="radio" name="q19"> B. in</label>
-                <label><input type="radio" name="q19"> C. on</label>
-                <label><input type="radio" name="q19"> D. during</label>
+                <label><input type="radio" name="q19" value="A"> A. at</label>
+                <label><input type="radio" name="q19" value="B"> B. in</label>
+                <label><input type="radio" name="q19" value="C"> C. on</label>
+                <label><input type="radio" name="q19" value="D"> D. during</label>
             </div>
         </div>
         
@@ -296,12 +344,21 @@
             <div class="question-number">Câu 20:</div>
             <p>The phone rang _____ I was having dinner.</p>
             <div class="options">
-                <label><input type="radio" name="q20"> A. at</label>
-                <label><input type="radio" name="q20"> B. in</label>
-                <label><input type="radio" name="q20"> C. while</label>
-                <label><input type="radio" name="q20"> D. during</label>
+                <label><input type="radio" name="q20" value="A"> A. at</label>
+                <label><input type="radio" name="q20" value="B"> B. in</label>
+                <label><input type="radio" name="q20" value="C"> C. while</label>
+                <label><input type="radio" name="q20" value="D"> D. during</label>
             </div>
         </div>
+        
+        <!-- Submit Button -->
+        <div class="submit-section">
+            <button type="button" id="submitBtn" class="submit-btn">
+                📝 SUBMIT - KIỂM TRA KẾT QUẢ
+            </button>
+            <div id="result" class="result-section" style="display: none;"></div>
+        </div>
+        </form>
     </div>
 
     <!-- ANSWER KEY WITH EXPLANATIONS -->
