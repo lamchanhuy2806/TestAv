@@ -1,6 +1,39 @@
-});
+</div>
+    
+    <script>
+        // Đáp án đúng
+        const correctAnswers = {
+            q1: 'A', q2: 'B', q3: 'C', q4: 'B', q5: 'C',
+            q6: 'C', q7: 'C', q8: 'D', q9: 'B', q10: 'A',
+            q11: 'C', q12: 'B', q13: 'A', q14: 'B', q15: 'A',
+            q16: 'B', q17: 'C', q18: 'D', q19: 'C', q20: 'C'
+        };
 
-        // Function to determine grade based on percentage
+        // Giải thích đáp án
+        const explanations = {
+            q1: 'Dùng "at" với thời gian cụ thể (6:30)',
+            q2: 'Dùng "in" với tháng, năm, mùa',
+            q3: 'Dùng "on" với các thứ trong tuần',
+            q4: 'Dùng "in" với các phần của ngày (có "the")',
+            q5: 'Dùng "on" với ngày tháng cụ thể',
+            q6: 'Dùng "for" để chỉ khoảng thời gian',
+            q7: 'Dùng "on" với các ngày lễ cụ thể',
+            q8: 'Dùng "since" với mốc thời gian bắt đầu',
+            q9: 'Dùng "in" với các mùa trong năm',
+            q10: 'Dùng "from...to" để chỉ khoảng thời gian',
+            q11: 'Dùng "during" để chỉ suốt trong khoảng thời gian',
+            q12: 'Dùng "in" với năm sinh',
+            q13: 'Dùng "at" với thời gian cụ thể (8 PM)',
+            q14: 'Dùng "until" để chỉ "cho đến khi"',
+            q15: 'Dùng "at" với "noon" và "midnight"',
+            q16: 'Dùng "in" với các phần của ngày (có "the")',
+            q17: 'Dùng "on" với thứ + phần của ngày',
+            q18: 'Dùng "since" với mốc thời gian trong quá khứ',
+            q19: 'Dùng "on" với ngày lễ cụ thể có ngày tháng',
+            q20: 'Dùng "while" để chỉ hai hành động xảy ra đồng thời'
+        };
+
+        // Hàm xếp loại
         function getGrade(percentage) {
             if (percentage >= 90) return "Xuất sắc 🌟";
             if (percentage >= 80) return "Giỏi 👍";
@@ -9,34 +42,102 @@
             return "Cần cố gắng thêm 💪";
         }
 
-        // Add progress tracking
+        // Hàm cập nhật tiến trình
         function updateProgress() {
             const totalQuestions = 20;
             let answeredQuestions = 0;
             
             for (let i = 1; i <= totalQuestions; i++) {
                 const questionName = 'q' + i;
-                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+                const selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
                 if (selectedAnswer) {
                     answeredQuestions++;
                 }
             }
             
-            const progressText = `Đã trả lời: ${answeredQuestions}/${totalQuestions} câu`;
-            
-            // Update progress if element exists
             const progressElement = document.getElementById('progress');
             if (progressElement) {
-                progressElement.textContent = progressText;
+                progressElement.textContent = 'Đã trả lời: ' + answeredQuestions + '/' + totalQuestions + ' câu';
             }
         }
 
-        // Add event listeners to all radio buttons for progress tracking
+        // Hàm xử lý submit
+        function handleSubmit() {
+            let score = 0;
+            let totalQuestions = 20;
+            let userAnswers = {};
+            let resultHtml = '';
+
+            // Lấy đáp án của người dùng
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionName = 'q' + i;
+                const selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+                userAnswers[questionName] = selectedAnswer ? selectedAnswer.value : null;
+                
+                if (userAnswers[questionName] === correctAnswers[questionName]) {
+                    score++;
+                }
+            }
+
+            // Tính phần trăm
+            const percentage = Math.round((score / totalQuestions) * 100);
+
+            // Tạo HTML kết quả
+            resultHtml = '<div class="score-summary">';
+            resultHtml += '<h3>🎯 KẾT QUẢ BÀI THI</h3>';
+            resultHtml += '<div class="score-details">';
+            resultHtml += '<p><strong>Số câu đúng:</strong> ' + score + '/' + totalQuestions + '</p>';
+            resultHtml += '<p><strong>Điểm số:</strong> ' + percentage + '%</p>';
+            resultHtml += '<p><strong>Xếp loại:</strong> ' + getGrade(percentage) + '</p>';
+            resultHtml += '</div></div>';
+            
+            resultHtml += '<div class="detailed-results">';
+            resultHtml += '<h4>📋 CHI TIẾT KẾT QUẢ:</h4>';
+
+            // Thêm chi tiết từng câu
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionName = 'q' + i;
+                const userAnswer = userAnswers[questionName];
+                const correctAnswer = correctAnswers[questionName];
+                const isCorrect = userAnswer === correctAnswer;
+                
+                resultHtml += '<div class="question-result ' + (isCorrect ? 'correct' : 'incorrect') + '">';
+                resultHtml += '<strong>Câu ' + i + ':</strong> ';
+                resultHtml += (userAnswer ? 'Bạn chọn: ' + userAnswer : 'Chưa chọn') + ' | ';
+                resultHtml += 'Đáp án đúng: ' + correctAnswer;
+                resultHtml += (isCorrect ? ' ✅' : ' ❌');
+                resultHtml += '<br><em>' + explanations[questionName] + '</em>';
+                resultHtml += '</div>';
+            }
+
+            resultHtml += '</div>';
+
+            // Hiển thị kết quả
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = resultHtml;
+            resultDiv.style.display = 'block';
+
+            // Cuộn đến kết quả
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+
+            // Thay đổi nút
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.textContent = '🔄 LÀM LẠI';
+            submitBtn.onclick = function() {
+                location.reload();
+            };
+        }
+
+        // Khởi tạo khi trang load xong
         document.addEventListener('DOMContentLoaded', function() {
+            // Thêm sự kiện cho nút submit
+            document.getElementById('submitBtn').addEventListener('click', handleSubmit);
+            
+            // Thêm sự kiện cho các radio button
             const radioButtons = document.querySelectorAll('input[type="radio"]');
-            radioButtons.forEach(radio => {
-                radio.addEventListener('change', updateProgress);
-            });
+            for (let i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].addEventListener('change', updateProgress);
+            }
         });
     </script>
 </body>
