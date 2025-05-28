@@ -1,0 +1,251 @@
+/* ========================================
+   PREPOSITIONS OF TIME - STYLESHEET
+   ======================================== */
+
+/* Base Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.test-paper {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    border-bottom: 3px solid #2c3e50;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header h2 {
+    color: #34495e;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+/* Grammar Rules Box */
+.grammar-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.grammar-box h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.rule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.rule-item {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #fff;
+}
+
+.rule-item h4 {
+    margin: 0 0 10px 0;
+    color: #ffd700;
+}
+
+.rule-item ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Student Information */
+.student-info {
+    border: 2px solid #34495e;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    background: #ecf0f1;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-field {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.info-field:last-child {
+    margin-right: 0;
+}
+
+.underline {
+    border-bottom: 1px solid #2c3e50;
+    min-height: 25px;
+    margin-left: 10px;
+    flex: 1;
+}
+
+/* Question Styles */
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 0 5px 5px 0;
+}
+
+.question-number {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.options {
+    margin-left: 20px;
+}
+
+.options label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.options label:hover {
+    background-color: #e8f4fd;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Answer Section */
+.answer-section {
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    page-break-before: always;
+}
+
+.answer-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.answer-item {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.answer-number {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 16px;
+}
+
+.correct-answer {
+    color: #2ecc71;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.explanation {
+    color: #ecf0f1;
+    font-style: italic;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* Print Styles */
+@media print {
+    body { 
+        background: white; 
+    }
+    
+    .test-paper { 
+        box-shadow: none; 
+    }
+    
+    .answer-section { 
+        page-break-before: always; 
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .test-paper {
+        padding: 20px;
+    }
+    
+    .rule-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-field {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Additional Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
