@@ -52,225 +52,7 @@
                 <div class="question-number">Câu 1:</div>
                 <p>I'm _______ because I lost my wallet last night.</p>
                 <div class="options">
-                    <label><input type="radio" name="q39" value="A"> A. Independence and good habits</label>
-                    <label><input type="radio" name="q39" value="B"> B. How to be lazy</label>
-                    <label><input type="radio" name="q39" value="C"> C. How to avoid work</label>
-                    <label><input type="radio" name="q39" value="D"> D. Nothing important</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 40:</div>
-                <p>According to the passage, sharing housework with family members:</p>
-                <div class="options">
-                    <label><input type="radio" name="q40" value="A"> A. Creates conflicts in the family</label>
-                    <label><input type="radio" name="q40" value="B"> B. Makes family members tired</label>
-                    <label><input type="radio" name="q40" value="C"> C. Strengthens family bonds</label>
-                    <label><input type="radio" name="q40" value="D"> D. Is not necessary</label>
-                </div>
-            </div>
-
-            <div class="submit-section">
-                <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
-            </div>
-        </form>
-
-        <div id="result" class="result-section" style="display: none;">
-            <h2>📊 KẾT QUẢ BÀI THI</h2>
-            <div id="scoreInfo" class="score-summary"></div>
-            <div id="detailedResults" class="detailed-results"></div>
-            <div class="submit-section">
-                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Đáp án đúng
-        const correctAnswers = {
-            // Grammar & Vocabulary (1-15)
-            q1: 'D', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
-            q6: 'B', q7: 'C', q8: 'C', q9: 'B', q10: 'B',
-            q11: 'B', q12: 'B', q13: 'B', q14: 'A', q15: 'B',
-            
-            // Cloze Test (16-25)
-            q16: 'A', q17: 'C', q18: 'B', q19: 'D', q20: 'A',
-            q21: 'B', q22: 'A', q23: 'D', q24: 'C', q25: 'B',
-            
-            // Sentence Transformation (26-35)
-            q26: 'C', q27: 'A', q28: 'B', q29: 'A', q30: 'C',
-            q31: 'A', q32: 'B', q33: 'B', q34: 'A', q35: 'A',
-            
-            // Reading Comprehension (36-40)
-            q36: 'B', q37: 'B', q38: 'B', q39: 'A', q40: 'C'
-        };
-
-        // Cập nhật progress khi chọn đáp án
-        document.addEventListener('change', function(e) {
-            if (e.target.type === 'radio') {
-                updateProgress();
-            }
-        });
-
-        function updateProgress() {
-            let answered = 0;
-            for (let i = 1; i <= 40; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selected) answered++;
-            }
-            
-            const percentage = Math.round((answered / 40) * 100);
-            document.getElementById('progressBar').style.width = percentage + '%';
-            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
-        }
-
-        function submitTest() {
-            const studentName = document.getElementById('studentName').value;
-            const studentClass = document.getElementById('studentClass').value;
-            
-            if (!studentName || !studentClass) {
-                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
-                return;
-            }
-
-            let correctCount = 0;
-            let totalQuestions = 40;
-            let sectionScores = {
-                grammar: { correct: 0, total: 15 },
-                cloze: { correct: 0, total: 10 },
-                transformation: { correct: 0, total: 10 },
-                reading: { correct: 0, total: 5 }
-            };
-            
-            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
-            
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                const userAnswer = selected ? selected.value : null;
-                const correctAnswer = correctAnswers[`q${i}`];
-                const isCorrect = userAnswer === correctAnswer;
-                
-                if (isCorrect) {
-                    correctCount++;
-                    // Phân loại theo section
-                    if (i <= 15) sectionScores.grammar.correct++;
-                    else if (i <= 25) sectionScores.cloze.correct++;
-                    else if (i <= 35) sectionScores.transformation.correct++;
-                    else sectionScores.reading.correct++;
-                }
-                
-                const statusClass = isCorrect ? 'correct' : 'incorrect';
-                const statusIcon = isCorrect ? '✅' : '❌';
-                const answerText = userAnswer || 'Không chọn';
-                
-                detailedHTML += `
-                    <div class="question-result ${statusClass}">
-                        <strong>Câu ${i}:</strong> ${statusIcon} 
-                        Bạn chọn: <span>${answerText}</span> | 
-                        Đáp án: <span>${correctAnswer}</span>
-                        <em>Kết quả: ${isCorrect ? 'Đúng' : 'Sai'}</em>
-                    </div>
-                `;
-            }
-            
-            const score = (correctCount * 0.25).toFixed(2);
-            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
-            
-            let grade = '';
-            if (percentage >= 80) grade = 'Giỏi 🌟';
-            else if (percentage >= 65) grade = 'Khá 👍';
-            else if (percentage >= 50) grade = 'Trung bình 📝';
-            else grade = 'Cần cố gắng 💪';
-            
-            const currentDate = new Date().toLocaleString('vi-VN');
-            
-            document.getElementById('scoreInfo').innerHTML = `
-                <h3>👤 Thông tin thí sinh</h3>
-                <div class="score-details">
-                    <div class="score-item">
-                        <strong>${studentName}</strong>
-                        Họ tên
-                    </div>
-                    <div class="score-item">
-                        <strong>${studentClass}</strong>
-                        Lớp
-                    </div>
-                    <div class="score-item">
-                        <strong>${currentDate}</strong>
-                        Ngày thi
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
-                <div class="score-details">
-                    <div class="score-item">
-                        <strong>${correctCount}/40</strong>
-                        Số câu đúng
-                    </div>
-                    <div class="score-item">
-                        <strong>${score}/10</strong>
-                        Điểm số
-                    </div>
-                    <div class="score-item">
-                        <strong>${percentage}%</strong>
-                        Phần trăm
-                    </div>
-                    <div class="score-item">
-                        <strong>${grade}</strong>
-                        Xếp loại
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 30px;">📊 Kết quả từng phần</h3>
-                <div class="section-analysis">
-                    <strong>📝 Grammar & Vocabulary:</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>📖 Cloze Test:</strong> ${sectionScores.cloze.correct}/${sectionScores.cloze.total} (${((sectionScores.cloze.correct/sectionScores.cloze.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>🔄 Sentence Transformation:</strong> ${sectionScores.transformation.correct}/${sectionScores.transformation.total} (${((sectionScores.transformation.correct/sectionScores.transformation.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>📚 Reading Comprehension:</strong> ${sectionScores.reading.correct}/${sectionScores.reading.total} (${((sectionScores.reading.correct/sectionScores.reading.total)*100).toFixed(1)}%)
-                </div>
-            `;
-            
-            document.getElementById('detailedResults').innerHTML = detailedHTML;
-            document.getElementById('result').style.display = 'block';
-            
-            // Scroll to results
-            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function resetTest() {
-            // Reset form
-            document.getElementById('testForm').reset();
-            document.getElementById('studentName').value = '';
-            document.getElementById('studentClass').value = '';
-            
-            // Reset progress
-            document.getElementById('progressBar').style.width = '0%';
-            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
-            
-            // Hide results
-            document.getElementById('result').style.display = 'none';
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Prevent accidental page refresh
-        window.addEventListener('beforeunload', function(e) {
-            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
-            if (answered > 0) {
-                e.preventDefault();
-                e.returnValue = '';
-            }
-        });
-    </script>
-</body>
-</html>q1" value="A"> A. excited</label>
+                    <label><input type="radio" name="q1" value="A"> A. excited</label>
                     <label><input type="radio" name="q1" value="B"> B. calm</label>
                     <label><input type="radio" name="q1" value="C"> C. happy</label>
                     <label><input type="radio" name="q1" value="D"> D. worried</label>
@@ -717,4 +499,225 @@
                 <div class="question-number">Câu 39:</div>
                 <p>What do children learn from doing housework?</p>
                 <div class="options">
-                    <label><input type="radio" name="
+                    <label><input type="radio" name="q39" value="A"> A. Independence and good habits</label>
+                    <label><input type="radio" name="q39" value="B"> B. How to be lazy</label>
+                    <label><input type="radio" name="q39" value="C"> C. How to avoid work</label>
+                    <label><input type="radio" name="q39" value="D"> D. Nothing important</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 40:</div>
+                <p>According to the passage, sharing housework with family members:</p>
+                <div class="options">
+                    <label><input type="radio" name="q40" value="A"> A. Creates conflicts in the family</label>
+                    <label><input type="radio" name="q40" value="B"> B. Makes family members tired</label>
+                    <label><input type="radio" name="q40" value="C"> C. Strengthens family bonds</label>
+                    <label><input type="radio" name="q40" value="D"> D. Is not necessary</label>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- NÚT SUBMIT Ở CUỐI TRANG -->
+        <div class="submit-section">
+            <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
+        </div>
+
+        <!-- KẾT QUẢ -->
+        <div id="result" class="result-section" style="display: none;">
+            <h2>📊 KẾT QUẢ BÀI THI</h2>
+            <div id="scoreInfo" class="score-summary"></div>
+            <div id="detailedResults" class="detailed-results"></div>
+            <div class="submit-section">
+                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Đáp án đúng
+        const correctAnswers = {
+            // Grammar & Vocabulary (1-15)
+            q1: 'D', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'C', q9: 'B', q10: 'B',
+            q11: 'B', q12: 'B', q13: 'B', q14: 'A', q15: 'B',
+            
+            // Cloze Test (16-25)
+            q16: 'A', q17: 'C', q18: 'B', q19: 'D', q20: 'A',
+            q21: 'B', q22: 'A', q23: 'D', q24: 'C', q25: 'B',
+            
+            // Sentence Transformation (26-35)
+            q26: 'C', q27: 'A', q28: 'B', q29: 'A', q30: 'C',
+            q31: 'A', q32: 'B', q33: 'B', q34: 'A', q35: 'A',
+            
+            // Reading Comprehension (36-40)
+            q36: 'B', q37: 'B', q38: 'B', q39: 'A', q40: 'C'
+        };
+
+        // Cập nhật progress khi chọn đáp án
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio') {
+                updateProgress();
+            }
+        });
+
+        function updateProgress() {
+            let answered = 0;
+            for (let i = 1; i <= 40; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) answered++;
+            }
+            
+            const percentage = Math.round((answered / 40) * 100);
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
+        }
+
+        function submitTest() {
+            const studentName = document.getElementById('studentName').value;
+            const studentClass = document.getElementById('studentClass').value;
+            
+            if (!studentName || !studentClass) {
+                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
+                return;
+            }
+
+            let correctCount = 0;
+            let totalQuestions = 40;
+            let sectionScores = {
+                grammar: { correct: 0, total: 15 },
+                cloze: { correct: 0, total: 10 },
+                transformation: { correct: 0, total: 10 },
+                reading: { correct: 0, total: 5 }
+            };
+            
+            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const userAnswer = selected ? selected.value : null;
+                const correctAnswer = correctAnswers[`q${i}`];
+                const isCorrect = userAnswer === correctAnswer;
+                
+                if (isCorrect) {
+                    correctCount++;
+                    // Phân loại theo section
+                    if (i <= 15) sectionScores.grammar.correct++;
+                    else if (i <= 25) sectionScores.cloze.correct++;
+                    else if (i <= 35) sectionScores.transformation.correct++;
+                    else sectionScores.reading.correct++;
+                }
+                
+                const statusClass = isCorrect ? 'correct' : 'incorrect';
+                const statusIcon = isCorrect ? '✅' : '❌';
+                const answerText = userAnswer || 'Không chọn';
+                
+                detailedHTML += `
+                    <div class="question-result ${statusClass}">
+                        <strong>Câu ${i}:</strong> ${statusIcon} 
+                        Bạn chọn: <span>${answerText}</span> | 
+                        Đáp án: <span>${correctAnswer}</span>
+                        <em>Kết quả: ${isCorrect ? 'Đúng' : 'Sai'}</em>
+                    </div>
+                `;
+            }
+            
+            const score = (correctCount * 0.25).toFixed(2);
+            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
+            
+            let grade = '';
+            if (percentage >= 80) grade = 'Giỏi 🌟';
+            else if (percentage >= 65) grade = 'Khá 👍';
+            else if (percentage >= 50) grade = 'Trung bình 📝';
+            else grade = 'Cần cố gắng 💪';
+            
+            const currentDate = new Date().toLocaleString('vi-VN');
+            
+            document.getElementById('scoreInfo').innerHTML = `
+                <h3>👤 Thông tin thí sinh</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${studentName}</strong>
+                        Họ tên
+                    </div>
+                    <div class="score-item">
+                        <strong>${studentClass}</strong>
+                        Lớp
+                    </div>
+                    <div class="score-item">
+                        <strong>${currentDate}</strong>
+                        Ngày thi
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${correctCount}/40</strong>
+                        Số câu đúng
+                    </div>
+                    <div class="score-item">
+                        <strong>${score}/10</strong>
+                        Điểm số
+                    </div>
+                    <div class="score-item">
+                        <strong>${percentage}%</strong>
+                        Phần trăm
+                    </div>
+                    <div class="score-item">
+                        <strong>${grade}</strong>
+                        Xếp loại
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">📊 Kết quả từng phần</h3>
+                <div class="section-analysis">
+                    <strong>📝 Grammar & Vocabulary:</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>📖 Cloze Test:</strong> ${sectionScores.cloze.correct}/${sectionScores.cloze.total} (${((sectionScores.cloze.correct/sectionScores.cloze.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>🔄 Sentence Transformation:</strong> ${sectionScores.transformation.correct}/${sectionScores.transformation.total} (${((sectionScores.transformation.correct/sectionScores.transformation.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>📚 Reading Comprehension:</strong> ${sectionScores.reading.correct}/${sectionScores.reading.total} (${((sectionScores.reading.correct/sectionScores.reading.total)*100).toFixed(1)}%)
+                </div>
+            `;
+            
+            document.getElementById('detailedResults').innerHTML = detailedHTML;
+            document.getElementById('result').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetTest() {
+            // Reset form
+            document.getElementById('testForm').reset();
+            document.getElementById('studentName').value = '';
+            document.getElementById('studentClass').value = '';
+            
+            // Reset progress
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
+            
+            // Hide results
+            document.getElementById('result').style.display = 'none';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Prevent accidental page refresh
+        window.addEventListener('beforeunload', function(e) {
+            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
+            if (answered > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+    </script>
+</body>
+</html>
