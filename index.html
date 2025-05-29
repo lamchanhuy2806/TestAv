@@ -3,556 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Test - Advanced Practice</title>
+    <title>English Test - Units 1-6 Practice</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="test-paper">
         <div class="header">
-            <h1>📚 English Test - Advanced Practice</h1>
+            <h1>📚 English Test - Units 1-6 Practice</h1>
             <h2>Mixed Skills Assessment</h2>
             <p><strong>Grammar • Vocabulary • Cloze Test • Reading • Sentence Transformation</strong></p>
-        </div>
-
-        <div class="exam-info">
-            <h3>📋 THÔNG TIN BÀI THI</h3>
-            <div class="info-grid">
-                <div class="info-item">⏰ Thời gian: 90 phút</div>
-                <div class="info-item">📝 Số câu: 40 câu</div>
-                <div class="info-item">📊 Mỗi câu: 0.25 điểm</div>
-                <div class="info-item">🎯 Mixed Skills</div>
-            </div>
-        </div>
-
-        <div class="student-info">
-            <div class="info-row">
-                <div class="info-field">
-                    <label><strong>Họ và tên:</strong></label>
-                    <input type="text" id="studentName" placeholder="Nhập họ tên">
-                </div>
-                <div class="info-field">
-                    <label><strong>Lớp:</strong></label>
-                    <input type="text" id="studentClass" placeholder="Nhập lớp">
-                </div>
-            </div>
-        </div>
-
-        <div class="progress-section">
-            <div id="progressText">📊 Đã trả lời: 0/40 câu (0%)</div>
-            <div class="progress">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-        </div>
-
-        <form id="testForm">
-            <!-- PHẦN I: GRAMMAR & VOCABULARY -->
-            <div class="section-header">📝 PHẦN I: GRAMMAR & VOCABULARY - 15 câu</div>
-            
-            <div class="question">
-                <div class="question-number">Câu 1:</div>
-                <p>I'm _______ because I lost my wallet last night.</p>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="A"> A. excited</label>
-                    <label><input type="radio" name="q1" value="B"> B. calm</label>
-                    <label><input type="radio" name="q1" value="C"> C. happy</label>
-                    <label><input type="radio" name="q1" value="D"> D. worried</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 2:</div>
-                <p>It was a nice day, so we decided _______ for a walk.</p>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="A"> A. go</label>
-                    <label><input type="radio" name="q2" value="B"> B. to go</label>
-                    <label><input type="radio" name="q2" value="C"> C. going</label>
-                    <label><input type="radio" name="q2" value="D"> D. to going</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 3:</div>
-                <p>My name's Pete and this is Sylvia. _______ doctors from France.</p>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="A"> A. I'm</label>
-                    <label><input type="radio" name="q3" value="B"> B. We're</label>
-                    <label><input type="radio" name="q3" value="C"> C. She's</label>
-                    <label><input type="radio" name="q3" value="D"> D. They're</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 4:</div>
-                <p>They're _______ because they got up very early.</p>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="A"> A. scared</label>
-                    <label><input type="radio" name="q4" value="B"> B. bored</label>
-                    <label><input type="radio" name="q4" value="C"> C. tired</label>
-                    <label><input type="radio" name="q4" value="D"> D. interested</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 5:</div>
-                <p>It's raining. Do you want to stand _______ my umbrella with me?</p>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="A"> A. in front of</label>
-                    <label><input type="radio" name="q5" value="B"> B. under</label>
-                    <label><input type="radio" name="q5" value="C"> C. behind</label>
-                    <label><input type="radio" name="q5" value="D"> D. near</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 6:</div>
-                <p>She _______ to school every day by bus.</p>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="A"> A. go</label>
-                    <label><input type="radio" name="q6" value="B"> B. goes</label>
-                    <label><input type="radio" name="q6" value="C"> C. going</label>
-                    <label><input type="radio" name="q6" value="D"> D. went</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 7:</div>
-                <p>Look! The children _______ in the playground.</p>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="A"> A. play</label>
-                    <label><input type="radio" name="q7" value="B"> B. plays</label>
-                    <label><input type="radio" name="q7" value="C"> C. are playing</label>
-                    <label><input type="radio" name="q7" value="D"> D. played</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 8:</div>
-                <p>I _______ my homework when my friend called me.</p>
-                <div class="options">
-                    <label><input type="radio" name="q8" value="A"> A. do</label>
-                    <label><input type="radio" name="q8" value="B"> B. did</label>
-                    <label><input type="radio" name="q8" value="C"> C. was doing</label>
-                    <label><input type="radio" name="q8" value="D"> D. have done</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 9:</div>
-                <p>There _______ many students in the library yesterday.</p>
-                <div class="options">
-                    <label><input type="radio" name="q9" value="A"> A. was</label>
-                    <label><input type="radio" name="q9" value="B"> B. were</label>
-                    <label><input type="radio" name="q9" value="C"> C. is</label>
-                    <label><input type="radio" name="q9" value="D"> D. are</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 10:</div>
-                <p>My sister is _______ than me.</p>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="A"> A. tall</label>
-                    <label><input type="radio" name="q10" value="B"> B. taller</label>
-                    <label><input type="radio" name="q10" value="C"> C. tallest</label>
-                    <label><input type="radio" name="q10" value="D"> D. the tallest</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 11:</div>
-                <p>If it _______ tomorrow, we will stay at home.</p>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="A"> A. rain</label>
-                    <label><input type="radio" name="q11" value="B"> B. rains</label>
-                    <label><input type="radio" name="q11" value="C"> C. will rain</label>
-                    <label><input type="radio" name="q11" value="D"> D. rained</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 12:</div>
-                <p>I have lived here _______ five years.</p>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="A"> A. since</label>
-                    <label><input type="radio" name="q12" value="B"> B. for</label>
-                    <label><input type="radio" name="q12" value="C"> C. ago</label>
-                    <label><input type="radio" name="q12" value="D"> D. in</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 13:</div>
-                <p>She asked me _______ I could help her with the project.</p>
-                <div class="options">
-                    <label><input type="radio" name="q13" value="A"> A. that</label>
-                    <label><input type="radio" name="q13" value="B"> B. if</label>
-                    <label><input type="radio" name="q13" value="C"> C. what</label>
-                    <label><input type="radio" name="q13" value="D"> D. when</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 14:</div>
-                <p>The book _______ by millions of people around the world.</p>
-                <div class="options">
-                    <label><input type="radio" name="q14" value="A"> A. is read</label>
-                    <label><input type="radio" name="q14" value="B"> B. reads</label>
-                    <label><input type="radio" name="q14" value="C"> C. was read</label>
-                    <label><input type="radio" name="q14" value="D"> D. has been read</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 15:</div>
-                <p>I wish I _______ more time to spend with my family.</p>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="A"> A. have</label>
-                    <label><input type="radio" name="q15" value="B"> B. had</label>
-                    <label><input type="radio" name="q15" value="C"> C. will have</label>
-                    <label><input type="radio" name="q15" value="D"> D. would have</label>
-                </div>
-            </div>
-
-            <!-- PHẦN II: CLOZE TEST -->
-            <div class="section-header">📖 PHẦN II: CLOZE TEST - 10 câu</div>
-            
-            <div class="reading-passage">
-                <h4>A Letter to a Friend</h4>
-                <p><strong>Directions:</strong> Choose the correct answer that best completes each of the blanks in the text.</p>
-                <br>
-                <p>Dear Charles,</p>
-                <p>I'm very sorry I can't come to meet you at the airport because I have to take my mother _______(16) from hospital at that time. Our neighbor, Peter Lee has kindly offered to meet you and _______(17) you home. As you have never met him before, I shall _______(18) him to you.</p>
-                
-                <p>Peter Lee is _______(19) tall and slim. He is a young man in his early twenties with _______(20) short hair and a fair complexion. He _______(21) a round face and appears cheerful by nature. It is easy to recognize him _______(22) he is usually dressed in jeans and a T-shirt and _______(23) boots.</p>
-                
-                <p>I do hope you manage to recognize my neighbor _______(24) any difficulty and I look forward to _______(25) you when he brings you to my flat.</p>
-                
-                <p>Yours sincerely,<br>John</p>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 16:</div>
-                <div class="options">
-                    <label><input type="radio" name="q16" value="A"> A. home</label>
-                    <label><input type="radio" name="q16" value="B"> B. house</label>
-                    <label><input type="radio" name="q16" value="C"> C. here</label>
-                    <label><input type="radio" name="q16" value="D"> D. work</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 17:</div>
-                <div class="options">
-                    <label><input type="radio" name="q17" value="A"> A. move</label>
-                    <label><input type="radio" name="q17" value="B"> B. go</label>
-                    <label><input type="radio" name="q17" value="C"> C. bring</label>
-                    <label><input type="radio" name="q17" value="D"> D. travel</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 18:</div>
-                <div class="options">
-                    <label><input type="radio" name="q18" value="A"> A. say</label>
-                    <label><input type="radio" name="q18" value="B"> B. describe</label>
-                    <label><input type="radio" name="q18" value="C"> C. tell</label>
-                    <label><input type="radio" name="q18" value="D"> D. speak</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 19:</div>
-                <div class="options">
-                    <label><input type="radio" name="q19" value="A"> A. are</label>
-                    <label><input type="radio" name="q19" value="B"> B. be</label>
-                    <label><input type="radio" name="q19" value="C"> C. was</label>
-                    <label><input type="radio" name="q19" value="D"> D. is</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 20:</div>
-                <div class="options">
-                    <label><input type="radio" name="q20" value="A"> A. in</label>
-                    <label><input type="radio" name="q20" value="B"> B. with</label>
-                    <label><input type="radio" name="q20" value="C"> C. on</label>
-                    <label><input type="radio" name="q20" value="D"> D. at</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 21:</div>
-                <div class="options">
-                    <label><input type="radio" name="q21" value="A"> A. have</label>
-                    <label><input type="radio" name="q21" value="B"> B. has</label>
-                    <label><input type="radio" name="q21" value="C"> C. is</label>
-                    <label><input type="radio" name="q21" value="D"> D. are</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 22:</div>
-                <div class="options">
-                    <label><input type="radio" name="q22" value="A"> A. because</label>
-                    <label><input type="radio" name="q22" value="B"> B. when</label>
-                    <label><input type="radio" name="q22" value="C"> C. although</label>
-                    <label><input type="radio" name="q22" value="D"> D. for</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 23:</div>
-                <div class="options">
-                    <label><input type="radio" name="q23" value="A"> A. goes</label>
-                    <label><input type="radio" name="q23" value="B"> B. put</label>
-                    <label><input type="radio" name="q23" value="C"> C. gets</label>
-                    <label><input type="radio" name="q23" value="D"> D. wears</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 24:</div>
-                <div class="options">
-                    <label><input type="radio" name="q24" value="A"> A. with</label>
-                    <label><input type="radio" name="q24" value="B"> B. about</label>
-                    <label><input type="radio" name="q24" value="C"> C. without</label>
-                    <label><input type="radio" name="q24" value="D"> D. to</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 25:</div>
-                <div class="options">
-                    <label><input type="radio" name="q25" value="A"> A. see</label>
-                    <label><input type="radio" name="q25" value="B"> B. seeing</label>
-                    <label><input type="radio" name="q25" value="C"> C. to see</label>
-                    <label><input type="radio" name="q25" value="D"> D. saw</label>
-                </div>
-            </div>
-
-            <!-- PHẦN III: SENTENCE TRANSFORMATION -->
-            <div class="section-header">🔄 PHẦN III: SENTENCE TRANSFORMATION - 10 câu</div>
-            <p style="font-style: italic; margin-bottom: 20px;"><strong>Directions:</strong> Choose the answer that has the same meaning as the original sentence.</p>
-
-            <div class="question">
-                <div class="question-number">Câu 26:</div>
-                <p><em>My friends like listening to music every Sunday.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q26" value="A"> A. My friends loves listening to music</label>
-                    <label><input type="radio" name="q26" value="B"> B. My friends love listen to music on Sundays</label>
-                    <label><input type="radio" name="q26" value="C"> C. My friends love listening to music on Sundays</label>
-                    <label><input type="radio" name="q26" value="D"> D. My friends like to listen to music</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 27:</div>
-                <p><em>Why don't we go swimming?</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q27" value="A"> A. What about going swimming?</label>
-                    <label><input type="radio" name="q27" value="B"> B. Shall we go to the swimming?</label>
-                    <label><input type="radio" name="q27" value="C"> C. Would you like going swimming?</label>
-                    <label><input type="radio" name="q27" value="D"> D. Let's to go swimming?</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 28:</div>
-                <p><em>Bill didn't go to school because of his illness.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q28" value="A"> A. Bill was ill and he didn't go to school.</label>
-                    <label><input type="radio" name="q28" value="B"> B. Because Bill was ill, he didn't go to school.</label>
-                    <label><input type="radio" name="q28" value="C"> C. Bill was ill so he went to school</label>
-                    <label><input type="radio" name="q28" value="D"> D. Bill went to school so he was ill</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 29:</div>
-                <p><em>I share an apartment with my best friend.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q29" value="A"> A. I live in an apartment with my best friend.</label>
-                    <label><input type="radio" name="q29" value="B"> B. My best friend is staying in an apartment</label>
-                    <label><input type="radio" name="q29" value="C"> C. I and my friend share an apartments</label>
-                    <label><input type="radio" name="q29" value="D"> D. I and my friend live together</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 30:</div>
-                <p><em>He goes to work by bike.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q30" value="A"> A. He ride a bike to work.</label>
-                    <label><input type="radio" name="q30" value="B"> B. he drive a bike to work.</label>
-                    <label><input type="radio" name="q30" value="C"> C. He rides his bike to work.</label>
-                    <label><input type="radio" name="q30" value="D"> D. He get to work by bike.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 31:</div>
-                <p><em>The last time I saw him was three years ago.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q31" value="A"> A. I haven't seen him for three years.</label>
-                    <label><input type="radio" name="q31" value="B"> B. I didn't see him three years ago.</label>
-                    <label><input type="radio" name="q31" value="C"> C. I saw him three years before.</label>
-                    <label><input type="radio" name="q31" value="D"> D. I have seen him for three years.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 32:</div>
-                <p><em>"I will call you tomorrow," she said.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q32" value="A"> A. She said she will call me tomorrow.</label>
-                    <label><input type="radio" name="q32" value="B"> B. She said she would call me the next day.</label>
-                    <label><input type="radio" name="q32" value="C"> C. She said she calls me tomorrow.</label>
-                    <label><input type="radio" name="q32" value="D"> D. She said she called me the next day.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 33:</div>
-                <p><em>It's not necessary for you to come early.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q33" value="A"> A. You mustn't come early.</label>
-                    <label><input type="radio" name="q33" value="B"> B. You don't have to come early.</label>
-                    <label><input type="radio" name="q33" value="C"> C. You shouldn't come early.</label>
-                    <label><input type="radio" name="q33" value="D"> D. You can't come early.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 34:</div>
-                <p><em>This is the most interesting book I have ever read.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q34" value="A"> A. I have never read such an interesting book before.</label>
-                    <label><input type="radio" name="q34" value="B"> B. I have read many interesting books.</label>
-                    <label><input type="radio" name="q34" value="C"> C. This book is more interesting than others.</label>
-                    <label><input type="radio" name="q34" value="D"> D. I find this book very interesting.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 35:</div>
-                <p><em>Despite the rain, they went out for a walk.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q35" value="A"> A. Although it rained, they went out for a walk.</label>
-                    <label><input type="radio" name="q35" value="B"> B. Because it rained, they went out for a walk.</label>
-                    <label><input type="radio" name="q35" value="C"> C. It rained so they went out for a walk.</label>
-                    <label><input type="radio" name="q35" value="D"> D. It didn't rain so they went out for a walk.</label>
-                </div>
-            </div>
-
-            <!-- PHẦN IV: READING COMPREHENSION -->
-            <div class="section-header">📚 PHẦN IV: READING COMPREHENSION - 5 câu</div>
-            
-            <div class="reading-passage">
-                <h4>Benefits of doing housework</h4>
-                <p>Many people think that doing housework is boring and tiring. However, recent studies show that housework can actually bring many benefits to our health and well-being.</p>
-                
-                <p>First, housework is a form of physical exercise. Activities like cleaning, washing dishes, and organizing rooms help us burn calories and stay fit. According to researchers, just 30 minutes of housework can burn up to 100 calories, which is similar to a short walk.</p>
-                
-                <p>Second, doing housework can reduce stress and improve our mood. When we clean and organize our living space, we feel more relaxed and comfortable. A clean and tidy home creates a peaceful environment that helps us think more clearly.</p>
-                
-                <p>Third, housework teaches us important life skills and responsibility. Children who help with housework from an early age learn to be independent and develop good habits. They also understand the value of hard work and cooperation.</p>
-                
-                <p>Finally, sharing housework with family members strengthens family bonds. When everyone contributes to keeping the home clean and organized, it creates a sense of teamwork and mutual respect.</p>
-                
-                <p>In conclusion, although housework may seem like a chore, it actually offers many physical, mental, and social benefits that make it worth doing.</p>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 36:</div>
-                <p>What is the main idea of the passage?</p>
-                <div class="options">
-                    <label><input type="radio" name="q36" value="A"> A. Housework is boring and tiring.</label>
-                    <label><input type="radio" name="q36" value="B"> B. Housework brings many benefits to our health and well-being.</label>
-                    <label><input type="radio" name="q36" value="C"> C. Children should not do housework.</label>
-                    <label><input type="radio" name="q36" value="D"> D. Housework is only good for physical exercise.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 37:</div>
-                <p>According to the passage, 30 minutes of housework can burn:</p>
-                <div class="options">
-                    <label><input type="radio" name="q37" value="A"> A. 50 calories</label>
-                    <label><input type="radio" name="q37" value="B"> B. 100 calories</label>
-                    <label><input type="radio" name="q37" value="C"> C. 150 calories</label>
-                    <label><input type="radio" name="q37" value="D"> D. 200 calories</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 38:</div>
-                <p>How does housework affect our mood?</p>
-                <div class="options">
-                    <label><input type="radio" name="q38" value="A"> A. It makes us more stressed.</label>
-                    <label><input type="radio" name="q38" value="B"> B. It reduces stress and improves our mood.</label>
-                    <label><input type="radio" name="q38" value="C"> C. It has no effect on our mood.</label>
-                    <label><input type="radio" name="q38" value="D"> D. It makes us feel tired.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 39:</div>
-                <p>What do children learn from doing housework?</p>
-                <div class="options">
-                    <label><input type="radio" name="q39" value="A"> A. Independence and good habits</label>
-                    <label><input type="radio" name="q39" value="B"> B. How to be lazy</label>
-                    <label><input type="radio" name="q39" value="C"> C. How to avoid work</label>
-                    <label><input type="radio" name="q39" value="D"> D. Nothing important</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 40:</div>
-                <p>According to the passage, sharing housework with family members:</p>
-                <div class="options">
-                    <label><input type="radio" name="q40" value="A"> A. Creates conflicts in the family</label>
-                    <label><input type="radio" name="q40" value="B"> B. Makes family members tired</label>
-                    <label><input type="radio" name="q40" value="C"> C. Strengthens family bonds</label>
-                    <label><input type="radio" name="q40" value="D"> D. Is not necessary</label>
-                </div>
-            </div>
-
-        </form>
-
-        <!-- NÚT SUBMIT Ở CUỐI TRANG -->
-        <div class="submit-section">
-            <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
-        </div>
-
-        <!-- KẾT QUẢ -->
-        <div id="result" class="result-section" style="display: none;">
-            <h2>📊 KẾT QUẢ BÀI THI</h2>
-            <div id="scoreInfo" class="score-summary"></div>
-            <div id="detailedResults" class="detailed-results"></div>
-            <div class="submit-section">
-                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
-            </div>
         </div>
     </div>
 
     <script>
-        // Đáp án đúng
+        // Đáp án đúng - chỉ sử dụng ngữ pháp Units 1-6
         const correctAnswers = {
             // Grammar & Vocabulary (1-15)
-            q1: 'D', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
-            q6: 'B', q7: 'C', q8: 'C', q9: 'B', q10: 'B',
-            q11: 'B', q12: 'B', q13: 'B', q14: 'A', q15: 'B',
+            q1: 'A', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'A', q9: 'B', q10: 'B',
+            q11: 'A', q12: 'B', q13: 'A', q14: 'A', q15: 'C',
             
             // Cloze Test (16-25)
-            q16: 'A', q17: 'C', q18: 'B', q19: 'D', q20: 'A',
-            q21: 'B', q22: 'A', q23: 'D', q24: 'C', q25: 'B',
+            q16: 'A', q17: 'C', q18: 'A', q19: 'B', q20: 'B',
+            q21: 'B', q22: 'B', q23: 'B', q24: 'C', q25: 'B',
             
             // Sentence Transformation (26-35)
-            q26: 'C', q27: 'A', q28: 'B', q29: 'A', q30: 'C',
-            q31: 'A', q32: 'B', q33: 'B', q34: 'A', q35: 'A',
+            q26: 'A', q27: 'A', q28: 'B', q29: 'A', q30: 'A',
+            q31: 'A', q32: 'A', q33: 'A', q34: 'A', q35: 'A',
             
             // Reading Comprehension (36-40)
-            q36: 'B', q37: 'B', q38: 'B', q39: 'A', q40: 'C'
+            q36: 'B', q37: 'B', q38: 'C', q39: 'C', q40: 'C'
         };
 
         // Cập nhật progress khi chọn đáp án
@@ -673,7 +153,708 @@
                 
                 <h3 style="margin-top: 30px;">📊 Kết quả từng phần</h3>
                 <div class="section-analysis">
-                    <strong>📝 Grammar & Vocabulary:</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
+                    <strong>📝 Grammar & Vocabulary (Units 1-6):</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>📖 Cloze Test:</strong> ${sectionScores.cloze.correct}/${sectionScores.cloze.total} (${((sectionScores.cloze.correct/sectionScores.cloze.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>🔄 Sentence Transformation:</strong> ${sectionScores.transformation.correct}/${sectionScores.transformation.total} (${((sectionScores.transformation.correct/sectionScores.transformation.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>📚 Reading Comprehension:</strong> ${sectionScores.reading.correct}/${sectionScores.reading.total} (${((sectionScores.reading.correct/sectionScores.reading.total)*100).toFixed(1)}%)
+                </div>
+            `;
+            
+            document.getElementById('detailedResults').innerHTML = detailedHTML;
+            document.getElementById('result').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetTest() {
+            // Reset form
+            document.getElementById('testForm').reset();
+            document.getElementById('studentName').value = '';
+            document.getElementById('studentClass').value = '';
+            
+            // Reset progress
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
+            
+            // Hide results
+            document.getElementById('result').style.display = 'none';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Prevent accidental page refresh
+        window.addEventListener('beforeunload', function(e) {
+            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
+            if (answered > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+    </script>
+</body>
+</html>="info-grid">
+                <div class="info-item">⏰ Thời gian: 90 phút</div>
+                <div class="info-item">📝 Số câu: 40 câu</div>
+                <div class="info-item">📊 Mỗi câu: 0.25 điểm</div>
+                <div class="info-item">🎯 Units 1-6</div>
+            </div>
+        </div>
+
+        <div class="student-info">
+            <div class="info-row">
+                <div class="info-field">
+                    <label><strong>Họ và tên:</strong></label>
+                    <input type="text" id="studentName" placeholder="Nhập họ tên">
+                </div>
+                <div class="info-field">
+                    <label><strong>Lớp:</strong></label>
+                    <input type="text" id="studentClass" placeholder="Nhập lớp">
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div id="progressText">📊 Đã trả lời: 0/40 câu (0%)</div>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <form id="testForm">
+            <!-- PHẦN I: GRAMMAR & VOCABULARY -->
+            <div class="section-header">📝 PHẦN I: GRAMMAR & VOCABULARY - 15 câu</div>
+            
+            <div class="question">
+                <div class="question-number">Câu 1:</div>
+                <p>My name _____ John and I _____ from England.</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. is / am</label>
+                    <label><input type="radio" name="q1" value="B"> B. are / is</label>
+                    <label><input type="radio" name="q1" value="C"> C. am / are</label>
+                    <label><input type="radio" name="q1" value="D"> D. is / are</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 2:</div>
+                <p>What time _____ you _____ up in the morning?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. are / get</label>
+                    <label><input type="radio" name="q2" value="B"> B. do / get</label>
+                    <label><input type="radio" name="q2" value="C"> C. does / gets</label>
+                    <label><input type="radio" name="q2" value="D"> D. do / gets</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 3:</div>
+                <p>She _____ English and French very well.</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. speak</label>
+                    <label><input type="radio" name="q3" value="B"> B. speaks</label>
+                    <label><input type="radio" name="q3" value="C"> C. speaking</label>
+                    <label><input type="radio" name="q3" value="D"> D. to speak</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 4:</div>
+                <p>I _____ play football on weekends.</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. never</label>
+                    <label><input type="radio" name="q4" value="B"> B. always</label>
+                    <label><input type="radio" name="q4" value="C"> C. usually</label>
+                    <label><input type="radio" name="q4" value="D"> D. sometimes</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 5:</div>
+                <p>Look! It _____ outside. Take your umbrella.</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. rains</label>
+                    <label><input type="radio" name="q5" value="B"> B. is raining</label>
+                    <label><input type="radio" name="q5" value="C"> C. rain</label>
+                    <label><input type="radio" name="q5" value="D"> D. raining</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 6:</div>
+                <p>My birthday is _____ May 15th.</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. in</label>
+                    <label><input type="radio" name="q6" value="B"> B. on</label>
+                    <label><input type="radio" name="q6" value="C"> C. at</label>
+                    <label><input type="radio" name="q6" value="D"> D. of</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 7:</div>
+                <p>_____ you help me with my homework?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. Do</label>
+                    <label><input type="radio" name="q7" value="B"> B. Are</label>
+                    <label><input type="radio" name="q7" value="C"> C. Can</label>
+                    <label><input type="radio" name="q7" value="D"> D. Is</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 8:</div>
+                <p>There _____ a park near my house.</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. is</label>
+                    <label><input type="radio" name="q8" value="B"> B. are</label>
+                    <label><input type="radio" name="q8" value="C"> C. have</label>
+                    <label><input type="radio" name="q8" value="D"> D. has</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 9:</div>
+                <p>The library is _____ the bank and the post office.</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. next to</label>
+                    <label><input type="radio" name="q9" value="B"> B. between</label>
+                    <label><input type="radio" name="q9" value="C"> C. behind</label>
+                    <label><input type="radio" name="q9" value="D"> D. in front of</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 10:</div>
+                <p>What _____ you _____ now?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. do / do</label>
+                    <label><input type="radio" name="q10" value="B"> B. are / doing</label>
+                    <label><input type="radio" name="q10" value="C"> C. does / do</label>
+                    <label><input type="radio" name="q10" value="D"> D. is / doing</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 11:</div>
+                <p>My brother is very _____. He makes me laugh.</p>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> A. funny</label>
+                    <label><input type="radio" name="q11" value="B"> B. serious</label>
+                    <label><input type="radio" name="q11" value="C"> C. quiet</label>
+                    <label><input type="radio" name="q11" value="D"> D. angry</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 12:</div>
+                <p>I enjoy _____ books in my free time.</p>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="A"> A. read</label>
+                    <label><input type="radio" name="q12" value="B"> B. reading</label>
+                    <label><input type="radio" name="q12" value="C"> C. to read</label>
+                    <label><input type="radio" name="q12" value="D"> D. reads</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 13:</div>
+                <p>Today is _____ hot. I need some cold water.</p>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> A. very</label>
+                    <label><input type="radio" name="q13" value="B"> B. much</label>
+                    <label><input type="radio" name="q13" value="C"> C. many</label>
+                    <label><input type="radio" name="q13" value="D"> D. a lot</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 14:</div>
+                <p>_____ books are on the table?</p>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> A. Whose</label>
+                    <label><input type="radio" name="q14" value="B"> B. Who</label>
+                    <label><input type="radio" name="q14" value="C"> C. Where</label>
+                    <label><input type="radio" name="q14" value="D"> D. What</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 15:</div>
+                <p>I _____ go to bed early because I'm tired.</p>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="A"> A. can</label>
+                    <label><input type="radio" name="q15" value="B"> B. can't</label>
+                    <label><input type="radio" name="q15" value="C"> C. must</label>
+                    <label><input type="radio" name="q15" value="D"> D. mustn't</label>
+                </div>
+            </div>
+
+            <!-- PHẦN II: CLOZE TEST -->
+            <div class="section-header">📖 PHẦN II: CLOZE TEST - 10 câu</div>
+            
+            <div class="reading-passage">
+                <h4>My Daily Routine</h4>
+                <p><strong>Directions:</strong> Choose the correct answer that best completes each of the blanks in the text.</p>
+                <br>
+                <p>Hi! My name is Sarah and I want to tell you about my daily routine. I _____(16) up at 7 o'clock every morning. After I brush my teeth, I _____(17) breakfast with my family. I usually have coffee and toast.</p>
+                
+                <p>I _____(18) to work by bus at 8:30. I work _____(19) a teacher at a primary school. I really enjoy _____(20) with children. My job is very interesting but sometimes it _____(21) tiring.</p>
+                
+                <p>I finish work at 4 o'clock and then I go _____(22). In the evening, I like _____(23) TV or reading books. I _____(24) go to bed early because I need to get up early the next day.</p>
+                
+                <p>_____(25) weekends, I spend time with my friends and family. We often go to the cinema or have dinner together.</p>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 16:</div>
+                <div class="options">
+                    <label><input type="radio" name="q16" value="A"> A. get</label>
+                    <label><input type="radio" name="q16" value="B"> B. gets</label>
+                    <label><input type="radio" name="q16" value="C"> C. getting</label>
+                    <label><input type="radio" name="q16" value="D"> D. to get</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 17:</div>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> A. make</label>
+                    <label><input type="radio" name="q17" value="B"> B. do</label>
+                    <label><input type="radio" name="q17" value="C"> C. have</label>
+                    <label><input type="radio" name="q17" value="D"> D. take</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 18:</div>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> A. go</label>
+                    <label><input type="radio" name="q18" value="B"> B. walk</label>
+                    <label><input type="radio" name="q18" value="C"> C. travel</label>
+                    <label><input type="radio" name="q18" value="D"> D. move</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 19:</div>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> A. like</label>
+                    <label><input type="radio" name="q19" value="B"> B. as</label>
+                    <label><input type="radio" name="q19" value="C"> C. for</label>
+                    <label><input type="radio" name="q19" value="D"> D. with</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 20:</div>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> A. work</label>
+                    <label><input type="radio" name="q20" value="B"> B. working</label>
+                    <label><input type="radio" name="q20" value="C"> C. to work</label>
+                    <label><input type="radio" name="q20" value="D"> D. works</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 21:</div>
+                <div class="options">
+                    <label><input type="radio" name="q21" value="A"> A. am</label>
+                    <label><input type="radio" name="q21" value="B"> B. is</label>
+                    <label><input type="radio" name="q21" value="C"> C. are</label>
+                    <label><input type="radio" name="q21" value="D"> D. be</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 22:</div>
+                <div class="options">
+                    <label><input type="radio" name="q22" value="A"> A. house</label>
+                    <label><input type="radio" name="q22" value="B"> B. home</label>
+                    <label><input type="radio" name="q22" value="C"> C. family</label>
+                    <label><input type="radio" name="q22" value="D"> D. room</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 23:</div>
+                <div class="options">
+                    <label><input type="radio" name="q23" value="A"> A. watch</label>
+                    <label><input type="radio" name="q23" value="B"> B. watching</label>
+                    <label><input type="radio" name="q23" value="C"> C. to watch</label>
+                    <label><input type="radio" name="q23" value="D"> D. watches</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 24:</div>
+                <div class="options">
+                    <label><input type="radio" name="q24" value="A"> A. never</label>
+                    <label><input type="radio" name="q24" value="B"> B. always</label>
+                    <label><input type="radio" name="q24" value="C"> C. usually</label>
+                    <label><input type="radio" name="q24" value="D"> D. sometimes</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 25:</div>
+                <div class="options">
+                    <label><input type="radio" name="q25" value="A"> A. In</label>
+                    <label><input type="radio" name="q25" value="B"> B. On</label>
+                    <label><input type="radio" name="q25" value="C"> C. At</label>
+                    <label><input type="radio" name="q25" value="D"> D. For</label>
+                </div>
+            </div>
+
+            <!-- PHẦN III: SENTENCE TRANSFORMATION -->
+            <div class="section-header">🔄 PHẦN III: SENTENCE TRANSFORMATION - 10 câu</div>
+            <p style="font-style: italic; margin-bottom: 20px;"><strong>Directions:</strong> Choose the answer that has the same meaning as the original sentence.</p>
+
+            <div class="question">
+                <div class="question-number">Câu 26:</div>
+                <p><em>I go to school by bus every day.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q26" value="A"> A. I take the bus to school every day.</label>
+                    <label><input type="radio" name="q26" value="B"> B. I walk to school every day.</label>
+                    <label><input type="radio" name="q26" value="C"> C. I drive to school every day.</label>
+                    <label><input type="radio" name="q26" value="D"> D. I ride my bike to school every day.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 27:</div>
+                <p><em>What's your job?</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q27" value="A"> A. What do you do?</label>
+                    <label><input type="radio" name="q27" value="B"> B. Where do you work?</label>
+                    <label><input type="radio" name="q27" value="C"> C. How do you work?</label>
+                    <label><input type="radio" name="q27" value="D"> D. When do you work?</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 28:</div>
+                <p><em>She likes playing tennis.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q28" value="A"> A. She enjoys to play tennis.</label>
+                    <label><input type="radio" name="q28" value="B"> B. She enjoys playing tennis.</label>
+                    <label><input type="radio" name="q28" value="C"> C. She enjoys play tennis.</label>
+                    <label><input type="radio" name="q28" value="D"> D. She enjoys plays tennis.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 29:</div>
+                <p><em>The weather is very hot today.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q29" value="A"> A. Today is a very hot day.</label>
+                    <label><input type="radio" name="q29" value="B"> B. Today is a very cold day.</label>
+                    <label><input type="radio" name="q29" value="C"> C. The weather is very cold today.</label>
+                    <label><input type="radio" name="q29" value="D"> D. It's not hot today.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 30:</div>
+                <p><em>What time do you get up?</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q30" value="A"> A. When do you get up?</label>
+                    <label><input type="radio" name="q30" value="B"> B. Where do you get up?</label>
+                    <label><input type="radio" name="q30" value="C"> C. How do you get up?</label>
+                    <label><input type="radio" name="q30" value="D"> D. Why do you get up?</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 31:</div>
+                <p><em>There are many books on the shelf.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q31" value="A"> A. The shelf has many books.</label>
+                    <label><input type="radio" name="q31" value="B"> B. Many books are under the shelf.</label>
+                    <label><input type="radio" name="q31" value="C"> C. There aren't many books on the shelf.</label>
+                    <label><input type="radio" name="q31" value="D"> D. The shelf doesn't have books.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 32:</div>
+                <p><em>Can you speak English?</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q32" value="A"> A. Are you able to speak English?</label>
+                    <label><input type="radio" name="q32" value="B"> B. Do you like speaking English?</label>
+                    <label><input type="radio" name="q32" value="C"> C. Are you speaking English?</label>
+                    <label><input type="radio" name="q32" value="D"> D. Do you want to speak English?</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 33:</div>
+                <p><em>My house is next to the bank.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q33" value="A"> A. The bank is next to my house.</label>
+                    <label><input type="radio" name="q33" value="B"> B. My house is far from the bank.</label>
+                    <label><input type="radio" name="q33" value="C"> C. The bank is behind my house.</label>
+                    <label><input type="radio" name="q33" value="D"> D. My house is in the bank.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 34:</div>
+                <p><em>I don't like coffee.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q34" value="A"> A. Coffee is not my favorite drink.</label>
+                    <label><input type="radio" name="q34" value="B"> B. I love coffee very much.</label>
+                    <label><input type="radio" name="q34" value="C"> C. I always drink coffee.</label>
+                    <label><input type="radio" name="q34" value="D"> D. Coffee is delicious.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 35:</div>
+                <p><em>She is wearing a beautiful dress.</em></p>
+                <div class="options">
+                    <label><input type="radio" name="q35" value="A"> A. She has a beautiful dress on.</label>
+                    <label><input type="radio" name="q35" value="B"> B. She is buying a beautiful dress.</label>
+                    <label><input type="radio" name="q35" value="C"> C. She doesn't like the dress.</label>
+                    <label><input type="radio" name="q35" value="D"> D. The dress is not beautiful.</label>
+                </div>
+            </div>
+
+            <!-- PHẦN IV: READING COMPREHENSION -->
+            <div class="section-header">📚 PHẦN IV: READING COMPREHENSION - 5 câu</div>
+            
+            <div class="reading-passage">
+                <h4>My Family</h4>
+                <p>Hello! My name is Anna and I'm from Italy. I live with my family in a small house near the city center. There are four people in my family: my parents, my younger brother and me.</p>
+                
+                <p>My father is a doctor and he works at the hospital. He gets up very early every morning at 6 o'clock and goes to work by car. He is very kind and always helps people. My mother is a teacher at a primary school. She loves children and enjoys her job very much. She usually walks to work because the school is not far from our house.</p>
+                
+                <p>My brother Tom is 12 years old. He is a student and he goes to the same school as my mother. Tom likes playing football and he is very good at it. He plays football with his friends every afternoon after school.</p>
+                
+                <p>I am 16 years old and I am a high school student. I like reading books and listening to music in my free time. I also enjoy spending time with my family. On weekends, we often go to the park or visit our grandparents who live in another city.</p>
+                
+                <p>We are a happy family and we love each other very much.</p>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 36:</div>
+                <p>How many people are there in Anna's family?</p>
+                <div class="options">
+                    <label><input type="radio" name="q36" value="A"> A. Three</label>
+                    <label><input type="radio" name="q36" value="B"> B. Four</label>
+                    <label><input type="radio" name="q36" value="C"> C. Five</label>
+                    <label><input type="radio" name="q36" value="D"> D. Six</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 37:</div>
+                <p>What is Anna's father's job?</p>
+                <div class="options">
+                    <label><input type="radio" name="q37" value="A"> A. Teacher</label>
+                    <label><input type="radio" name="q37" value="B"> B. Doctor</label>
+                    <label><input type="radio" name="q37" value="C"> C. Student</label>
+                    <label><input type="radio" name="q37" value="D"> D. Football player</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 38:</div>
+                <p>How does Anna's mother go to work?</p>
+                <div class="options">
+                    <label><input type="radio" name="q38" value="A"> A. By car</label>
+                    <label><input type="radio" name="q38" value="B"> B. By bus</label>
+                    <label><input type="radio" name="q38" value="C"> C. She walks</label>
+                    <label><input type="radio" name="q38" value="D"> D. By bike</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 39:</div>
+                <p>What does Tom like doing?</p>
+                <div class="options">
+                    <label><input type="radio" name="q39" value="A"> A. Reading books</label>
+                    <label><input type="radio" name="q39" value="B"> B. Listening to music</label>
+                    <label><input type="radio" name="q39" value="C"> C. Playing football</label>
+                    <label><input type="radio" name="q39" value="D"> D. Watching TV</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 40:</div>
+                <p>What does Anna's family do on weekends?</p>
+                <div class="options">
+                    <label><input type="radio" name="q40" value="A"> A. They stay at home</label>
+                    <label><input type="radio" name="q40" value="B"> B. They go to work</label>
+                    <label><input type="radio" name="q40" value="C"> C. They go to the park or visit their grandparents</label>
+                    <label><input type="radio" name="q40" value="D"> D. They go shopping</label>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- NÚT SUBMIT Ở CUỐI TRANG -->
+        <div class="submit-section">
+            <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
+        </div>
+
+        <!-- KẾT QUẢ -->
+        <div id="result" class="result-section" style="display: none;">
+            <h2>📊 KẾT QUẢ BÀI THI</h2>
+            <div id="scoreInfo" class="score-summary"></div>
+            <div id="detailedResults" class="detailed-results"></div>
+            <div class="submit-section">
+                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Đáp án đúng - chỉ sử dụng ngữ pháp Units 1-6
+        const correctAnswers = {
+            // Grammar & Vocabulary (1-15)
+            q1: 'A', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'A', q9: 'B', q10: 'B',
+            q11: 'A', q12: 'B', q13: 'A', q14: 'A', q15: 'C',
+            
+            // Cloze Test (16-25)
+            q16: 'A', q17: 'C', q18: 'A', q19: 'B', q20: 'B',
+            q21: 'B', q22: 'B', q23: 'B', q24: 'C', q25: 'B',
+            
+            // Sentence Transformation (26-35)
+            q26: 'A', q27: 'A', q28: 'B', q29: 'A', q30: 'A',
+            q31: 'A', q32: 'A', q33: 'A', q34: 'A', q35: 'A',
+            
+            // Reading Comprehension (36-40)
+            q36: 'B', q37: 'B', q38: 'C', q39: 'C', q40: 'C'
+        };
+
+        // Cập nhật progress khi chọn đáp án
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio') {
+                updateProgress();
+            }
+        });
+
+        function updateProgress() {
+            let answered = 0;
+            for (let i = 1; i <= 40; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) answered++;
+            }
+            
+            const percentage = Math.round((answered / 40) * 100);
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
+        }
+
+        function submitTest() {
+            const studentName = document.getElementById('studentName').value;
+            const studentClass = document.getElementById('studentClass').value;
+            
+            if (!studentName || !studentClass) {
+                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
+                return;
+            }
+
+            let correctCount = 0;
+            let totalQuestions = 40;
+            let sectionScores = {
+                grammar: { correct: 0, total: 15 },
+                cloze: { correct: 0, total: 10 },
+                transformation: { correct: 0, total: 10 },
+                reading: { correct: 0, total: 5 }
+            };
+            
+            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const userAnswer = selected ? selected.value : null;
+                const correctAnswer = correctAnswers[`q${i}`];
+                const isCorrect = userAnswer === correctAnswer;
+                
+                if (isCorrect) {
+                    correctCount++;
+                    // Phân loại theo section
+                    if (i <= 15) sectionScores.grammar.correct++;
+                    else if (i <= 25) sectionScores.cloze.correct++;
+                    else if (i <= 35) sectionScores.transformation.correct++;
+                    else sectionScores.reading.correct++;
+                }
+                
+                const statusClass = isCorrect ? 'correct' : 'incorrect';
+                const statusIcon = isCorrect ? '✅' : '❌';
+                const answerText = userAnswer || 'Không chọn';
+                
+                detailedHTML += `
+                    <div class="question-result ${statusClass}">
+                        <strong>Câu ${i}:</strong> ${statusIcon} 
+                        Bạn chọn: <span>${answerText}</span> | 
+                        Đáp án: <span>${correctAnswer}</span>
+                        <em>Kết quả: ${isCorrect ? 'Đúng' : 'Sai'}</em>
+                    </div>
+                `;
+            }
+            
+            const score = (correctCount * 0.25).toFixed(2);
+            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
+            
+            let grade = '';
+            if (percentage >= 80) grade = 'Giỏi 🌟';
+            else if (percentage >= 65) grade = 'Khá 👍';
+            else if (percentage >= 50) grade = 'Trung bình 📝';
+            else grade = 'Cần cố gắng 💪';
+            
+            const currentDate = new Date().toLocaleString('vi-VN');
+            
+            document.getElementById('scoreInfo').innerHTML = `
+                <h3>👤 Thông tin thí sinh</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${studentName}</strong>
+                        Họ tên
+                    </div>
+                    <div class="score-item">
+                        <strong>${studentClass}</strong>
+                        Lớp
+                    </div>
+                    <div class="score-item">
+                        <strong>${currentDate}</strong>
+                        Ngày thi
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${correctCount}/40</strong>
+                        Số câu đúng
+                    </div>
+                    <div class="score-item">
+                        <strong>${score}/10</strong>
+                        Điểm số
+                    </div>
+                    <div class="score-item">
+                        <strong>${percentage}%</strong>
+                        Phần trăm
+                    </div>
+                    <div class="score-item">
+                        <strong>${grade}</strong>
+                        Xếp loại
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">📊 Kết quả từng phần</h3>
+                <div class="section-analysis">
+                    <strong>📝 Grammar & Vocabulary (Units 1-6):</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
                 </div>
                 <div class="section-analysis">
                     <strong>📖 Cloze Test:</strong> ${sectionScores.cloze.correct}/${sectionScores.cloze.total} (${((sectionScores.cloze.correct/sectionScores.cloze.total)*100).toFixed(1)}%)
