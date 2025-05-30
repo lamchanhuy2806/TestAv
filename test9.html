@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boo! 🐼</title>
+    <style>
+        body {
+            background-color: #fff;
+            text-align: center;
+            padding-top: 100px;
+            font-family: 'Comic Sans MS', cursive;
+            transition: background 0.4s;
+        }
+
+        .cute-img {
+            width: 250px;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .shake {
+            animation: shake 0.3s ease-in-out 3;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello! 🐼</h1>
+    <img src="https://i.imgur.com/8Km9tLL.png" alt="Cute Panda" class="cute-img" id="pandaImg">
+    <audio id="screamSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+    <script>
+        setTimeout(() => {
+            const img = document.getElementById('pandaImg');
+            const audio = document.getElementById('screamSound');
+
+            // Phát âm thanh hù dọa
+            audio.play();
+
+            // Hiệu ứng giật mình
+            document.body.style.backgroundColor = "#ffcccc";
+            img.classList.add('shake');
+
+            // Thay đổi tiêu đề
+            document.querySelector('h1').innerText = "BOO! 😱";
+
+        }, 2000); // 2 giây sau mới xảy ra hiệu ứng
+    </script>
+</body>
+</html>
