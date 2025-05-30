@@ -3,900 +3,617 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Test - Units 1-6 Practice</title>
+    <title>English Test Navigator - Units 1-6</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css">
 </head>
 <body>
-    <div class="test-paper">
-        <div class="header">
-            <h1>📚 English Test - Units 1-6 Practice</h1>
-            <h2>Mixed Skills Assessment</h2>
-            <p><strong>Grammar • Vocabulary • Cloze Test • Reading • Sentence Transformation</strong></p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">📚 English Tests</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">📝 Đề Ôn Thi</a>
+                    <div class="dropdown-content">
+                        <a href="test1.html" class="dropdown-item">
+                            <span class="test-number">Test 1</span>Personal Best A2 - Units 1-6
+                        </a>
+                        <a href="test2.html" class="dropdown-item">
+                            <span class="test-number">Test 2</span>Mixed Skills Practice - Set A
+                        </a>
+                        <a href="test3.html" class="dropdown-item">
+                            <span class="test-number">Test 3</span>Grammar & Vocabulary Focus
+                        </a>
+                        <a href="test4.html" class="dropdown-item">
+                            <span class="test-number">Test 4</span>Reading & Cloze Test Practice
+                        </a>
+                        <a href="test5.html" class="dropdown-item">
+                            <span class="test-number">Test 5</span>Sentence Transformation Focus
+                        </a>
+                        <a href="test6.html" class="dropdown-item">
+                            <span class="test-number">Test 6</span>Communication & Daily Life
+                        </a>
+                        <a href="test7.html" class="dropdown-item">
+                            <span class="test-number">Test 7</span>Family & Hobbies Theme
+                        </a>
+                        <a href="test8.html" class="dropdown-item">
+                            <span class="test-number">Test 8</span>Weather & Seasons Practice
+                        </a>
+                        <a href="test9.html" class="dropdown-item">
+                            <span class="test-number">Test 9</span>Places & Directions Focus
+                        </a>
+                        <a href="test10.html" class="dropdown-item">
+                            <span class="test-number">Test 10</span>Final Review Test
+                        </a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#stats" class="nav-link">📊 Thống Kê</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#guide" class="nav-link">📖 Hướng Dẫn</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">ℹ️ Giới Thiệu</a>
+                </li>
+            </ul>
+            
+            <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="test-paper">
+            <div class="welcome-section">
+                <h1 class="welcome-title">🎯 Hệ Thống Ôn Thi Tiếng Anh</h1>
+                <h2 class="welcome-subtitle">Units 1-6 Practice Tests</h2>
+                
+                <p class="welcome-description">
+                    Chào mừng bạn đến với hệ thống ôn thi tiếng Anh! Chúng tôi cung cấp 10 bộ đề luyện tập 
+                    đa dạng với các dạng bài khác nhau để giúp bạn ôn tập hiệu quả Units 1-6. 
+                    Mỗi bộ đề được thiết kế chuyên biệt với 40 câu hỏi và hệ thống chấm điểm tự động.
+                </p>
+
+                <div class="test-grid">
+                    <a href="test1.html" class="test-card">
+                        <h3>📝 Test 1</h3>
+                        <p>Personal Best A2 - Basic Review</p>
+                    </a>
+                    <a href="test2.html" class="test-card">
+                        <h3>📚 Test 2</h3>
+                        <p>Mixed Skills Practice - Set A</p>
+                    </a>
+                    <a href="test3.html" class="test-card">
+                        <h3>📖 Test 3</h3>
+                        <p>Grammar & Vocabulary Focus</p>
+                    </a>
+                    <a href="test4.html" class="test-card">
+                        <h3>🔍 Test 4</h3>
+                        <p>Reading & Cloze Test Practice</p>
+                    </a>
+                    <a href="test5.html" class="test-card">
+                        <h3>🔄 Test 5</h3>
+                        <p>Sentence Transformation</p>
+                    </a>
+                    <a href="test6.html" class="test-card">
+                        <h3>💬 Test 6</h3>
+                        <p>Communication & Daily Life</p>
+                    </a>
+                    <a href="test7.html" class="test-card">
+                        <h3>👨‍👩‍👧‍👦 Test 7</h3>
+                        <p>Family & Hobbies Theme</p>
+                    </a>
+                    <a href="test8.html" class="test-card">
+                        <h3>🌤️ Test 8</h3>
+                        <p>Weather & Seasons</p>
+                    </a>
+                    <a href="test9.html" class="test-card">
+                        <h3>🗺️ Test 9</h3>
+                        <p>Places & Directions</p>
+                    </a>
+                    <a href="test10.html" class="test-card">
+                        <h3>🎯 Test 10</h3>
+                        <p>Final Review Test</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section" id="stats">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📊 Thống Kê Hệ Thống</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Bộ Đề Luyện Tập</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">400</div>
+                        <div class="stat-label">Tổng Số Câu Hỏi</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Units Bao Phủ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Dạng Bài Khác Nhau</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guide Section -->
+            <div class="stats-section" id="guide">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📖 Hướng Dẫn Sử Dụng</h2>
+                <div class="guide-content">
+                    <h3>🎯 Cách Chọn Đề Thi:</h3>
+                    <p>• Nhấp vào menu "📝 Đề Ôn Thi" để xem danh sách 10 bộ đề</p>
+                    <p>• Chọn đề phù hợp với mục tiêu ôn tập của bạn</p>
+                    <p>• Mỗi đề có 40 câu hỏi, thời gian làm bài 90 phút</p>
+
+                    <h3>📝 Cấu Trúc Mỗi Đề Thi:</h3>
+                    <p>• <strong>Phần I:</strong> Grammar & Vocabulary (15 câu)</p>
+                    <p>• <strong>Phần II:</strong> Cloze Test (10 câu)</p>
+                    <p>• <strong>Phần III:</strong> Sentence Transformation (10 câu)</p>
+                    <p>• <strong>Phần IV:</strong> Reading Comprehension (5 câu)</p>
+
+                    <h3>⚡ Tính Năng Đặc Biệt:</h3>
+                    <p>• Chấm điểm tự động và hiển thị kết quả chi tiết</p>
+                    <p>• Theo dõi tiến độ làm bài real-time</p>
+                    <p>• Phân tích điểm theo từng phần</p>
+                    <p>• Có thể làm lại nhiều lần để cải thiện điểm số</p>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="stats-section" id="about">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">ℹ️ Giới Thiệu</h2>
+                <div class="about-content">
+                    <p>Hệ thống ôn thi tiếng Anh Units 1-6 được thiết kế đặc biệt cho học sinh muốn củng cố kiến thức và chuẩn bị tốt cho kỳ thi.</p>
+                    <p>Với 10 bộ đề đa dạng và phong phú, bạn sẽ có cơ hội luyện tập toàn diện các kỹ năng ngữ pháp, từ vựng, đọc hiểu và giao tiếp.</p>
+                    <div class="about-quote">
+                        "Thành công đến từ sự chuẩn bị kỹ lưỡng và luyện tập không ngừng!"
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Đáp án đúng - chỉ sử dụng ngữ pháp Units 1-6
-        const correctAnswers = {
-            // Grammar & Vocabulary (1-15)
-            q1: 'A', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
-            q6: 'B', q7: 'C', q8: 'A', q9: 'B', q10: 'B',
-            q11: 'A', q12: 'B', q13: 'A', q14: 'A', q15: 'C',
-            
-            // Cloze Test (16-25)
-            q16: 'A', q17: 'C', q18: 'A', q19: 'B', q20: 'B',
-            q21: 'B', q22: 'B', q23: 'B', q24: 'C', q25: 'B',
-            
-            // Sentence Transformation (26-35)
-            q26: 'A', q27: 'A', q28: 'B', q29: 'A', q30: 'A',
-            q31: 'A', q32: 'A', q33: 'A', q34: 'A', q35: 'A',
-            
-            // Reading Comprehension (36-40)
-            q36: 'B', q37: 'B', q38: 'C', q39: 'C', q40: 'C'
-        };
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
 
-        // Cập nhật progress khi chọn đáp án
-        document.addEventListener('change', function(e) {
-            if (e.target.type === 'radio') {
-                updateProgress();
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
             }
         });
 
-        function updateProgress() {
-            let answered = 0;
-            for (let i = 1; i <= 40; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selected) answered++;
-            }
-            
-            const percentage = Math.round((answered / 40) * 100);
-            document.getElementById('progressBar').style.width = percentage + '%';
-            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
-        function submitTest() {
-            const studentName = document.getElementById('studentName').value;
-            const studentClass = document.getElementById('studentClass').value;
-            
-            if (!studentName || !studentClass) {
-                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
-                return;
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
             }
+        });
 
-            let correctCount = 0;
-            let totalQuestions = 40;
-            let sectionScores = {
-                grammar: { correct: 0, total: 15 },
-                cloze: { correct: 0, total: 10 },
-                transformation: { correct: 0, total: 10 },
-                reading: { correct: 0, total: 5 }
-            };
-            
-            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
-            
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                const userAnswer = selected ? selected.value : null;
-                const correctAnswer = correctAnswers[`q${i}`];
-                const isCorrect = userAnswer === correctAnswer;
+        // Add loading animation to test cards
+        document.querySelectorAll('.test-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const originalText = this.innerHTML;
+                this.innerHTML = originalText + '<div class="loading"></div>';
                 
-                if (isCorrect) {
-                    correctCount++;
-                    // Phân loại theo section
-                    if (i <= 15) sectionScores.grammar.correct++;
-                    else if (i <= 25) sectionScores.cloze.correct++;
-                    else if (i <= 35) sectionScores.transformation.correct++;
-                    else sectionScores.reading.correct++;
-                }
-                
-                const statusClass = isCorrect ? 'correct' : 'incorrect';
-                const statusIcon = isCorrect ? '✅' : '❌';
-                const answerText = userAnswer || 'Không chọn';
-                
-                detailedHTML += `
-                    <div class="question-result ${statusClass}">
-                        <strong>Câu ${i}:</strong> ${statusIcon} 
-                        Bạn chọn: <span>${answerText}</span> | 
-                        Đáp án: <span>${correctAnswer}</span>
-                        <em>Kết quả: ${isCorrect ? 'Đúng' : 'Sai'}</em>
-                    </div>
-                `;
-            }
-            
-            const score = (correctCount * 0.25).toFixed(2);
-            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
-            
-            let grade = '';
-            if (percentage >= 80) grade = 'Giỏi 🌟';
-            else if (percentage >= 65) grade = 'Khá 👍';
-            else if (percentage >= 50) grade = 'Trung bình 📝';
-            else grade = 'Cần cố gắng 💪';
-            
-            const currentDate = new Date().toLocaleString('vi-VN');
-            
-            document.getElementById('scoreInfo').innerHTML = `
-                <h3>👤 Thông tin thí sinh</h3>
-                <div class="score-details">
-                    <div class="score-item">
-                        <strong>${studentName}</strong>
-                        Họ tên
-                    </div>
-                    <div class="score-item">
-                        <strong>${studentClass}</strong>
-                        Lớp
-                    </div>
-                    <div class="score-item">
-                        <strong>${currentDate}</strong>
-                        Ngày thi
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
-                <div class="score-details">
-                    <div class="score-item">
-                        <strong>${correctCount}/40</strong>
-                        Số câu đúng
-                    </div>
-                    <div class="score-item">
-                        <strong>${score}/10</strong>
-                        Điểm số
-                    </div>
-                    <div class="score-item">
-                        <strong>${percentage}%</strong>
-                        Phần trăm
-                    </div>
-                    <div class="score-item">
-                        <strong>${grade}</strong>
-                        Xếp loại
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 30px;">📊 Kết quả từng phần</h3>
-                <div class="section-analysis">
-                    <strong>📝 Grammar & Vocabulary (Units 1-6):</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>📖 Cloze Test:</strong> ${sectionScores.cloze.correct}/${sectionScores.cloze.total} (${((sectionScores.cloze.correct/sectionScores.cloze.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>🔄 Sentence Transformation:</strong> ${sectionScores.transformation.correct}/${sectionScores.transformation.total} (${((sectionScores.transformation.correct/sectionScores.transformation.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>📚 Reading Comprehension:</strong> ${sectionScores.reading.correct}/${sectionScores.reading.total} (${((sectionScores.reading.correct/sectionScores.reading.total)*100).toFixed(1)}%)
-                </div>
-            `;
-            
-            document.getElementById('detailedResults').innerHTML = detailedHTML;
-            document.getElementById('result').style.display = 'block';
-            
-            // Scroll to results
-            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function resetTest() {
-            // Reset form
-            document.getElementById('testForm').reset();
-            document.getElementById('studentName').value = '';
-            document.getElementById('studentClass').value = '';
-            
-            // Reset progress
-            document.getElementById('progressBar').style.width = '0%';
-            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
-            
-            // Hide results
-            document.getElementById('result').style.display = 'none';
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Prevent accidental page refresh
-        window.addEventListener('beforeunload', function(e) {
-            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
-            if (answered > 0) {
-                e.preventDefault();
-                e.returnValue = '';
-            }
+                // Remove loading after a short delay (for demo purposes)
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                }, 1000);
+            });
         });
     </script>
 </body>
-</html>="info-grid">
-                <div class="info-item">⏰ Thời gian: 90 phút</div>
-                <div class="info-item">📝 Số câu: 40 câu</div>
-                <div class="info-item">📊 Mỗi câu: 0.25 điểm</div>
-                <div class="info-item">🎯 Units 1-6</div>
-            </div>
-        </div>
+</html>
+        }
 
-        <div class="student-info">
-            <div class="info-row">
-                <div class="info-field">
-                    <label><strong>Họ và tên:</strong></label>
-                    <input type="text" id="studentName" placeholder="Nhập họ tên">
-                </div>
-                <div class="info-field">
-                    <label><strong>Lớp:</strong></label>
-                    <input type="text" id="studentClass" placeholder="Nhập lớp">
-                </div>
-            </div>
-        </div>
+        /* Main content */
+        .main-content {
+            padding: 40px 0;
+            min-height: calc(100vh - 80px);
+        }
 
-        <div class="progress-section">
-            <div id="progressText">📊 Đã trả lời: 0/40 câu (0%)</div>
-            <div class="progress">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-        </div>
+        .welcome-section {
+            text-align: center;
+            background: white;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
 
-        <form id="testForm">
-            <!-- PHẦN I: GRAMMAR & VOCABULARY -->
-            <div class="section-header">📝 PHẦN I: GRAMMAR & VOCABULARY - 15 câu</div>
+        .welcome-title {
+            font-size: 48px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .welcome-subtitle {
+            font-size: 24px;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .welcome-description {
+            font-size: 18px;
+            color: #34495e;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .test-card {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+            color: white;
+        }
+
+        .test-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+        .test-card p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .stats-section {
+            background: #ecf0f1;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        /* Mobile responsive */
+        .mobile-menu {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2c3e50;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                background: #34495e;
+            }
+
+            .dropdown-item {
+                color: white;
+                border-bottom: 1px solid #2c3e50;
+            }
+
+            .welcome-title {
+                font-size: 36px;
+            }
+
+            .welcome-section {
+                padding: 40px 20px;
+            }
+
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">📚 English Tests</a>
             
-            <div class="question">
-                <div class="question-number">Câu 1:</div>
-                <p>My name _____ John and I _____ from England.</p>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="A"> A. is / am</label>
-                    <label><input type="radio" name="q1" value="B"> B. are / is</label>
-                    <label><input type="radio" name="q1" value="C"> C. am / are</label>
-                    <label><input type="radio" name="q1" value="D"> D. is / are</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 2:</div>
-                <p>What time _____ you _____ up in the morning?</p>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="A"> A. are / get</label>
-                    <label><input type="radio" name="q2" value="B"> B. do / get</label>
-                    <label><input type="radio" name="q2" value="C"> C. does / gets</label>
-                    <label><input type="radio" name="q2" value="D"> D. do / gets</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 3:</div>
-                <p>She _____ English and French very well.</p>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="A"> A. speak</label>
-                    <label><input type="radio" name="q3" value="B"> B. speaks</label>
-                    <label><input type="radio" name="q3" value="C"> C. speaking</label>
-                    <label><input type="radio" name="q3" value="D"> D. to speak</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 4:</div>
-                <p>I _____ play football on weekends.</p>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="A"> A. never</label>
-                    <label><input type="radio" name="q4" value="B"> B. always</label>
-                    <label><input type="radio" name="q4" value="C"> C. usually</label>
-                    <label><input type="radio" name="q4" value="D"> D. sometimes</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 5:</div>
-                <p>Look! It _____ outside. Take your umbrella.</p>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="A"> A. rains</label>
-                    <label><input type="radio" name="q5" value="B"> B. is raining</label>
-                    <label><input type="radio" name="q5" value="C"> C. rain</label>
-                    <label><input type="radio" name="q5" value="D"> D. raining</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 6:</div>
-                <p>My birthday is _____ May 15th.</p>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="A"> A. in</label>
-                    <label><input type="radio" name="q6" value="B"> B. on</label>
-                    <label><input type="radio" name="q6" value="C"> C. at</label>
-                    <label><input type="radio" name="q6" value="D"> D. of</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 7:</div>
-                <p>_____ you help me with my homework?</p>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="A"> A. Do</label>
-                    <label><input type="radio" name="q7" value="B"> B. Are</label>
-                    <label><input type="radio" name="q7" value="C"> C. Can</label>
-                    <label><input type="radio" name="q7" value="D"> D. Is</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 8:</div>
-                <p>There _____ a park near my house.</p>
-                <div class="options">
-                    <label><input type="radio" name="q8" value="A"> A. is</label>
-                    <label><input type="radio" name="q8" value="B"> B. are</label>
-                    <label><input type="radio" name="q8" value="C"> C. have</label>
-                    <label><input type="radio" name="q8" value="D"> D. has</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 9:</div>
-                <p>The library is _____ the bank and the post office.</p>
-                <div class="options">
-                    <label><input type="radio" name="q9" value="A"> A. next to</label>
-                    <label><input type="radio" name="q9" value="B"> B. between</label>
-                    <label><input type="radio" name="q9" value="C"> C. behind</label>
-                    <label><input type="radio" name="q9" value="D"> D. in front of</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 10:</div>
-                <p>What _____ you _____ now?</p>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="A"> A. do / do</label>
-                    <label><input type="radio" name="q10" value="B"> B. are / doing</label>
-                    <label><input type="radio" name="q10" value="C"> C. does / do</label>
-                    <label><input type="radio" name="q10" value="D"> D. is / doing</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 11:</div>
-                <p>My brother is very _____. He makes me laugh.</p>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="A"> A. funny</label>
-                    <label><input type="radio" name="q11" value="B"> B. serious</label>
-                    <label><input type="radio" name="q11" value="C"> C. quiet</label>
-                    <label><input type="radio" name="q11" value="D"> D. angry</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 12:</div>
-                <p>I enjoy _____ books in my free time.</p>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="A"> A. read</label>
-                    <label><input type="radio" name="q12" value="B"> B. reading</label>
-                    <label><input type="radio" name="q12" value="C"> C. to read</label>
-                    <label><input type="radio" name="q12" value="D"> D. reads</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 13:</div>
-                <p>Today is _____ hot. I need some cold water.</p>
-                <div class="options">
-                    <label><input type="radio" name="q13" value="A"> A. very</label>
-                    <label><input type="radio" name="q13" value="B"> B. much</label>
-                    <label><input type="radio" name="q13" value="C"> C. many</label>
-                    <label><input type="radio" name="q13" value="D"> D. a lot</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 14:</div>
-                <p>_____ books are on the table?</p>
-                <div class="options">
-                    <label><input type="radio" name="q14" value="A"> A. Whose</label>
-                    <label><input type="radio" name="q14" value="B"> B. Who</label>
-                    <label><input type="radio" name="q14" value="C"> C. Where</label>
-                    <label><input type="radio" name="q14" value="D"> D. What</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 15:</div>
-                <p>I _____ go to bed early because I'm tired.</p>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="A"> A. can</label>
-                    <label><input type="radio" name="q15" value="B"> B. can't</label>
-                    <label><input type="radio" name="q15" value="C"> C. must</label>
-                    <label><input type="radio" name="q15" value="D"> D. mustn't</label>
-                </div>
-            </div>
-
-            <!-- PHẦN II: CLOZE TEST -->
-            <div class="section-header">📖 PHẦN II: CLOZE TEST - 10 câu</div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">📝 Đề Ôn Thi</a>
+                    <div class="dropdown-content">
+                        <a href="test1.html" class="dropdown-item">
+                            <span class="test-number">Test 1</span>Personal Best A2 - Units 1-6
+                        </a>
+                        <a href="test2.html" class="dropdown-item">
+                            <span class="test-number">Test 2</span>Mixed Skills Practice - Set A
+                        </a>
+                        <a href="test3.html" class="dropdown-item">
+                            <span class="test-number">Test 3</span>Grammar & Vocabulary Focus
+                        </a>
+                        <a href="test4.html" class="dropdown-item">
+                            <span class="test-number">Test 4</span>Reading & Cloze Test Practice
+                        </a>
+                        <a href="test5.html" class="dropdown-item">
+                            <span class="test-number">Test 5</span>Sentence Transformation Focus
+                        </a>
+                        <a href="test6.html" class="dropdown-item">
+                            <span class="test-number">Test 6</span>Communication & Daily Life
+                        </a>
+                        <a href="test7.html" class="dropdown-item">
+                            <span class="test-number">Test 7</span>Family & Hobbies Theme
+                        </a>
+                        <a href="test8.html" class="dropdown-item">
+                            <span class="test-number">Test 8</span>Weather & Seasons Practice
+                        </a>
+                        <a href="test9.html" class="dropdown-item">
+                            <span class="test-number">Test 9</span>Places & Directions Focus
+                        </a>
+                        <a href="test10.html" class="dropdown-item">
+                            <span class="test-number">Test 10</span>Final Review Test
+                        </a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#stats" class="nav-link">📊 Thống Kê</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#guide" class="nav-link">📖 Hướng Dẫn</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">ℹ️ Giới Thiệu</a>
+                </li>
+            </ul>
             
-            <div class="reading-passage">
-                <h4>My Daily Routine</h4>
-                <p><strong>Directions:</strong> Choose the correct answer that best completes each of the blanks in the text.</p>
-                <br>
-                <p>Hi! My name is Sarah and I want to tell you about my daily routine. I _____(16) up at 7 o'clock every morning. After I brush my teeth, I _____(17) breakfast with my family. I usually have coffee and toast.</p>
-                
-                <p>I _____(18) to work by bus at 8:30. I work _____(19) a teacher at a primary school. I really enjoy _____(20) with children. My job is very interesting but sometimes it _____(21) tiring.</p>
-                
-                <p>I finish work at 4 o'clock and then I go _____(22). In the evening, I like _____(23) TV or reading books. I _____(24) go to bed early because I need to get up early the next day.</p>
-                
-                <p>_____(25) weekends, I spend time with my friends and family. We often go to the cinema or have dinner together.</p>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 16:</div>
-                <div class="options">
-                    <label><input type="radio" name="q16" value="A"> A. get</label>
-                    <label><input type="radio" name="q16" value="B"> B. gets</label>
-                    <label><input type="radio" name="q16" value="C"> C. getting</label>
-                    <label><input type="radio" name="q16" value="D"> D. to get</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 17:</div>
-                <div class="options">
-                    <label><input type="radio" name="q17" value="A"> A. make</label>
-                    <label><input type="radio" name="q17" value="B"> B. do</label>
-                    <label><input type="radio" name="q17" value="C"> C. have</label>
-                    <label><input type="radio" name="q17" value="D"> D. take</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 18:</div>
-                <div class="options">
-                    <label><input type="radio" name="q18" value="A"> A. go</label>
-                    <label><input type="radio" name="q18" value="B"> B. walk</label>
-                    <label><input type="radio" name="q18" value="C"> C. travel</label>
-                    <label><input type="radio" name="q18" value="D"> D. move</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 19:</div>
-                <div class="options">
-                    <label><input type="radio" name="q19" value="A"> A. like</label>
-                    <label><input type="radio" name="q19" value="B"> B. as</label>
-                    <label><input type="radio" name="q19" value="C"> C. for</label>
-                    <label><input type="radio" name="q19" value="D"> D. with</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 20:</div>
-                <div class="options">
-                    <label><input type="radio" name="q20" value="A"> A. work</label>
-                    <label><input type="radio" name="q20" value="B"> B. working</label>
-                    <label><input type="radio" name="q20" value="C"> C. to work</label>
-                    <label><input type="radio" name="q20" value="D"> D. works</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 21:</div>
-                <div class="options">
-                    <label><input type="radio" name="q21" value="A"> A. am</label>
-                    <label><input type="radio" name="q21" value="B"> B. is</label>
-                    <label><input type="radio" name="q21" value="C"> C. are</label>
-                    <label><input type="radio" name="q21" value="D"> D. be</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 22:</div>
-                <div class="options">
-                    <label><input type="radio" name="q22" value="A"> A. house</label>
-                    <label><input type="radio" name="q22" value="B"> B. home</label>
-                    <label><input type="radio" name="q22" value="C"> C. family</label>
-                    <label><input type="radio" name="q22" value="D"> D. room</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 23:</div>
-                <div class="options">
-                    <label><input type="radio" name="q23" value="A"> A. watch</label>
-                    <label><input type="radio" name="q23" value="B"> B. watching</label>
-                    <label><input type="radio" name="q23" value="C"> C. to watch</label>
-                    <label><input type="radio" name="q23" value="D"> D. watches</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 24:</div>
-                <div class="options">
-                    <label><input type="radio" name="q24" value="A"> A. never</label>
-                    <label><input type="radio" name="q24" value="B"> B. always</label>
-                    <label><input type="radio" name="q24" value="C"> C. usually</label>
-                    <label><input type="radio" name="q24" value="D"> D. sometimes</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 25:</div>
-                <div class="options">
-                    <label><input type="radio" name="q25" value="A"> A. In</label>
-                    <label><input type="radio" name="q25" value="B"> B. On</label>
-                    <label><input type="radio" name="q25" value="C"> C. At</label>
-                    <label><input type="radio" name="q25" value="D"> D. For</label>
-                </div>
-            </div>
-
-            <!-- PHẦN III: SENTENCE TRANSFORMATION -->
-            <div class="section-header">🔄 PHẦN III: SENTENCE TRANSFORMATION - 10 câu</div>
-            <p style="font-style: italic; margin-bottom: 20px;"><strong>Directions:</strong> Choose the answer that has the same meaning as the original sentence.</p>
-
-            <div class="question">
-                <div class="question-number">Câu 26:</div>
-                <p><em>I go to school by bus every day.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q26" value="A"> A. I take the bus to school every day.</label>
-                    <label><input type="radio" name="q26" value="B"> B. I walk to school every day.</label>
-                    <label><input type="radio" name="q26" value="C"> C. I drive to school every day.</label>
-                    <label><input type="radio" name="q26" value="D"> D. I ride my bike to school every day.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 27:</div>
-                <p><em>What's your job?</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q27" value="A"> A. What do you do?</label>
-                    <label><input type="radio" name="q27" value="B"> B. Where do you work?</label>
-                    <label><input type="radio" name="q27" value="C"> C. How do you work?</label>
-                    <label><input type="radio" name="q27" value="D"> D. When do you work?</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 28:</div>
-                <p><em>She likes playing tennis.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q28" value="A"> A. She enjoys to play tennis.</label>
-                    <label><input type="radio" name="q28" value="B"> B. She enjoys playing tennis.</label>
-                    <label><input type="radio" name="q28" value="C"> C. She enjoys play tennis.</label>
-                    <label><input type="radio" name="q28" value="D"> D. She enjoys plays tennis.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 29:</div>
-                <p><em>The weather is very hot today.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q29" value="A"> A. Today is a very hot day.</label>
-                    <label><input type="radio" name="q29" value="B"> B. Today is a very cold day.</label>
-                    <label><input type="radio" name="q29" value="C"> C. The weather is very cold today.</label>
-                    <label><input type="radio" name="q29" value="D"> D. It's not hot today.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 30:</div>
-                <p><em>What time do you get up?</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q30" value="A"> A. When do you get up?</label>
-                    <label><input type="radio" name="q30" value="B"> B. Where do you get up?</label>
-                    <label><input type="radio" name="q30" value="C"> C. How do you get up?</label>
-                    <label><input type="radio" name="q30" value="D"> D. Why do you get up?</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 31:</div>
-                <p><em>There are many books on the shelf.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q31" value="A"> A. The shelf has many books.</label>
-                    <label><input type="radio" name="q31" value="B"> B. Many books are under the shelf.</label>
-                    <label><input type="radio" name="q31" value="C"> C. There aren't many books on the shelf.</label>
-                    <label><input type="radio" name="q31" value="D"> D. The shelf doesn't have books.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 32:</div>
-                <p><em>Can you speak English?</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q32" value="A"> A. Are you able to speak English?</label>
-                    <label><input type="radio" name="q32" value="B"> B. Do you like speaking English?</label>
-                    <label><input type="radio" name="q32" value="C"> C. Are you speaking English?</label>
-                    <label><input type="radio" name="q32" value="D"> D. Do you want to speak English?</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 33:</div>
-                <p><em>My house is next to the bank.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q33" value="A"> A. The bank is next to my house.</label>
-                    <label><input type="radio" name="q33" value="B"> B. My house is far from the bank.</label>
-                    <label><input type="radio" name="q33" value="C"> C. The bank is behind my house.</label>
-                    <label><input type="radio" name="q33" value="D"> D. My house is in the bank.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 34:</div>
-                <p><em>I don't like coffee.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q34" value="A"> A. Coffee is not my favorite drink.</label>
-                    <label><input type="radio" name="q34" value="B"> B. I love coffee very much.</label>
-                    <label><input type="radio" name="q34" value="C"> C. I always drink coffee.</label>
-                    <label><input type="radio" name="q34" value="D"> D. Coffee is delicious.</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 35:</div>
-                <p><em>She is wearing a beautiful dress.</em></p>
-                <div class="options">
-                    <label><input type="radio" name="q35" value="A"> A. She has a beautiful dress on.</label>
-                    <label><input type="radio" name="q35" value="B"> B. She is buying a beautiful dress.</label>
-                    <label><input type="radio" name="q35" value="C"> C. She doesn't like the dress.</label>
-                    <label><input type="radio" name="q35" value="D"> D. The dress is not beautiful.</label>
-                </div>
-            </div>
-
-            <!-- PHẦN IV: READING COMPREHENSION -->
-            <div class="section-header">📚 PHẦN IV: READING COMPREHENSION - 5 câu</div>
-            
-            <div class="reading-passage">
-                <h4>My Family</h4>
-                <p>Hello! My name is Anna and I'm from Italy. I live with my family in a small house near the city center. There are four people in my family: my parents, my younger brother and me.</p>
-                
-                <p>My father is a doctor and he works at the hospital. He gets up very early every morning at 6 o'clock and goes to work by car. He is very kind and always helps people. My mother is a teacher at a primary school. She loves children and enjoys her job very much. She usually walks to work because the school is not far from our house.</p>
-                
-                <p>My brother Tom is 12 years old. He is a student and he goes to the same school as my mother. Tom likes playing football and he is very good at it. He plays football with his friends every afternoon after school.</p>
-                
-                <p>I am 16 years old and I am a high school student. I like reading books and listening to music in my free time. I also enjoy spending time with my family. On weekends, we often go to the park or visit our grandparents who live in another city.</p>
-                
-                <p>We are a happy family and we love each other very much.</p>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 36:</div>
-                <p>How many people are there in Anna's family?</p>
-                <div class="options">
-                    <label><input type="radio" name="q36" value="A"> A. Three</label>
-                    <label><input type="radio" name="q36" value="B"> B. Four</label>
-                    <label><input type="radio" name="q36" value="C"> C. Five</label>
-                    <label><input type="radio" name="q36" value="D"> D. Six</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 37:</div>
-                <p>What is Anna's father's job?</p>
-                <div class="options">
-                    <label><input type="radio" name="q37" value="A"> A. Teacher</label>
-                    <label><input type="radio" name="q37" value="B"> B. Doctor</label>
-                    <label><input type="radio" name="q37" value="C"> C. Student</label>
-                    <label><input type="radio" name="q37" value="D"> D. Football player</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 38:</div>
-                <p>How does Anna's mother go to work?</p>
-                <div class="options">
-                    <label><input type="radio" name="q38" value="A"> A. By car</label>
-                    <label><input type="radio" name="q38" value="B"> B. By bus</label>
-                    <label><input type="radio" name="q38" value="C"> C. She walks</label>
-                    <label><input type="radio" name="q38" value="D"> D. By bike</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 39:</div>
-                <p>What does Tom like doing?</p>
-                <div class="options">
-                    <label><input type="radio" name="q39" value="A"> A. Reading books</label>
-                    <label><input type="radio" name="q39" value="B"> B. Listening to music</label>
-                    <label><input type="radio" name="q39" value="C"> C. Playing football</label>
-                    <label><input type="radio" name="q39" value="D"> D. Watching TV</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-number">Câu 40:</div>
-                <p>What does Anna's family do on weekends?</p>
-                <div class="options">
-                    <label><input type="radio" name="q40" value="A"> A. They stay at home</label>
-                    <label><input type="radio" name="q40" value="B"> B. They go to work</label>
-                    <label><input type="radio" name="q40" value="C"> C. They go to the park or visit their grandparents</label>
-                    <label><input type="radio" name="q40" value="D"> D. They go shopping</label>
-                </div>
-            </div>
-
-        </form>
-
-        <!-- NÚT SUBMIT Ở CUỐI TRANG -->
-        <div class="submit-section">
-            <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
+            <div class="mobile-menu" onclick="toggleMenu()">☰</div>
         </div>
+    </nav>
 
-        <!-- KẾT QUẢ -->
-        <div id="result" class="result-section" style="display: none;">
-            <h2>📊 KẾT QUẢ BÀI THI</h2>
-            <div id="scoreInfo" class="score-summary"></div>
-            <div id="detailedResults" class="detailed-results"></div>
-            <div class="submit-section">
-                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="test-paper">
+            <div class="welcome-section">
+                <h1 class="welcome-title">🎯 Hệ Thống Ôn Thi Tiếng Anh</h1>
+                <h2 class="welcome-subtitle">Units 1-6 Practice Tests</h2>
+                
+                <p class="welcome-description">
+                    Chào mừng bạn đến với hệ thống ôn thi tiếng Anh! Chúng tôi cung cấp 10 bộ đề luyện tập 
+                    đa dạng với các dạng bài khác nhau để giúp bạn ôn tập hiệu quả Units 1-6. 
+                    Mỗi bộ đề được thiết kế chuyên biệt với 40 câu hỏi và hệ thống chấm điểm tự động.
+                </p>
+
+                <div class="test-grid">
+                    <a href="test1.html" class="test-card">
+                        <h3>📝 Test 1</h3>
+                        <p>Personal Best A2 - Basic Review</p>
+                    </a>
+                    <a href="test2.html" class="test-card">
+                        <h3>📚 Test 2</h3>
+                        <p>Mixed Skills Practice - Set A</p>
+                    </a>
+                    <a href="test3.html" class="test-card">
+                        <h3>📖 Test 3</h3>
+                        <p>Grammar & Vocabulary Focus</p>
+                    </a>
+                    <a href="test4.html" class="test-card">
+                        <h3>🔍 Test 4</h3>
+                        <p>Reading & Cloze Test Practice</p>
+                    </a>
+                    <a href="test5.html" class="test-card">
+                        <h3>🔄 Test 5</h3>
+                        <p>Sentence Transformation</p>
+                    </a>
+                    <a href="test6.html" class="test-card">
+                        <h3>💬 Test 6</h3>
+                        <p>Communication & Daily Life</p>
+                    </a>
+                    <a href="test7.html" class="test-card">
+                        <h3>👨‍👩‍👧‍👦 Test 7</h3>
+                        <p>Family & Hobbies Theme</p>
+                    </a>
+                    <a href="test8.html" class="test-card">
+                        <h3>🌤️ Test 8</h3>
+                        <p>Weather & Seasons</p>
+                    </a>
+                    <a href="test9.html" class="test-card">
+                        <h3>🗺️ Test 9</h3>
+                        <p>Places & Directions</p>
+                    </a>
+                    <a href="test10.html" class="test-card">
+                        <h3>🎯 Test 10</h3>
+                        <p>Final Review Test</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section" id="stats">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📊 Thống Kê Hệ Thống</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Bộ Đề Luyện Tập</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">400</div>
+                        <div class="stat-label">Tổng Số Câu Hỏi</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Units Bao Phủ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Dạng Bài Khác Nhau</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guide Section -->
+            <div class="stats-section" id="guide">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📖 Hướng Dẫn Sử Dụng</h2>
+                <div style="color: #34495e; line-height: 1.8; font-size: 16px;">
+                    <h3 style="color: #e74c3c;">🎯 Cách Chọn Đề Thi:</h3>
+                    <p>• Nhấp vào menu "📝 Đề Ôn Thi" để xem danh sách 10 bộ đề</p>
+                    <p>• Chọn đề phù hợp với mục tiêu ôn tập của bạn</p>
+                    <p>• Mỗi đề có 40 câu hỏi, thời gian làm bài 90 phút</p>
+
+                    <h3 style="color: #e74c3c; margin-top: 30px;">📝 Cấu Trúc Mỗi Đề Thi:</h3>
+                    <p>• <strong>Phần I:</strong> Grammar & Vocabulary (15 câu)</p>
+                    <p>• <strong>Phần II:</strong> Cloze Test (10 câu)</p>
+                    <p>• <strong>Phần III:</strong> Sentence Transformation (10 câu)</p>
+                    <p>• <strong>Phần IV:</strong> Reading Comprehension (5 câu)</p>
+
+                    <h3 style="color: #e74c3c; margin-top: 30px;">⚡ Tính Năng Đặc Biệt:</h3>
+                    <p>• Chấm điểm tự động và hiển thị kết quả chi tiết</p>
+                    <p>• Theo dõi tiến độ làm bài real-time</p>
+                    <p>• Phân tích điểm theo từng phần</p>
+                    <p>• Có thể làm lại nhiều lần để cải thiện điểm số</p>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="stats-section" id="about">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">ℹ️ Giới Thiệu</h2>
+                <div style="color: #34495e; line-height: 1.8; font-size: 16px; text-align: center;">
+                    <p>Hệ thống ôn thi tiếng Anh Units 1-6 được thiết kế đặc biệt cho học sinh muốn củng cố kiến thức và chuẩn bị tốt cho kỳ thi.</p>
+                    <p>Với 10 bộ đề đa dạng và phong phú, bạn sẽ có cơ hội luyện tập toàn diện các kỹ năng ngữ pháp, từ vựng, đọc hiểu và giao tiếp.</p>
+                    <p style="margin-top: 30px; font-style: italic; color: #7f8c8d;">
+                        "Thành công đến từ sự chuẩn bị kỹ lưỡng và luyện tập không ngừng!"
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Đáp án đúng - chỉ sử dụng ngữ pháp Units 1-6
-        const correctAnswers = {
-            // Grammar & Vocabulary (1-15)
-            q1: 'A', q2: 'B', q3: 'B', q4: 'C', q5: 'B',
-            q6: 'B', q7: 'C', q8: 'A', q9: 'B', q10: 'B',
-            q11: 'A', q12: 'B', q13: 'A', q14: 'A', q15: 'C',
-            
-            // Cloze Test (16-25)
-            q16: 'A', q17: 'C', q18: 'A', q19: 'B', q20: 'B',
-            q21: 'B', q22: 'B', q23: 'B', q24: 'C', q25: 'B',
-            
-            // Sentence Transformation (26-35)
-            q26: 'A', q27: 'A', q28: 'B', q29: 'A', q30: 'A',
-            q31: 'A', q32: 'A', q33: 'A', q34: 'A', q35: 'A',
-            
-            // Reading Comprehension (36-40)
-            q36: 'B', q37: 'B', q38: 'C', q39: 'C', q40: 'C'
-        };
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
 
-        // Cập nhật progress khi chọn đáp án
-        document.addEventListener('change', function(e) {
-            if (e.target.type === 'radio') {
-                updateProgress();
-            }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
 
-        function updateProgress() {
-            let answered = 0;
-            for (let i = 1; i <= 40; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selected) answered++;
-            }
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenu = document.querySelector('.mobile-menu');
             
-            const percentage = Math.round((answered / 40) * 100);
-            document.getElementById('progressBar').style.width = percentage + '%';
-            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
-        }
-
-        function submitTest() {
-            const studentName = document.getElementById('studentName').value;
-            const studentClass = document.getElementById('studentClass').value;
-            
-            if (!studentName || !studentClass) {
-                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
-                return;
-            }
-
-            let correctCount = 0;
-            let totalQuestions = 40;
-            let sectionScores = {
-                grammar: { correct: 0, total: 15 },
-                cloze: { correct: 0, total: 10 },
-                transformation: { correct: 0, total: 10 },
-                reading: { correct: 0, total: 5 }
-            };
-            
-            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
-            
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                const userAnswer = selected ? selected.value : null;
-                const correctAnswer = correctAnswers[`q${i}`];
-                const isCorrect = userAnswer === correctAnswer;
-                
-                if (isCorrect) {
-                    correctCount++;
-                    // Phân loại theo section
-                    if (i <= 15) sectionScores.grammar.correct++;
-                    else if (i <= 25) sectionScores.cloze.correct++;
-                    else if (i <= 35) sectionScores.transformation.correct++;
-                    else sectionScores.reading.correct++;
-                }
-                
-                const statusClass = isCorrect ? 'correct' : 'incorrect';
-                const statusIcon = isCorrect ? '✅' : '❌';
-                const answerText = userAnswer || 'Không chọn';
-                
-                detailedHTML += `
-                    <div class="question-result ${statusClass}">
-                        <strong>Câu ${i}:</strong> ${statusIcon} 
-                        Bạn chọn: <span>${answerText}</span> | 
-                        Đáp án: <span>${correctAnswer}</span>
-                        <em>Kết quả: ${isCorrect ? 'Đúng' : 'Sai'}</em>
-                    </div>
-                `;
-            }
-            
-            const score = (correctCount * 0.25).toFixed(2);
-            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
-            
-            let grade = '';
-            if (percentage >= 80) grade = 'Giỏi 🌟';
-            else if (percentage >= 65) grade = 'Khá 👍';
-            else if (percentage >= 50) grade = 'Trung bình 📝';
-            else grade = 'Cần cố gắng 💪';
-            
-            const currentDate = new Date().toLocaleString('vi-VN');
-            
-            document.getElementById('scoreInfo').innerHTML = `
-                <h3>👤 Thông tin thí sinh</h3>
-                <div class="score-details">
-                    <div class="score-item">
-                        <strong>${studentName}</strong>
-                        Họ tên
-                    </div>
-                    <div class="score-item">
-                        <strong>${studentClass}</strong>
-                        Lớp
-                    </div>
-                    <div class="score-item">
-                        <strong>${currentDate}</strong>
-                        Ngày thi
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
-                <div class="score-details">
-                    <div class="score-item">
-                        <strong>${correctCount}/40</strong>
-                        Số câu đúng
-                    </div>
-                    <div class="score-item">
-                        <strong>${score}/10</strong>
-                        Điểm số
-                    </div>
-                    <div class="score-item">
-                        <strong>${percentage}%</strong>
-                        Phần trăm
-                    </div>
-                    <div class="score-item">
-                        <strong>${grade}</strong>
-                        Xếp loại
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 30px;">📊 Kết quả từng phần</h3>
-                <div class="section-analysis">
-                    <strong>📝 Grammar & Vocabulary (Units 1-6):</strong> ${sectionScores.grammar.correct}/${sectionScores.grammar.total} (${((sectionScores.grammar.correct/sectionScores.grammar.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>📖 Cloze Test:</strong> ${sectionScores.cloze.correct}/${sectionScores.cloze.total} (${((sectionScores.cloze.correct/sectionScores.cloze.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>🔄 Sentence Transformation:</strong> ${sectionScores.transformation.correct}/${sectionScores.transformation.total} (${((sectionScores.transformation.correct/sectionScores.transformation.total)*100).toFixed(1)}%)
-                </div>
-                <div class="section-analysis">
-                    <strong>📚 Reading Comprehension:</strong> ${sectionScores.reading.correct}/${sectionScores.reading.total} (${((sectionScores.reading.correct/sectionScores.reading.total)*100).toFixed(1)}%)
-                </div>
-            `;
-            
-            document.getElementById('detailedResults').innerHTML = detailedHTML;
-            document.getElementById('result').style.display = 'block';
-            
-            // Scroll to results
-            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function resetTest() {
-            // Reset form
-            document.getElementById('testForm').reset();
-            document.getElementById('studentName').value = '';
-            document.getElementById('studentClass').value = '';
-            
-            // Reset progress
-            document.getElementById('progressBar').style.width = '0%';
-            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
-            
-            // Hide results
-            document.getElementById('result').style.display = 'none';
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Prevent accidental page refresh
-        window.addEventListener('beforeunload', function(e) {
-            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
-            if (answered > 0) {
-                e.preventDefault();
-                e.returnValue = '';
+            if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
             }
         });
     </script>
