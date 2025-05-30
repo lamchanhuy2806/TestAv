@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 5 - Units 1-6 Listening & Speaking Practice</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="test-paper">
+        <div class="header">
+            <h1>📚 Test 5 - Units 1-6 Listening & Speaking Practice</h1>
+            <h2>Communication & Pronunciation Focus</h2>
+            <p><strong>Grammar • Vocabulary • Reading • Writing • Listening • Speaking</strong></p>
+        </div>
+
+        <div class="exam-info">
+            <h3>📋 THÔNG TIN BÀI THI</h3>
+            <div class="info-grid">
+                <div class="info-item">⏰ Thời gian: 90 phút</div>
+                <div class="info-item">📝 Số câu: 40 câu</div>
+                <div class="info-item">📊 Mỗi câu: 0.25 điểm</div>
+                <div class="info-item">🎯 Units 1-6</div>
+            </div>
+        </div>
+
+        <div class="student-info">
+            <div class="info-row">
+                <div class="info-field">
+                    <label><strong>Họ và tên:</strong></label>
+                    <input type="text" id="studentName" placeholder="Nhập họ tên">
+                </div>
+                <div class="info-field">
+                    <label><strong>Lớp:</strong></label>
+                    <input type="text" id="studentClass" placeholder="Nhập lớp">
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div id="progressText">📊 Đã trả lời: 0/40 câu (0%)</div>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <form id="testForm">
+            <!-- UNIT 1: YOU AND ME - PRONUNCIATION & SPEAKING -->
+            <div class="section-header">📝 UNIT 1: YOU AND ME - PRONUNCIATION & SPEAKING - 8 câu</div>
+            
+            <div class="question">
+                <div class="question-number">Câu 1: (Pronunciation - /s/ sound)</div>
+                <p>Which word has the same /s/ sound as "miss"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. cheese</label>
+                    <label><input type="radio" name="q1" value="B"> B. class</label>
+                    <label><input type="radio" name="q1" value="C"> C. these</label>
+                    <label><input type="radio" name="q1" value="D"> D. rose</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 2: (Listening - Personal information)</div>
+                <p>You hear: "My phone number is 0987-654-321." What is the correct format?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. oh-nine-eight-seven, six-five-four, three-two-one</label>
+                    <label><input type="radio" name="q2" value="B"> B. zero-nine-eight-seven, six-five-four, three-two-one</label>
+                    <label><input type="radio" name="q2" value="C"> C. nine-eight-seven, six-five-four, three-two-one</label>
+                    <label><input type="radio" name="q2" value="D"> D. o-nine-eight-seven, six-five-four, three-two-one</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 3: (Speaking - Responding to introductions)</div>
+                <p>A: "Let me introduce you to my colleague, Sarah." B: "_____"</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. How do you do?</label>
+                    <label><input type="radio" name="q3" value="B"> B. What's up?</label>
+                    <label><input type="radio" name="q3" value="C"> C. See you!</label>
+                    <label><input type="radio" name="q3" value="D"> D. Take care!</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 4: (Pronunciation - Stress patterns)</div>
+                <p>Which word has the stress on the FIRST syllable?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Australia</label>
+                    <label><input type="radio" name="q4" value="B"> B. Japanese</label>
+                    <label><input type="radio" name="q4" value="C"> C. Vietnam</label>
+                    <label><input type="radio" name="q4" value="D"> D. Canada</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 5: (Listening - Numbers)</div>
+                <p>You hear someone spell: "T-H-I-R-T-E-E-N". What number is this?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. 30</label>
+                    <label><input type="radio" name="q5" value="B"> B. 13</label>
+                    <label><input type="radio" name="q5" value="C"> C. 3</label>
+                    <label><input type="radio" name="q5" value="D"> D. 33</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 6: (Speaking - Asking for repetition)</div>
+                <p>You didn't hear someone's name clearly. What do you say?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. What?</label>
+                    <label><input type="radio" name="q6" value="B"> B. Sorry, could you repeat that?</label>
+                    <label><input type="radio" name="q6" value="C"> C. I don't understand</label>
+                    <label><input type="radio" name="q6" value="D"> D. Speak louder</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 7: (Pronunciation - Vowel sounds)</div>
+                <p>Which word has the same vowel sound as "name"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. man</label>
+                    <label><input type="radio" name="q7" value="B"> B. game</label>
+                    <label><input type="radio" name="q7" value="C"> C. can</label>
+                    <label><input type="radio" name="q7" value="D"> D. hand</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 8: (Speaking - Ending conversations)</div>
+                <p>You're leaving a formal meeting. What do you say?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Bye!</label>
+                    <label><input type="radio" name="q8" value="B"> B. See ya!</label>
+                    <label><input type="radio" name="q8" value="C"> C. It was nice meeting you</label>
+                    <label><input type="radio" name="q8" value="D"> D. Catch you later!</label>
+                </div>
+            </div>
+
+            <!-- UNIT 2: WORK AND PLAY - CONVERSATION SKILLS -->
+            <div class="section-header">💼 UNIT 2: WORK AND PLAY - CONVERSATION SKILLS - 8 câu</div>
+
+            <div class="question">
+                <div class="question-number">Câu 9: (Listening - Daily routines)</div>
+                <p>You hear: "I get up at six, have breakfast at seven, and leave home at eight." What time does this person leave home?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. 6:00</label>
+                    <label><input type="radio" name="q9" value="B"> B. 7:00</label>
+                    <label><input type="radio" name="q9" value="C"> C. 8:00</label>
+                    <label><input type="radio" name="q9" value="D"> D. 9:00</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 10: (Speaking - Job interviews)</div>
+                <p>Interviewer: "What are your strengths?" Best response:</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. I'm perfect</label>
+                    <label><input type="radio" name="q10" value="B"> B. I work well in teams and I'm reliable</label>
+                    <label><input type="radio" name="q10" value="C"> C. I don't have weaknesses</label>
+                    <label><input type="radio" name="q10" value="D"> D. I'm better than others</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 11: (Pronunciation - /θ/ and /ð/ sounds)</div>
+                <p>Which word has the voiced /ð/ sound?</p>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> A. think</label>
+                    <label><input type="radio" name="q11" value="B"> B. thank</label>
+                    <label><input type="radio" name="q11" value="C"> C. this</label>
+                    <label><input type="radio" name="q11" value="D"> D. thin</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 12: (Listening - Weekend activities)</div>
+                <p>You hear: "On Saturday I clean my room, and on Sunday I visit my grandmother." When does this person clean their room?</p>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="A"> A. Friday</label>
+                    <label><input type="radio" name="q12" value="B"> B. Saturday</label>
+                    <label><input type="radio" name="q12" value="C"> C. Sunday</label>
+                    <label><input type="radio" name="q12" value="D"> D. Monday</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 13: (Speaking - Making suggestions)</div>
+                <p>Your friend looks tired. What do you suggest?</p>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> A. You look terrible</label>
+                    <label><input type="radio" name="q13" value="B"> B. Why don't you get some rest?</label>
+                    <label><input type="radio" name="q13" value="C"> C. Work harder</label>
+                    <label><input type="radio" name="q13" value="D"> D. I don't care</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 14: (Pronunciation - Silent letters)</div>
+                <p>Which word has a silent letter?</p>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> A. cat</label>
+                    <label><input type="radio" name="q14" value="B"> B. lamb</label>
+                    <label><input type="radio" name="q14" value="C"> C. dog</label>
+                    <label><input type="radio" name="q14" value="D"> D. pen</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 15: (Speaking - Describing work)</div>
+                <p>Someone asks about your job. How do you describe a challenging but enjoyable job?</p>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="A"> A. It's boring and easy</label>
+                    <label><input type="radio" name="q15" value="B"> B. It's demanding but rewarding</label>
+                    <label><input type="radio" name="q15" value="C"> C. I hate it</label>
+                    <label><input type="radio" name="q15" value="D"> D. It's terrible</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 16: (Listening - Time expressions)</div>
+                <p>You hear: "The meeting is at half past two in the afternoon." What time is the meeting?</p>
+                <div class="options">
+                    <label><input type="radio" name="q16" value="A"> A. 2:00 PM</label>
+                    <label><input type="radio" name="q16" value="B"> B. 2:30 PM</label>
+                    <label><input type="radio" name="q16" value="C"> C. 3:00 PM</label>
+                    <label><input type="radio" name="q16" value="D"> D. 3:30 PM</label>
+                </div>
+            </div>
+
+            <!-- UNIT 3: PEOPLE IN MY LIFE - SOCIAL COMMUNICATION -->
+            <div class="section-header">👨‍👩‍👧‍👦 UNIT 3: PEOPLE IN MY LIFE - SOCIAL COMMUNICATION - 8 câu</div>
+
+            <div class="question">
+                <div class="question-number">Câu 17: (Speaking - Inviting friends)</div>
+                <p>You want to invite someone to a party. What's the most polite way?</p>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> A. Come to my party!</label>
+                    <label><input type="radio" name="q17" value="B"> B. You must come to my party</label>
+                    <label><input type="radio" name="q17" value="C"> C. Would you like to come to my party?</label>
+                    <label><input type="radio" name="q17" value="D"> D. Be at my party</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 18: (Pronunciation - Linking sounds)</div>
+                <p>How is "an apple" pronounced with linking?</p>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> A. an apple</label>
+                    <label><input type="radio" name="q18" value="B"> B. a-napple</label>
+                    <label><input type="radio" name="q18" value="C"> C. an-apple</label>
+                    <label><input type="radio" name="q18" value="D"> D. ana-pple</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 19: (Listening - Family descriptions)</div>
+                <p>You hear: "My brother is taller than me, but my sister is the shortest in our family." Who is the tallest?</p>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> A. The speaker</label>
+                    <label><input type="radio" name="q19" value="B"> B. The brother</label>
+                    <label><input type="radio" name="q19" value="C"> C. The sister</label>
+                    <label><input type="radio" name="q19" value="D"> D. Can't tell</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 20: (Speaking - Expressing preferences)</div>
+                <p>Someone offers you tea or coffee, but you prefer juice. What do you say?</p>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> A. I don't want anything</label>
+                    <label><input type="radio" name="q20" value="B"> B. Actually, could I have some juice instead?</label>
+                    <label><input type="radio" name="q20" value="C"> C. No!</label>
+                    <label><input type="radio" name="q20" value="D"> D. I hate tea and coffee</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 21: (Pronunciation - Word stress in compounds)</div>
+                <p>Which word has the stress on the FIRST part?</p>
+                <div class="options">
+                    <label><input type="radio" name="q21" value="A"> A. understand</label>
+                    <label><input type="radio" name="q21" value="B"> B. afternoon</label>
+                    <label><input type="radio" name="q21" value="C"> C. homework</label>
+                    <label><input type="radio" name="q21" value="D"> D. forget</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 22: (Listening - Making arrangements)</div>
+                <p>You hear: "Let's meet at the café at seven, then go to the cinema at eight-thirty." What time should you be at the café?</p>
+                <div class="options">
+                    <label><input type="radio" name="q22" value="A"> A. 7:00</label>
+                    <label><input type="radio" name="q22" value="B"> B. 8:00</label>
+                    <label><input type="radio" name="q22" value="C"> C. 8:30</label>
+                    <label><input type="radio" name="q22" value="D"> D. 9:00</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 23: (Speaking - Accepting invitations)</div>
+                <p>A: "Would you like to join us for dinner?" B: "_____"</p>
+                <div class="options">
+                    <label><input type="radio" name="q23" value="A"> A. Maybe</label>
+                    <label><input type="radio" name="q23" value="B"> B. I suppose</label>
+                    <label><input type="radio" name="q23" value="C"> C. That sounds lovely, thank you</label>
+                    <label><input type="radio" name="q23" value="D"> D. If I have to</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 24: (Pronunciation - /ɪ/ and /iː/ sounds)</div>
+                <p>Which word has the short /ɪ/ sound?</p>
+                <div class="options">
+                    <label><input type="radio" name="q24" value="A"> A. seat</label>
+                    <label><input type="radio" name="q24" value="B"> B. see</label>
+                    <label><input type="radio" name="q24" value="C"> C. sit</label>
+                    <label><input type="radio" name="q24" value="D"> D. scene</label>
+                </div>
+            </div>
+
+            <!-- UNIT 4: HOME AND AWAY - COMMUNICATION SITUATIONS -->
+            <div class="section-header">🏠 UNIT 4: HOME AND AWAY - COMMUNICATION SITUATIONS - 8 câu</div>
+
+            <div class="question">
+                <div class="question-number">Câu 25: (Listening - Weather reports)</div>
+                <p>You hear: "Tomorrow will be cloudy with some rain in the morning, but sunny in the afternoon." What's the afternoon weather?</p>
+                <div class="options">
+                    <label><input type="radio" name="q25" value="A"> A. Cloudy</label>
+                    <label><input type="radio" name="q25" value="B"> B. Rainy</label>
+                    <label><input type="radio" name="q25" value="C"> C. Sunny</label>
+                    <label><input type="radio" name="q25" value="D"> D. Windy</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 26: (Speaking - Asking for directions)</div>
+                <p>You're lost and need to find the train station. What do you ask?</p>
+                <div class="options">
+                    <label><input type="radio" name="q26" value="A"> A. Where's the train station?</label>
+                    <label><input type="radio" name="q26" value="B"> B. Excuse me, could you tell me how to get to the train station?</label>
+                    <label><input type="radio" name="q26" value="C"> C. Train station!</label>
+                    <label><input type="radio" name="q26" value="D"> D. I need train station</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 27: (Pronunciation - Intonation patterns)</div>
+                <p>How do you say "Really?" when you're surprised (not questioning)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q27" value="A"> A. Really? (rising intonation)</label>
+                    <label><input type="radio" name="q27" value="B"> B. Really? (falling intonation)</label>
+                    <label><input type="radio" name="q27" value="C"> C. Really? (flat intonation)</label>
+                    <label><input type="radio" name="q27" value="D"> D. All the same</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 28: (Listening - Daily routines around the world)</div>
+                <p>You hear: "In Spain, people usually have dinner at ten o'clock at night." When do Spanish people have dinner?</p>
+                <div class="options">
+                    <label><input type="radio" name="q28" value="A"> A. 10:00 AM</label>
+                    <label><input type="radio" name="q28" value="B"> B. 10:00 PM</label>
+                    <label><input type="radio" name="q28" value="C"> C. 9:00 PM</label>
+                    <label><input type="radio" name="q28" value="D"> D. 11:00 PM</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 29: (Speaking - Describing routines)</div>
+                <p>How do you describe what you do every morning?</p>
+                <div class="options">
+                    <label><input type="radio" name="q29" value="A"> A. I'm getting up, washing, and eating</label>
+                    <label><input type="radio" name="q29" value="B"> B. I get up, wash, and have breakfast</label>
+                    <label><input type="radio" name="q29" value="C"> C. I got up, washed, and ate</label>
+                    <label><input type="radio" name="q29" value="D"> D. I will get up, wash, and eat</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 30: (Pronunciation - /w/ and /v/ sounds)</div>
+                <p>Which word starts with the /w/ sound?</p>
+                <div class="options">
+                    <label><input type="radio" name="q30" value="A"> A. very</label>
+                    <label><input type="radio" name="q30" value="B"> B. wear</label>
+                    <label><input type="radio" name="q30" value="C"> C. visit</label>
+                    <label><input type="radio" name="q30" value="D"> D. village</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 31: (Listening - Holiday plans)</div>
+                <p>You hear: "We're flying to Paris on Friday and coming back on Sunday." How long is their trip?</p>
+                <div class="options">
+                    <label><input type="radio" name="q31" value="A"> A. 1 day</label>
+                    <label><input type="radio" name="q31" value="B"> B. 2 days</label>
+                    <label><input type="radio" name="q31" value="C"> C. 3 days</label>
+                    <label><input type="radio" name="q31" value="D"> D. 4 days</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 32: (Speaking - Talking about weather)</div>
+                <p>It's raining heavily outside. What do you say to someone going out?</p>
+                <div class="options">
+                    <label><input type="radio" name="q32" value="A"> A. It's wet</label>
+                    <label><input type="radio" name="q32" value="B"> B. Take an umbrella, it's pouring outside</label>
+                    <label><input type="radio" name="q32" value="C"> C. Rain is falling</label>
+                    <label><input type="radio" name="q32" value="D"> D. Water from sky</label>
+                </div>
+            </div>
+
+            <!-- UNIT 5: WHAT ARE YOU WEARING? - SHOPPING CONVERSATIONS -->
+            <div class="section-header">👕 UNIT 5: WHAT ARE YOU WEARING? - SHOPPING CONVERSATIONS - 4 câu</div>
+
+            <div class="question">
+                <div class="question-number">Câu 33: (Speaking - Shopping for clothes)</div>
+                <p>Shop assistant: "Can I help you?" Customer's polite response:</p>
+                <div class="options">
+                    <label><input type="radio" name="q33" value="A"> A. No</label>
+                    <label><input type="radio" name="q33" value="B"> B. I'm just looking, thank you</label>
+                    <label><input type="radio" name="q33" value="C"> C. Go away</label>
+                    <label><input type="radio" name="q33" value="D"> D. Don't bother me</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 34: (Listening - Sizes and prices)</div>
+                <p>You hear: "The small is thirty pounds, the medium is thirty-five, and the large is forty." How much is the medium?</p>
+                <div class="options">
+                    <label><input type="radio" name="q34" value="A"> A. £30</label>
+                    <label><input type="radio" name="q34" value="B"> B. £35</label>
+                    <label><input type="radio" name="q34" value="C"> C. £40</label>
+                    <label><input type="radio" name="q34" value="D"> D. £45</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 35: (Pronunciation - /æ/ and /ʌ/ sounds)</div>
+                <p>Which word has the /ʌ/ sound like in "cup"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q35" value="A"> A. cat</label>
+                    <label><input type="radio" name="q35" value="B"> B. cut</label>
+                    <label><input type="radio" name="q35" value="C"> C. can</label>
+                    <label><input type="radio" name="q35" value="D"> D. cap</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 36: (Speaking - Describing clothes)</div>
+                <p>Someone asks what you're wearing to the party. How do you describe formal attire?</p>
+                <div class="options">
+                    <label><input type="radio" name="q36" value="A"> A. Old clothes</label>
+                    <label><input type="radio" name="q36" value="B"> B. A smart suit and dress shoes</label>
+                    <label><input type="radio" name="q36" value="C"> C. Pajamas</label>
+                    <label><input type="radio" name="q36" value="D"> D. Swimming costume</label>
+                </div>
+            </div>
+
+            <!-- UNIT 6: HOMES AND CITIES - LOCATION AND DIRECTIONS -->
+            <div class="section-header">🏠 UNIT 6: HOMES AND CITIES - LOCATION AND DIRECTIONS - 4 câu</div>
+
+            <div class="question">
+                <div class="question-number">Câu 37: (Listening - Giving directions)</div>
+                <p>You hear: "Go straight for two blocks, then turn left at the traffic lights." What do you do at the traffic lights?</p>
+                <div class="options">
+                    <label><input type="radio" name="q37" value="A"> A. Go straight</label>
+                    <label><input type="radio" name="q37" value="B"> B. Turn left</label>
+                    <label><input type="radio" name="q37" value="C"> C. Turn right</label>
+                    <label><input type="radio" name="q37" value="D"> D. Stop</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 38: (Speaking - Describing your home)</div>
+                <p>Someone asks about your ideal home. How do you describe it?</p>
+                <div class="options">
+                    <label><input type="radio" name="q38" value="A"> A. Big house, many rooms</label>
+                    <label><input type="radio" name="q38" value="B"> B. I'd love a cozy house with a garden and three bedrooms</label>
+                    <label><input type="radio" name="q38" value="C"> C. House good</label>
+                    <label><input type="radio" name="q38" value="D"> D. I want house</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 39: (Pronunciation - Silent 'h')</div>
+                <p>Which word has a silent 'h' at the beginning?</p>
+                <div class="options">
+                    <label><input type="radio" name="q39" value="A"> A. house</label>
+                    <label><input type="radio" name="q39" value="B"> B. hour</label>
+                    <label><input type="radio" name="q39" value="C"> C. hotel</label>
+                    <label><input type="radio" name="q39" value="D"> D. happy</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 40: (Speaking - Asking about facilities)</div>
+                <p>You're looking for an apartment. What's the best way to ask about nearby amenities?</p>
+                <div class="options">
+                    <label><input type="radio" name="q40" value="A"> A. What's around here?</label>
+                    <label><input type="radio" name="q40" value="B"> B. Are there any shops, schools, or public transport nearby?</label>
+                    <label><input type="radio" name="q40" value="C"> C. Things near?</label>
+                    <label><input type="radio" name="q40" value="D"> D. Got stuff?</label>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- NÚT SUBMIT Ở CUỐI TRANG -->
+        <div class="submit-section">
+            <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
+        </div>
+
+        <!-- KẾT QUẢ -->
+        <div id="result" class="result-section" style="display: none;">
+            <h2>📊 KẾT QUẢ BÀI THI</h2>
+            <div id="scoreInfo" class="score-summary"></div>
+            <div id="detailedResults" class="detailed-results"></div>
+            <div class="submit-section">
+                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Đáp án đúng cho Test 5 - Listening & Speaking Focus
+        const correctAnswers = {
+            // Unit 1: You and me - Pronunciation & Speaking (1-8)
+            q1: 'B', q2: 'B', q3: 'A', q4: 'D', q5: 'B',
+            q6: 'B', q7: 'B', q8: 'C',
+            
+            // Unit 2: Work and play - Conversation Skills (9-16)
+            q9: 'C', q10: 'B', q11: 'C', q12: 'B', q13: 'B',
+            q14: 'B', q15: 'B', q16: 'B',
+            
+            // Unit 3: People in my life - Social Communication (17-24)
+            q17: 'C', q18: 'B', q19: 'B', q20: 'B', q21: 'C',
+            q22: 'A', q23: 'C', q24: 'C',
+            
+            // Unit 4: Home and away - Communication Situations (25-32)
+            q25: 'C', q26: 'B', q27: 'A', q28: 'B', q29: 'B',
+            q30: 'B', q31: 'C', q32: 'B',
+            
+            // Unit 5: What are you wearing? - Shopping Conversations (33-36)
+            q33: 'B', q34: 'B', q35: 'B', q36: 'B',
+            
+            // Unit 6: Homes and cities - Location and Directions (37-40)
+            q37: 'B', q38: 'B', q39: 'B', q40: 'B'
+        };
+
+        // Giải thích đáp án chi tiết cho Test 5
+        const explanations = {
+            q1: "B. class - Âm /s/ giống như trong 'miss' và 'class'",
+            q2: "B. zero-nine-eight-seven, six-five-four, three-two-one - Cách đọc số điện thoại tiêu chuẩn",
+            q3: "A. How do you do? - Phản hồi lịch sự khi được giới thiệu",
+            q4: "D. Canada - Trọng âm rơi vào âm tiết đầu: 'CA-na-da'",
+            q5: "B. 13 - T-H-I-R-T-E-E-N đánh vần số 13",
+            q6: "B. Sorry, could you repeat that? - Cách lịch sự xin người khác nhắc lại",
+            q7: "B. game - Cùng âm /eɪ/ như trong 'name'",
+            q8: "C. It was nice meeting you - Cách chào tạm biệt trang trọng",
+            
+            q9: "C. 8:00 - 'leave home at eight' = rời nhà lúc 8 giờ",
+            q10: "B. I work well in teams and I'm reliable - Trả lời tích cực và cụ thể",
+            q11: "C. this - Âm /ð/ có trong 'this' (voiced)",
+            q12: "B. Saturday - 'On Saturday I clean my room'",
+            q13: "B. Why don't you get some rest? - Lời khuyên ân cần và phù hợp",
+            q14: "B. lamb - Chữ 'b' trong 'lamb' là âm câm",
+            q15: "B. It's demanding but rewarding - Mô tả công việc thách thức nhưng thú vị",
+            q16: "B. 2:30 PM - 'Half past two' = 2 giờ 30 phút",
+            
+            q17: "C. Would you like to come to my party? - Lời mời lịch sự nhất",
+            q18: "B. a-napple - Liên kết âm giữa 'an' và 'apple'",
+            q19: "B. The brother - Anh trai cao hơn người nói, em gái thấp nhất",
+            q20: "B. Actually, could I have some juice instead? - Cách từ chối lịch sự và đề xuất thay thế",
+            q21: "C. homework - Trọng âm rơi vào phần đầu: 'HOME-work'",
+            q22: "A. 7:00 - 'meet at the café at seven'",
+            q23: "C. That sounds lovely, thank you - Cách chấp nhận lời mời nhiệt tình",
+            q24: "C. sit - Âm /ɪ/ ngắn trong 'sit'",
+            
+            q25: "C. Sunny - 'sunny in the afternoon' = nắng vào buổi chiều",
+            q26: "B. Excuse me, could you tell me how to get to the train station? - Cách hỏi đường lịch sự và đầy đủ",
+            q27: "A. Really? (rising intonation) - Ngữ điệu lên khi ngạc nhiên",
+            q28: "B. 10:00 PM - 'ten o'clock at night' = 10 giờ tối",
+            q29: "B. I get up, wash, and have breakfast - Present simple cho thói quen hàng ngày",
+            q30: "B. wear - Bắt đầu bằng âm /w/",
+            q31: "C. 3 days - Từ thứ 6 đến chủ nhật = 3 ngày (Fri, Sat, Sun)",
+            q32: "B. Take an umbrella, it's pouring outside - Lời khuyên cụ thể và hữu ích",
+            
+            q33: "B. I'm just looking, thank you - Phản hồi lịch sự khi mua sắm",
+            q34: "B. £35 - 'the medium is thirty-five'",
+            q35: "B. cut - Âm /ʌ/ giống như trong 'cup'",
+            q36: "B. A smart suit and dress shoes - Mô tả trang phục trang trọng",
+            
+            q37: "B. Turn left - 'turn left at the traffic lights'",
+            q38: "B. I'd love a cozy house with a garden and three bedrooms - Mô tả chi tiết và tự nhiên",
+            q39: "B. hour - Chữ 'h' trong 'hour' là âm câm",
+            q40: "B. Are there any shops, schools, or public transport nearby? - Câu hỏi cụ thể và chuyên nghiệp"
+        };
+
+        // Cập nhật progress khi chọn đáp án
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio') {
+                updateProgress();
+            }
+        });
+
+        function updateProgress() {
+            let answered = 0;
+            for (let i = 1; i <= 40; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) answered++;
+            }
+            
+            const percentage = Math.round((answered / 40) * 100);
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
+        }
+
+        function submitTest() {
+            const studentName = document.getElementById('studentName').value;
+            const studentClass = document.getElementById('studentClass').value;
+            
+            if (!studentName || !studentClass) {
+                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
+                return;
+            }
+
+            let correctCount = 0;
+            let totalQuestions = 40;
+            let unitScores = {
+                unit1: { correct: 0, total: 8 },
+                unit2: { correct: 0, total: 8 },
+                unit3: { correct: 0, total: 8 },
+                unit4: { correct: 0, total: 8 },
+                unit5: { correct: 0, total: 4 },
+                unit6: { correct: 0, total: 4 }
+            };
+            
+            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const userAnswer = selected ? selected.value : null;
+                const correctAnswer = correctAnswers[`q${i}`];
+                const isCorrect = userAnswer === correctAnswer;
+                
+                if (isCorrect) {
+                    correctCount++;
+                    // Phân loại theo unit
+                    if (i <= 8) unitScores.unit1.correct++;
+                    else if (i <= 16) unitScores.unit2.correct++;
+                    else if (i <= 24) unitScores.unit3.correct++;
+                    else if (i <= 32) unitScores.unit4.correct++;
+                    else if (i <= 36) unitScores.unit5.correct++;
+                    else unitScores.unit6.correct++;
+                }
+                
+                const statusClass = isCorrect ? 'correct' : 'incorrect';
+                const statusIcon = isCorrect ? '✅' : '❌';
+                const answerText = userAnswer || 'Không chọn';
+                
+                // Determine unit for display
+                let unitName = '';
+                if (i <= 8) unitName = 'Unit 1: Pronunciation & Speaking';
+                else if (i <= 16) unitName = 'Unit 2: Conversation Skills';
+                else if (i <= 24) unitName = 'Unit 3: Social Communication';
+                else if (i <= 32) unitName = 'Unit 4: Communication Situations';
+                else if (i <= 36) unitName = 'Unit 5: Shopping Conversations';
+                else unitName = 'Unit 6: Location & Directions';
+                
+                detailedHTML += `
+                    <div class="question-result ${statusClass}">
+                        <strong>Câu ${i} (${unitName}):</strong> ${statusIcon} 
+                        <br>Bạn chọn: <span style="color: ${isCorrect ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${answerText}</span> | 
+                        Đáp án đúng: <span style="color: #27ae60; font-weight: bold;">${correctAnswer}</span>
+                        <br><em style="color: #34495e; font-size: 14px; margin-top: 5px; display: block;">
+                        💡 Giải thích: ${explanations[`q${i}`] || 'Không có giải thích.'}
+                        </em>
+                    </div>
+                `;
+            }
+            
+            const score = (correctCount * 0.25).toFixed(2);
+            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
+            
+            let grade = '';
+            if (percentage >= 80) grade = 'Giỏi 🌟';
+            else if (percentage >= 65) grade = 'Khá 👍';
+            else if (percentage >= 50) grade = 'Trung bình 📝';
+            else grade = 'Cần cố gắng 💪';
+            
+            const currentDate = new Date().toLocaleString('vi-VN');
+            
+            document.getElementById('scoreInfo').innerHTML = `
+                <h3>👤 Thông tin thí sinh</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${studentName}</strong>
+                        Họ tên
+                    </div>
+                    <div class="score-item">
+                        <strong>${studentClass}</strong>
+                        Lớp
+                    </div>
+                    <div class="score-item">
+                        <strong>${currentDate}</strong>
+                        Ngày thi
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${correctCount}/40</strong>
+                        Số câu đúng
+                    </div>
+                    <div class="score-item">
+                        <strong>${score}/10</strong>
+                        Điểm số
+                    </div>
+                    <div class="score-item">
+                        <strong>${percentage}%</strong>
+                        Phần trăm
+                    </div>
+                    <div class="score-item">
+                        <strong>${grade}</strong>
+                        Xếp loại
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">📚 Kết quả từng Unit</h3>
+                <div class="section-analysis">
+                    <strong>🎤 Unit 1 - Pronunciation & Speaking:</strong> ${unitScores.unit1.correct}/${unitScores.unit1.total} (${((unitScores.unit1.correct/unitScores.unit1.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>💬 Unit 2 - Conversation Skills:</strong> ${unitScores.unit2.correct}/${unitScores.unit2.total} (${((unitScores.unit2.correct/unitScores.unit2.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>👥 Unit 3 - Social Communication:</strong> ${unitScores.unit3.correct}/${unitScores.unit3.total} (${((unitScores.unit3.correct/unitScores.unit3.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>🗣️ Unit 4 - Communication Situations:</strong> ${unitScores.unit4.correct}/${unitScores.unit4.total} (${((unitScores.unit4.correct/unitScores.unit4.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>🛍️ Unit 5 - Shopping Conversations:</strong> ${unitScores.unit5.correct}/${unitScores.unit5.total} (${((unitScores.unit5.correct/unitScores.unit5.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>📍 Unit 6 - Location & Directions:</strong> ${unitScores.unit6.correct}/${unitScores.unit6.total} (${((unitScores.unit6.correct/unitScores.unit6.total)*100).toFixed(1)}%)
+                </div>
+            `;
+            
+            document.getElementById('detailedResults').innerHTML = detailedHTML;
+            document.getElementById('result').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetTest() {
+            // Reset form
+            document.getElementById('testForm').reset();
+            document.getElementById('studentName').value = '';
+            document.getElementById('studentClass').value = '';
+            
+            // Reset progress
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
+            
+            // Hide results
+            document.getElementById('result').style.display = 'none';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Prevent accidental page refresh
+        window.addEventListener('beforeunload', function(e) {
+            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
+            if (answered > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+    </script>
+</body>
+</html>
