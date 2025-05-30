@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 8 - Units 1-6 Comprehensive Practice</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="test-paper">
+        <div class="header">
+            <h1>📚 Test 8 - Units 1-6 Comprehensive Practice</h1>
+            <h2>Final Assessment Test</h2>
+            <p><strong>Grammar • Vocabulary • Reading • Writing • Listening • Speaking</strong></p>
+        </div>
+
+        <div class="exam-info">
+            <h3>📋 THÔNG TIN BÀI THI</h3>
+            <div class="info-grid">
+                <div class="info-item">⏰ Thời gian: 90 phút</div>
+                <div class="info-item">📝 Số câu: 40 câu</div>
+                <div class="info-item">📊 Mỗi câu: 0.25 điểm</div>
+                <div class="info-item">🎯 Units 1-6</div>
+            </div>
+        </div>
+
+        <div class="student-info">
+            <div class="info-row">
+                <div class="info-field">
+                    <label><strong>Họ và tên:</strong></label>
+                    <input type="text" id="studentName" placeholder="Nhập họ tên">
+                </div>
+                <div class="info-field">
+                    <label><strong>Lớp:</strong></label>
+                    <input type="text" id="studentClass" placeholder="Nhập lớp">
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div id="progressText">📊 Đã trả lời: 0/40 câu (0%)</div>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <form id="testForm">
+            <!-- MIXED QUESTIONS FROM ALL UNITS -->
+            
+            <div class="question">
+                <div class="question-number">Câu 1: (Unit 2 - Professional skills and abilities)</div>
+                <p>A secretary _____ letters and a pilot _____ airplanes.</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. types / flies</label>
+                    <label><input type="radio" name="q1" value="B"> B. type / fly</label>
+                    <label><input type="radio" name="q1" value="C"> C. typing / flying</label>
+                    <label><input type="radio" name="q1" value="D"> D. is type / is fly</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 2: (Unit 5 - Clothing sizes and shopping)</div>
+                <p>A: "What size do you wear?" B: "_____"</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. I wear clothes</label>
+                    <label><input type="radio" name="q2" value="B"> B. I'm medium</label>
+                    <label><input type="radio" name="q2" value="C"> C. I like blue</label>
+                    <label><input type="radio" name="q2" value="D"> D. It's expensive</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 3: (Unit 1 - School subjects and preferences)</div>
+                <p>My _____ subject is math, but my _____ subject is history.</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. favorite / worst</label>
+                    <label><input type="radio" name="q3" value="B"> B. best / good</label>
+                    <label><input type="radio" name="q3" value="C"> C. like / dislike</label>
+                    <label><input type="radio" name="q3" value="D"> D. easy / hard</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 4: (Unit 6 - Urban vs rural living)</div>
+                <p>I prefer living in the _____ because it's peaceful, not in the _____ because it's too noisy.</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. city / countryside</label>
+                    <label><input type="radio" name="q4" value="B"> B. countryside / city</label>
+                    <label><input type="radio" name="q4" value="C"> C. town / village</label>
+                    <label><input type="radio" name="q4" value="D"> D. center / suburbs</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 5: (Unit 4 - Morning routine sequence)</div>
+                <p>First, I _____ my alarm clock. Then, I _____ out of bed.</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. turn off / get</label>
+                    <label><input type="radio" name="q5" value="B"> B. turn on / go</label>
+                    <label><input type="radio" name="q5" value="C"> C. set / put</label>
+                    <label><input type="radio" name="q5" value="D"> D. ring / jump</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 6: (Unit 3 - Extended family relationships)</div>
+                <p>My sister's husband is my _____ and their children are my _____.</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. brother-in-law / nephews and nieces</label>
+                    <label><input type="radio" name="q6" value="B"> B. cousin / grandchildren</label>
+                    <label><input type="radio" name="q6" value="C"> C. uncle / cousins</label>
+                    <label><input type="radio" name="q6" value="D"> D. step-brother / step-children</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 7: (Unit 1 - Technology and communication)</div>
+                <p>I use my _____ to make calls and my _____ to send emails.</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. computer / phone</label>
+                    <label><input type="radio" name="q7" value="B"> B. phone / computer</label>
+                    <label><input type="radio" name="q7" value="C"> C. tablet / laptop</label>
+                    <label><input type="radio" name="q7" value="D"> D. watch / camera</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 8: (Unit 2 - Work environments and conditions)</div>
+                <p>Some people work _____ while others work _____. Both have advantages.</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. indoors / outdoors</label>
+                    <label><input type="radio" name="q8" value="B"> B. alone / together</label>
+                    <label><input type="radio" name="q8" value="C"> C. hard / easy</label>
+                    <label><input type="radio" name="q8" value="D"> D. early / late</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 9: (Unit 4 - Describing seasons and changes)</div>
+                <p>The days get _____ in winter and _____ in summer.</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. longer / shorter</label>
+                    <label><input type="radio" name="q9" value="B"> B. shorter / longer</label>
+                    <label><input type="radio" name="q9" value="C"> C. colder / hotter</label>
+                    <label><input type="radio" name="q9" value="D"> D. darker / brighter</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 10: (Unit 5 - Fashion and style descriptions)</div>
+                <p>She has excellent _____. Her clothes always look _____ and stylish.</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. taste / fashionable</label>
+                    <label><input type="radio" name="q10" value="B"> B. money / expensive</label>
+                    <label><input type="radio" name="q10" value="C"> C. time / quick</label>
+                    <label><input type="radio" name="q10" value="D"> D. luck / lucky</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 11: (Unit 6 - Transportation and commuting)</div>
+                <p>The _____ is always crowded during rush hour, so I prefer to _____ to work.</p>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> A. bus / walk</label>
+                    <label><input type="radio" name="q11" value="B"> B. road / drive</label>
+                    <label><input type="radio" name="q11" value="C"> C. train / fly</label>
+                    <label><input type="radio" name="q11" value="D"> D. subway / run</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 12: (Unit 3 - Describing emotions and feelings)</div>
+                <p>I feel _____ when I watch horror movies but _____ when I watch comedies.</p>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="A"> A. scared / happy</label>
+                    <label><input type="radio" name="q12" value="B"> B. excited / bored</label>
+                    <label><input type="radio" name="q12" value="C"> C. tired / energetic</label>
+                    <label><input type="radio" name="q12" value="D"> D. confused / clear</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 13: (Unit 1 - Personal identification details)</div>
+                <p>A: "Could I have your full name and date of birth?" B: "_____"</p>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> A. I'm fine, thank you</label>
+                    <label><input type="radio" name="q13" value="B"> B. Sarah Johnson, March 15th, 1995</label>
+                    <label><input type="radio" name="q13" value="C"> C. I live in London</label>
+                    <label><input type="radio" name="q13" value="D"> D. I'm a student</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 14: (Unit 4 - Weather predictions and plans)</div>
+                <p>If it _____ tomorrow, we _____ the picnic.</p>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> A. rains / will cancel</label>
+                    <label><input type="radio" name="q14" value="B"> B. will rain / cancel</label>
+                    <label><input type="radio" name="q14" value="C"> C. rained / canceled</label>
+                    <label><input type="radio" name="q14" value="D"> D. is raining / are canceling</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 15: (Unit 2 - Career goals and aspirations)</div>
+                <p>When I finish university, I _____ to become a software engineer.</p>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="A"> A. want</label>
+                    <label><input type="radio" name="q15" value="B"> B. wanted</label>
+                    <label><input type="radio" name="q15" value="C"> C. will want</label>
+                    <label><input type="radio" name="q15" value="D"> D. am wanting</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 16: (Unit 5 - Clothing care and maintenance)</div>
+                <p>You should _____ this shirt in cold water and _____ it in the shade.</p>
+                <div class="options">
+                    <label><input type="radio" name="q16" value="A"> A. wash / dry</label>
+                    <label><input type="radio" name="q16" value="B"> B. clean / iron</label>
+                    <label><input type="radio" name="q16" value="C"> C. soak / fold</label>
+                    <label><input type="radio" name="q16" value="D"> D. rinse / hang</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 17: (Unit 3 - Social gatherings and celebrations)</div>
+                <p>We're _____ a birthday party for Tom next Saturday. Would you like to _____?</p>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> A. having / come</label>
+                    <label><input type="radio" name="q17" value="B"> B. making / join</label>
+                    <label><input type="radio" name="q17" value="C"> C. doing / attend</label>
+                    <label><input type="radio" name="q17" value="D"> D. organizing / participate</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 18: (Unit 6 - Housing types and features)</div>
+                <p>They live in a modern _____ with a swimming pool and a large _____.</p>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> A. apartment / balcony</label>
+                    <label><input type="radio" name="q18" value="B"> B. house / garden</label>
+                    <label><input type="radio" name="q18" value="C"> C. flat / terrace</label>
+                    <label><input type="radio" name="q18" value="D"> D. villa / courtyard</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 19: (Unit 1 - Educational achievements)</div>
+                <p>She's very _____ at languages. She speaks five languages _____.</p>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> A. good / fluently</label>
+                    <label><input type="radio" name="q19" value="B"> B. well / fluent</label>
+                    <label><input type="radio" name="q19" value="C"> C. better / more fluent</label>
+                    <label><input type="radio" name="q19" value="D"> D. best / most fluently</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 20: (Unit 4 - Vacation activities and experiences)</div>
+                <p>During our holiday, we _____ many museums and _____ lots of souvenirs.</p>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> A. visited / bought</label>
+                    <label><input type="radio" name="q20" value="B"> B. saw / took</label>
+                    <label><input type="radio" name="q20" value="C"> C. went / found</label>
+                    <label><input type="radio" name="q20" value="D"> D. looked / got</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 21: (Unit 2 - Work-life balance)</div>
+                <p>It's important to have a good _____ between work and personal life.</p>
+                <div class="options">
+                    <label><input type="radio" name="q21" value="A"> A. balance</label>
+                    <label><input type="radio" name="q21" value="B"> B. difference</label>
+                    <label><input type="radio" name="q21" value="C"> C. separation</label>
+                    <label><input type="radio" name="q21" value="D"> D. distance</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 22: (Unit 5 - Seasonal clothing choices)</div>
+                <p>In autumn, people usually wear _____ because the weather gets _____.</p>
+                <div class="options">
+                    <label><input type="radio" name="q22" value="A"> A. layers / unpredictable</label>
+                    <label><input type="radio" name="q22" value="B"> B. shorts / warm</label>
+                    <label><input type="radio" name="q22" value="C"> C. swimwear / hot</label>
+                    <label><input type="radio" name="q22" value="D"> D. uniforms / formal</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 23: (Unit 3 - Personality traits and characteristics)</div>
+                <p>My brother is very _____. He always thinks before he speaks.</p>
+                <div class="options">
+                    <label><input type="radio" name="q23" value="A"> A. thoughtful</label>
+                    <label><input type="radio" name="q23" value="B"> B. thoughtless</label>
+                    <label><input type="radio" name="q23" value="C"> C. thinking</label>
+                    <label><input type="radio" name="q23" value="D"> D. thoughts</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 24: (Unit 6 - Emergency services and safety)</div>
+                <p>In case of emergency, call the _____ for medical help or the _____ for fires.</p>
+                <div class="options">
+                    <label><input type="radio" name="q24" value="A"> A. ambulance / fire department</label>
+                    <label><input type="radio" name="q24" value="B"> B. hospital / police</label>
+                    <label><input type="radio" name="q24" value="C"> C. doctor / firefighter</label>
+                    <label><input type="radio" name="q24" value="D"> D. nurse / officer</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 25: (Unit 1 - Academic performance and grades)</div>
+                <p>If you _____ hard, you _____ good grades in your exams.</p>
+                <div class="options">
+                    <label><input type="radio" name="q25" value="A"> A. study / will get</label>
+                    <label><input type="radio" name="q25" value="B"> B. studied / got</label>
+                    <label><input type="radio" name="q25" value="C"> C. are studying / get</label>
+                    <label><input type="radio" name="q25" value="D"> D. will study / are getting</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 26: (Unit 4 - Global climate and geography)</div>
+                <p>The climate near the _____ is usually hot and humid, while _____ regions are cold and dry.</p>
+                <div class="options">
+                    <label><input type="radio" name="q26" value="A"> A. equator / polar</label>
+                    <label><input type="radio" name="q26" value="B"> B. ocean / mountain</label>
+                    <label><input type="radio" name="q26" value="C"> C. city / countryside</label>
+                    <label><input type="radio" name="q26" value="D"> D. desert / forest</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 27: (Unit 2 - Professional development and training)</div>
+                <p>Many companies provide _____ for their employees to improve their skills.</p>
+                <div class="options">
+                    <label><input type="radio" name="q27" value="A"> A. training</label>
+                    <label><input type="radio" name="q27" value="B"> B. punishment</label>
+                    <label><input type="radio" name="q27" value="C"> C. holidays</label>
+                    <label><input type="radio" name="q27" value="D"> D. problems</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 28: (Unit 5 - Shopping preferences and decisions)</div>
+                <p>A: "Which dress do you prefer?" B: "_____"</p>
+                <div class="options">
+                    <label><input type="radio" name="q28" value="A"> A. I prefer dresses</label>
+                    <label><input type="radio" name="q28" value="B"> B. I prefer the blue one to the red one</label>
+                    <label><input type="radio" name="q28" value="C"> C. I'm preferring blue</label>
+                    <label><input type="radio" name="q28" value="D"> D. Preferring is difficult</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 29: (Unit 3 - Cultural differences and customs)</div>
+                <p>In some cultures, people _____ hands when they meet, while in others they _____.</p>
+                <div class="options">
+                    <label><input type="radio" name="q29" value="A"> A. shake / bow</label>
+                    <label><input type="radio" name="q29" value="B"> B. hold / wave</label>
+                    <label><input type="radio" name="q29" value="C"> C. touch / smile</label>
+                    <label><input type="radio" name="q29" value="D"> D. clap / nod</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 30: (Unit 6 - Environmental concerns and solutions)</div>
+                <p>To protect the environment, we should _____ energy and _____ waste.</p>
+                <div class="options">
+                    <label><input type="radio" name="q30" value="A"> A. save / reduce</label>
+                    <label><input type="radio" name="q30" value="B"> B. use / increase</label>
+                    <label><input type="radio" name="q30" value="C"> C. waste / create</label>
+                    <label><input type="radio" name="q30" value="D"> D. spend / make</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 31: (Unit 1 - Technology in education)</div>
+                <p>Modern students use _____ and _____ to help them with their studies.</p>
+                <div class="options">
+                    <label><input type="radio" name="q31" value="A"> A. laptops / tablets</label>
+                    <label><input type="radio" name="q31" value="B"> B. books / pens</label>
+                    <label><input type="radio" name="q31" value="C"> C. desks / chairs</label>
+                    <label><input type="radio" name="q31" value="D"> D. bags / shoes</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 32: (Unit 4 - Health and wellness routines)</div>
+                <p>To stay healthy, you should _____ regularly and eat _____ food.</p>
+                <div class="options">
+                    <label><input type="radio" name="q32" value="A"> A. exercise / nutritious</label>
+                    <label><input type="radio" name="q32" value="B"> B. sleep / fast</label>
+                    <label><input type="radio" name="q32" value="C"> C. work / expensive</label>
+                    <label><input type="radio" name="q32" value="D"> D. study / hot</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 33: (Unit 2 - Workplace communication)</div>
+                <p>During meetings, it's important to _____ carefully and _____ your ideas clearly.</p>
+                <div class="options">
+                    <label><input type="radio" name="q33" value="A"> A. listen / express</label>
+                    <label><input type="radio" name="q33" value="B"> B. sleep / hide</label>
+                    <label><input type="radio" name="q33" value="C"> C. eat / forget</label>
+                    <label><input type="radio" name="q33" value="D"> D. play / ignore</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 34: (Unit 5 - Fashion trends and personal style)</div>
+                <p>Fashion trends _____ every season, but personal style _____ the same.</p>
+                <div class="options">
+                    <label><input type="radio" name="q34" value="A"> A. change / stays</label>
+                    <label><input type="radio" name="q34" value="B"> B. stay / changes</label>
+                    <label><input type="radio" name="q34" value="C"> C. improve / worsens</label>
+                    <label><input type="radio" name="q34" value="D"> D. disappear / appears</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 35: (Unit 3 - Generational differences)</div>
+                <p>_____ people often use social media, while _____ people prefer traditional communication.</p>
+                <div class="options">
+                    <label><input type="radio" name="q35" value="A"> A. Young / older</label>
+                    <label><input type="radio" name="q35" value="B"> B. Tall / short</label>
+                    <label><input type="radio" name="q35" value="C"> C. Rich / poor</label>
+                    <label><input type="radio" name="q35" value="D"> D. Happy / sad</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 36: (Unit 6 - City planning and infrastructure)</div>
+                <p>Good cities need efficient _____ systems and plenty of _____ spaces.</p>
+                <div class="options">
+                    <label><input type="radio" name="q36" value="A"> A. transportation / green</label>
+                    <label><input type="radio" name="q36" value="B"> B. education / red</label>
+                    <label><input type="radio" name="q36" value="C"> C. entertainment / blue</label>
+                    <label><input type="radio" name="q36" value="D"> D. shopping / yellow</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 37: (Unit 1 - Learning strategies and success)</div>
+                <p>The _____ way to learn a language is through _____ practice.</p>
+                <div class="options">
+                    <label><input type="radio" name="q37" value="A"> A. best / regular</label>
+                    <label><input type="radio" name="q37" value="B"> B. worst / irregular</label>
+                    <label><input type="radio" name="q37" value="C"> C. easiest / difficult</label>
+                    <label><input type="radio" name="q37" value="D"> D. hardest / simple</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 38: (Unit 4 - International travel experiences)</div>
+                <p>When you travel to _____ countries, you need to respect their _____ and traditions.</p>
+                <div class="options">
+                    <label><input type="radio" name="q38" value="A"> A. foreign / customs</label>
+                    <label><input type="radio" name="q38" value="B"> B. nearby / problems</label>
+                    <label><input type="radio" name="q38" value="C"> C. expensive / money</label>
+                    <label><input type="radio" name="q38" value="D"> D. dangerous / fears</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 39: (Unit 2 - Future career possibilities)</div>
+                <p>In the future, there will be many _____ jobs that don't exist today.</p>
+                <div class="options">
+                    <label><input type="radio" name="q39" value="A"> A. new</label>
+                    <label><input type="radio" name="q39" value="B"> B. old</label>
+                    <label><input type="radio" name="q39" value="C"> C. traditional</label>
+                    <label><input type="radio" name="q39" value="D"> D. past</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">Câu 40: (Unit 3 - Building relationships and trust)</div>
+                <p>Good friendships are _____ on trust, understanding, and _____ support.</p>
+                <div class="options">
+                    <label><input type="radio" name="q40" value="A"> A. based / mutual</label>
+                    <label><input type="radio" name="q40" value="B"> B. built / selfish</label>
+                    <label><input type="radio" name="q40" value="C"> C. founded / individual</label>
+                    <label><input type="radio" name="q40" value="D"> D. created / personal</label>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- NÚT SUBMIT Ở CUỐI TRANG -->
+        <div class="submit-section">
+            <button type="button" class="submit-btn" onclick="submitTest()">🎯 NỘP BÀI & XEM KẾT QUẢ</button>
+        </div>
+
+        <!-- KẾT QUẢ -->
+        <div id="result" class="result-section" style="display: none;">
+            <h2>📊 KẾT QUẢ BÀI THI</h2>
+            <div id="scoreInfo" class="score-summary"></div>
+            <div id="detailedResults" class="detailed-results"></div>
+            <div class="submit-section">
+                <button type="button" class="submit-btn" onclick="resetTest()" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔄 LÀM LẠI</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Đáp án đúng cho Test 8 - Comprehensive Practice
+        const correctAnswers = {
+            q1: 'A', q2: 'B', q3: 'A', q4: 'B', q5: 'A',
+            q6: 'A', q7: 'B', q8: 'A', q9: 'B', q10: 'A',
+            q11: 'A', q12: 'A', q13: 'B', q14: 'A', q15: 'A',
+            q16: 'A', q17: 'A', q18: 'B', q19: 'A', q20: 'A',
+            q21: 'A', q22: 'A', q23: 'A', q24: 'A', q25: 'A',
+            q26: 'A', q27: 'A', q28: 'B', q29: 'A', q30: 'A',
+            q31: 'A', q32: 'A', q33: 'A', q34: 'A', q35: 'A',
+            q36: 'A', q37: 'A', q38: 'A', q39: 'A', q40: 'A'
+        };
+
+        // Giải thích đáp án chi tiết cho Test 8
+        const explanations = {
+            q1: "A. types / flies - Present simple ngôi thứ 3 số ít: 'secretary types', 'pilot flies'",
+            q2: "B. I'm medium - Trả lời về kích cỡ quần áo: 'I'm small/medium/large'",
+            q3: "A. favorite / worst - Môn học yêu thích và môn học tệ nhất",
+            q4: "B. countryside / city - Thích vùng nông thôn yên tĩnh hơn thành phố ồn ào",
+            q5: "A. turn off / get - 'Turn off alarm clock' và 'get out of bed'",
+            q6: "A. brother-in-law / nephews and nieces - Chồng của chị/em gái và con của họ",
+            q7: "B. phone / computer - Điện thoại để gọi, máy tính để gửi email",
+            q8: "A. indoors / outdoors - Làm việc trong nhà và ngoài trời",
+            q9: "B. shorter / longer - Ngày ngắn hơn vào mùa đông, dài hơn vào mùa hè",
+            q10: "A. taste / fashionable - 'Good taste' = gu thẩm mỹ tốt, quần áo 'fashionable'",
+            q11: "A. bus / walk - Xe buýt đông đúc nên thích đi bộ",
+            q12: "A. scared / happy - Sợ hãi với phim kinh dị, vui vẻ với phim hài",
+            q13: "B. Sarah Johnson, March 15th, 1995 - Trả lời đầy đủ họ tên và ngày sinh",
+            q14: "A. rains / will cancel - Câu điều kiện loại 1: If + present simple, will + V",
+            q15: "A. want - Present simple cho mong muốn tương lai",
+            q16: "A. wash / dry - Giặt trong nước lạnh và phơi trong bóng mát",
+            q17: "A. having / come - 'Having a party' và 'come to the party'",
+            q18: "B. house / garden - Ngôi nhà hiện đại với hồ bơi và vườn lớn",
+            q19: "A. good / fluently - 'Good at' + noun, 'speak fluently' (adverb)",
+            q20: "A. visited / bought - Past tense: thăm bảo tàng và mua đồ lưu niệm",
+            q21: "A. balance - 'Work-life balance' = cân bằng công việc-cuộc sống",
+            q22: "A. layers / unpredictable - Mùa thu mặc nhiều lớp vì thời tiết khó đoán",
+            q23: "A. thoughtful - Chu đáo, suy nghĩ kỹ trước khi nói",
+            q24: "A. ambulance / fire department - Xe cứu thương cho y tế, cứu hỏa cho hỏa hoạn",
+            q25: "A. study / will get - Câu điều kiện loại 1 về học tập",
+            q26: "A. equator / polar - Vùng xích đạo nóng ẩm, vùng cực lạnh khô",
+            q27: "A. training - Các công ty cung cấp đào tạo cho nhân viên",
+            q28: "B. I prefer the blue one to the red one - Cách thể hiện sự ưa thích giữa hai lựa chọn",
+            q29: "A. shake / bow - Bắt tay trong một số nền văn hóa, cúi chào trong nền văn hóa khác",
+            q30: "A. save / reduce - Tiết kiệm năng lượng và giảm rác thải",
+            q31: "A. laptops / tablets - Công nghệ hiện đại trong giáo dục",
+            q32: "A. exercise / nutritious - Tập thể dục và ăn thức ăn bổ dưỡng",
+            q33: "A. listen / express - Lắng nghe và thể hiện ý kiến trong cuộc họp",
+            q34: "A. change / stays - Xu hướng thời trang thay đổi, phong cách cá nhân không đổi",
+            q35: "A. Young / older - Người trẻ dùng mạng xã hội, người lớn tuổi thích giao tiếp truyền thống",
+            q36: "A. transportation / green - Hệ thống giao thông và không gian xanh",
+            q37: "A. best / regular - Cách tốt nhất học ngôn ngữ là thực hành thường xuyên",
+            q38: "A. foreign / customs - Du lịch nước ngoài cần tôn trọng phong tục",
+            q39: "A. new - Tương lai sẽ có nhiều công việc mới",
+            q40: "A. based / mutual - Tình bạn dựa trên sự tin tưởng và hỗ trợ lẫn nhau"
+        };
+
+        // Cập nhật progress khi chọn đáp án
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio') {
+                updateProgress();
+            }
+        });
+
+        function updateProgress() {
+            let answered = 0;
+            for (let i = 1; i <= 40; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) answered++;
+            }
+            
+            const percentage = Math.round((answered / 40) * 100);
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `📊 Đã trả lời: ${answered}/40 câu (${percentage}%)`;
+        }
+
+        function submitTest() {
+            const studentName = document.getElementById('studentName').value;
+            const studentClass = document.getElementById('studentClass').value;
+            
+            if (!studentName || !studentClass) {
+                alert('Vui lòng nhập đầy đủ họ tên và lớp!');
+                return;
+            }
+
+            let correctCount = 0;
+            let totalQuestions = 40;
+            let unitScores = {
+                unit1: { correct: 0, total: 8 },
+                unit2: { correct: 0, total: 10 },
+                unit3: { correct: 0, total: 8 },
+                unit4: { correct: 0, total: 6 },
+                unit5: { correct: 0, total: 4 },
+                unit6: { correct: 0, total: 4 }
+            };
+            
+            // Mapping câu hỏi theo unit (dựa vào ghi chú trong câu hỏi)
+            const questionUnits = {
+                1: 2, 2: 5, 3: 1, 4: 6, 5: 4, 6: 3, 7: 1, 8: 2, 9: 4, 10: 5,
+                11: 6, 12: 3, 13: 1, 14: 4, 15: 2, 16: 5, 17: 3, 18: 6, 19: 1, 20: 4,
+                21: 2, 22: 5, 23: 3, 24: 6, 25: 1, 26: 4, 27: 2, 28: 5, 29: 3, 30: 6,
+                31: 1, 32: 4, 33: 2, 34: 5, 35: 3, 36: 6, 37: 1, 38: 4, 39: 2, 40: 3
+            };
+            
+            let detailedHTML = '<h4>📋 Chi tiết từng câu:</h4>';
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const userAnswer = selected ? selected.value : null;
+                const correctAnswer = correctAnswers[`q${i}`];
+                const isCorrect = userAnswer === correctAnswer;
+                
+                if (isCorrect) {
+                    correctCount++;
+                    // Phân loại theo unit
+                    const unit = questionUnits[i];
+                    switch(unit) {
+                        case 1: unitScores.unit1.correct++; break;
+                        case 2: unitScores.unit2.correct++; break;
+                        case 3: unitScores.unit3.correct++; break;
+                        case 4: unitScores.unit4.correct++; break;
+                        case 5: unitScores.unit5.correct++; break;
+                        case 6: unitScores.unit6.correct++; break;
+                    }
+                }
+                
+                const statusClass = isCorrect ? 'correct' : 'incorrect';
+                const statusIcon = isCorrect ? '✅' : '❌';
+                const answerText = userAnswer || 'Không chọn';
+                
+                // Determine unit for display
+                const unit = questionUnits[i];
+                let unitName = '';
+                switch(unit) {
+                    case 1: unitName = 'Unit 1: You and me'; break;
+                    case 2: unitName = 'Unit 2: Work and play'; break;
+                    case 3: unitName = 'Unit 3: People in my life'; break;
+                    case 4: unitName = 'Unit 4: Home and away'; break;
+                    case 5: unitName = 'Unit 5: What are you wearing?'; break;
+                    case 6: unitName = 'Unit 6: Homes and cities'; break;
+                }
+                
+                detailedHTML += `
+                    <div class="question-result ${statusClass}">
+                        <strong>Câu ${i} (${unitName}):</strong> ${statusIcon} 
+                        <br>Bạn chọn: <span style="color: ${isCorrect ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${answerText}</span> | 
+                        Đáp án đúng: <span style="color: #27ae60; font-weight: bold;">${correctAnswer}</span>
+                        <br><em style="color: #34495e; font-size: 14px; margin-top: 5px; display: block;">
+                        💡 Giải thích: ${explanations[`q${i}`] || 'Không có giải thích.'}
+                        </em>
+                    </div>
+                `;
+            }
+            
+            const score = (correctCount * 0.25).toFixed(2);
+            const percentage = ((correctCount / totalQuestions) * 100).toFixed(1);
+            
+            let grade = '';
+            if (percentage >= 80) grade = 'Giỏi 🌟';
+            else if (percentage >= 65) grade = 'Khá 👍';
+            else if (percentage >= 50) grade = 'Trung bình 📝';
+            else grade = 'Cần cố gắng 💪';
+            
+            const currentDate = new Date().toLocaleString('vi-VN');
+            
+            document.getElementById('scoreInfo').innerHTML = `
+                <h3>👤 Thông tin thí sinh</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${studentName}</strong>
+                        Họ tên
+                    </div>
+                    <div class="score-item">
+                        <strong>${studentClass}</strong>
+                        Lớp
+                    </div>
+                    <div class="score-item">
+                        <strong>${currentDate}</strong>
+                        Ngày thi
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">🎯 Kết quả tổng quan</h3>
+                <div class="score-details">
+                    <div class="score-item">
+                        <strong>${correctCount}/40</strong>
+                        Số câu đúng
+                    </div>
+                    <div class="score-item">
+                        <strong>${score}/10</strong>
+                        Điểm số
+                    </div>
+                    <div class="score-item">
+                        <strong>${percentage}%</strong>
+                        Phần trăm
+                    </div>
+                    <div class="score-item">
+                        <strong>${grade}</strong>
+                        Xếp loại
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">📚 Kết quả từng Unit</h3>
+                <div class="section-analysis">
+                    <strong>📝 Unit 1 - You and me:</strong> ${unitScores.unit1.correct}/${unitScores.unit1.total} (${((unitScores.unit1.correct/unitScores.unit1.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>💼 Unit 2 - Work and play:</strong> ${unitScores.unit2.correct}/${unitScores.unit2.total} (${((unitScores.unit2.correct/unitScores.unit2.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>👨‍👩‍👧‍👦 Unit 3 - People in my life:</strong> ${unitScores.unit3.correct}/${unitScores.unit3.total} (${((unitScores.unit3.correct/unitScores.unit3.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>🏠 Unit 4 - Home and away:</strong> ${unitScores.unit4.correct}/${unitScores.unit4.total} (${((unitScores.unit4.correct/unitScores.unit4.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>👕 Unit 5 - What are you wearing?:</strong> ${unitScores.unit5.correct}/${unitScores.unit5.total} (${((unitScores.unit5.correct/unitScores.unit5.total)*100).toFixed(1)}%)
+                </div>
+                <div class="section-analysis">
+                    <strong>🏘️ Unit 6 - Homes and cities:</strong> ${unitScores.unit6.correct}/${unitScores.unit6.total} (${((unitScores.unit6.correct/unitScores.unit6.total)*100).toFixed(1)}%)
+                </div>
+            `;
+            
+            document.getElementById('detailedResults').innerHTML = detailedHTML;
+            document.getElementById('result').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetTest() {
+            // Reset form
+            document.getElementById('testForm').reset();
+            document.getElementById('studentName').value = '';
+            document.getElementById('studentClass').value = '';
+            
+            // Reset progress
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('progressText').textContent = '📊 Đã trả lời: 0/40 câu (0%)';
+            
+            // Hide results
+            document.getElementById('result').style.display = 'none';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Prevent accidental page refresh
+        window.addEventListener('beforeunload', function(e) {
+            const answered = document.querySelectorAll('input[type="radio"]:checked').length;
+            if (answered > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+    </script>
+</body>
+</html>
