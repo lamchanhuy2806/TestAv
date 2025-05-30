@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test 1 - Units 1-6 Practice</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="test-paper">
@@ -670,9 +670,11 @@
                 detailedHTML += `
                     <div class="question-result ${statusClass}">
                         <strong>Câu ${i} (${unitName}):</strong> ${statusIcon} 
-                        Bạn chọn: <span>${answerText}</span> | 
-                        Đáp án: <span>${correctAnswer}</span>
-                        <em>Kết quả: ${isCorrect ? 'Đúng' : 'Sai'}</em>
+                        <br>Bạn chọn: <span style="color: ${isCorrect ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${answerText}</span> | 
+                        Đáp án đúng: <span style="color: #27ae60; font-weight: bold;">${correctAnswer}</span>
+                        <br><em style="color: #34495e; font-size: 14px; margin-top: 5px; display: block;">
+                        💡 Giải thích: ${explanations[`q${i}`] || 'Không có giải thích.'}
+                        </em>
                     </div>
                 `;
             }
