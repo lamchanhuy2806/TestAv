@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Máy Tính Thống Kê</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="container">
         <header>
             <h1>📊 Máy Tính Thống Kê</h1>
-            <p>Nhập dãy số nguyên để phân tích thống kê</p>
+            <p>Nhập dãy số nguyên để phân tích thống kê với giải thích cách tính</p>
         </header>
 
         <div class="input-section">
@@ -30,48 +30,75 @@
 
             <div class="stats-grid">
                 <div class="stat-card">
-                    <h4>📊 Trung Bình</h4>
+                    <h4>📊 Trung Bình 
+                        <button class="show-calculation" onclick="toggleCalculation('mean-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="mean" class="result-value"></div>
+                    <div id="mean-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>📍 Trung Vị</h4>
+                    <h4>📍 Trung Vị 
+                        <button class="show-calculation" onclick="toggleCalculation('median-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="median" class="result-value"></div>
+                    <div id="median-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>🎯 Mode</h4>
+                    <h4>🎯 Mode 
+                        <button class="show-calculation" onclick="toggleCalculation('mode-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="mode" class="result-value"></div>
+                    <div id="mode-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>⬆️ GTLN (Max)</h4>
+                    <h4>⬆️ GTLN (Max) 
+                        <button class="show-calculation" onclick="toggleCalculation('max-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="max" class="result-value"></div>
+                    <div id="max-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>⬇️ GTNN (Min)</h4>
+                    <h4>⬇️ GTNN (Min) 
+                        <button class="show-calculation" onclick="toggleCalculation('min-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="min" class="result-value"></div>
+                    <div id="min-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>↔️ Khoảng (Range)</h4>
+                    <h4>↔️ Khoảng (Range) 
+                        <button class="show-calculation" onclick="toggleCalculation('range-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="range" class="result-value"></div>
+                    <div id="range-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>📏 Phương Sai</h4>
+                    <h4>📏 Phương Sai 
+                        <button class="show-calculation" onclick="toggleCalculation('variance-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="variance" class="result-value"></div>
+                    <div id="variance-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>📐 Độ Lệch Chuẩn</h4>
+                    <h4>📐 Độ Lệch Chuẩn 
+                        <button class="show-calculation" onclick="toggleCalculation('stddev-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="stdDev" class="result-value"></div>
+                    <div id="stddev-calc" class="calculation-steps"></div>
                 </div>
 
                 <div class="stat-card">
-                    <h4>📊 Hệ Số Biến Thiên</h4>
+                    <h4>📊 Hệ Số Biến Thiên 
+                        <button class="show-calculation" onclick="toggleCalculation('coeff-calc')">Xem cách tính</button>
+                    </h4>
                     <div id="coeffVar" class="result-value"></div>
+                    <div id="coeff-calc" class="calculation-steps"></div>
                 </div>
             </div>
         </div>
@@ -80,13 +107,17 @@
     </div>
 
     <script>
+        let currentNumbers = [];
+        let currentStats = {};
+
         function parseInput(input) {
             return input.split(/[,\s]+/)
                 .map(num => num.trim())
                 .filter(num => num !== '')
-                .map(num => parseFloat(num))   // <-- parseFloat thay vì parseInt
+                .map(num => parseFloat(num))
                 .filter(num => !isNaN(num));
         }
+
         function calculateMean(arr) {
             return arr.reduce((sum, num) => sum + num, 0) / arr.length;
         }
@@ -117,13 +148,106 @@
             return sumSquaredDiffs / (arr.length - 1);
         }
 
+        function generateMeanExplanation(numbers, mean) {
+            const sum = numbers.reduce((a, b) => a + b, 0);
+            return `Công thức: Trung bình = Tổng các số / Số lượng phần tử
+
+Tính toán:
+Tổng = ${numbers.join(' + ')} = ${sum}
+Số lượng phần tử = ${numbers.length}
+
+Trung bình = ${sum} ÷ ${numbers.length} = ${mean.toFixed(2)}`;
+        }
+
+        function generateMedianExplanation(sortedNumbers, median) {
+            const n = sortedNumbers.length;
+            const mid = Math.floor(n / 2);
+            
+            let explanation = `Dãy số đã sắp xếp: [${sortedNumbers.join(', ')}]
+Số lượng phần tử: ${n}\n\n`;
+
+            if (n % 2 === 0) {
+                explanation += `Vì có ${n} phần tử (chẵn), trung vị là trung bình của 2 số ở giữa:
+Vị trí giữa: ${mid} và ${mid + 1}
+Phần tử thứ ${mid}: ${sortedNumbers[mid - 1]}
+Phần tử thứ ${mid + 1}: ${sortedNumbers[mid]}
+
+Trung vị = (${sortedNumbers[mid - 1]} + ${sortedNumbers[mid]}) ÷ 2 = ${median}`;
+            } else {
+                explanation += `Vì có ${n} phần tử (lẻ), trung vị là số ở giữa:
+Vị trí giữa: ${mid + 1}
+Trung vị = ${sortedNumbers[mid]}`;
+            }
+            
+            return explanation;
+        }
+
+        function generateModeExplanation(numbers) {
+            const frequency = {};
+            numbers.forEach(num => frequency[num] = (frequency[num] || 0) + 1);
+
+            let explanation = `Đếm tần suất xuất hiện của mỗi số:\n`;
+            Object.keys(frequency).sort((a, b) => a - b).forEach(num => {
+                explanation += `${num}: xuất hiện ${frequency[num]} lần\n`;
+            });
+
+            const maxFreq = Math.max(...Object.values(frequency));
+            const modes = Object.keys(frequency).filter(key => frequency[key] === maxFreq);
+
+            if (modes.length === numbers.length) {
+                explanation += `\nMỗi số chỉ xuất hiện 1 lần → Không có mode`;
+            } else {
+                explanation += `\nTần suất cao nhất: ${maxFreq} lần
+Các số có tần suất cao nhất: ${modes.join(', ')}`;
+            }
+
+            return explanation;
+        }
+
+        function generateVarianceExplanation(numbers, mean, variance) {
+            let explanation = `Công thức: s² = Σ(xi - x̄)² / (n-1)
+
+Trong đó:
+- xi: từng phần tử trong dãy
+- x̄: trung bình = ${mean.toFixed(2)}
+- n: số phần tử = ${numbers.length}
+
+Tính toán từng bước:`;
+
+            numbers.forEach((num, i) => {
+                const diff = num - mean;
+                const squared = Math.pow(diff, 2);
+                explanation += `\n(${num} - ${mean.toFixed(2)})² = ${diff.toFixed(2)}² = ${squared.toFixed(2)}`;
+            });
+
+            const sumSquared = numbers.reduce((sum, num) => sum + Math.pow(num - mean, 2), 0);
+            explanation += `\n\nTổng các bình phương: ${sumSquared.toFixed(2)}
+Phương sai = ${sumSquared.toFixed(2)} ÷ (${numbers.length} - 1) = ${variance.toFixed(2)}`;
+
+            return explanation;
+        }
+
+        function generateStdDevExplanation(variance, stdDev) {
+            return `Công thức: s = √s²
+
+Độ lệch chuẩn = √${variance.toFixed(2)} = ${stdDev.toFixed(2)}`;
+        }
+
+        function generateCoeffVarExplanation(stdDev, mean, coeffVar) {
+            return `Công thức: CV = (s / |x̄|) × 100%
+
+Trong đó:
+- s: độ lệch chuẩn = ${stdDev.toFixed(2)}
+- |x̄|: trị tuyệt đối của trung bình = ${Math.abs(mean).toFixed(2)}
+
+CV = (${stdDev.toFixed(2)} / ${Math.abs(mean).toFixed(2)}) × 100% = ${coeffVar.toFixed(2)}%`;
+        }
 
         function calculateStats() {
             const input = document.getElementById('numberInput').value;
             const errorDiv = document.getElementById('error');
             const resultsDiv = document.getElementById('results');
 
-            // Clear previous error
             errorDiv.classList.add('hidden');
 
             if (!input.trim()) {
@@ -134,14 +258,19 @@
             const numbers = parseInput(input);
 
             if (numbers.length === 0) {
-                showError('Không tìm thấy số nguyên hợp lệ!');
+                showError('Không tìm thấy số hợp lệ!');
                 return;
             }
 
-            // Sort array
+            if (numbers.length < 2) {
+                showError('Cần ít nhất 2 số để tính phương sai và độ lệch chuẩn!');
+                return;
+            }
+
+            currentNumbers = numbers;
             const sortedNumbers = [...numbers].sort((a, b) => a - b);
 
-            // Calculate statistics
+            // Calculate all statistics
             const mean = calculateMean(numbers);
             const median = calculateMedian(sortedNumbers);
             const mode = calculateMode(numbers);
@@ -151,6 +280,11 @@
             const variance = calculateVariance(numbers, mean);
             const stdDev = Math.sqrt(variance);
             const coeffVar = mean !== 0 ? (stdDev / Math.abs(mean)) * 100 : 0;
+
+            currentStats = {
+                mean, median, mode, max, min, range, variance, stdDev, coeffVar,
+                sortedNumbers, numbers
+            };
 
             // Display results
             document.getElementById('sortedArray').textContent = sortedNumbers.join(', ');
@@ -164,7 +298,26 @@
             document.getElementById('stdDev').textContent = stdDev.toFixed(2);
             document.getElementById('coeffVar').textContent = coeffVar.toFixed(2) + '%';
 
+            // Prepare explanations
+            document.getElementById('mean-calc').textContent = generateMeanExplanation(numbers, mean);
+            document.getElementById('median-calc').textContent = generateMedianExplanation(sortedNumbers, median);
+            document.getElementById('mode-calc').textContent = generateModeExplanation(numbers);
+            document.getElementById('max-calc').textContent = `Trong dãy số [${sortedNumbers.join(', ')}]
+Giá trị lớn nhất là: ${max}`;
+            document.getElementById('min-calc').textContent = `Trong dãy số [${sortedNumbers.join(', ')}]
+Giá trị nhỏ nhất là: ${min}`;
+            document.getElementById('range-calc').textContent = `Khoảng = GTLN - GTNN
+Khoảng = ${max} - ${min} = ${range}`;
+            document.getElementById('variance-calc').textContent = generateVarianceExplanation(numbers, mean, variance);
+            document.getElementById('stddev-calc').textContent = generateStdDevExplanation(variance, stdDev);
+            document.getElementById('coeff-calc').textContent = generateCoeffVarExplanation(stdDev, mean, coeffVar);
+
             resultsDiv.classList.remove('hidden');
+        }
+
+        function toggleCalculation(calcId) {
+            const calcDiv = document.getElementById(calcId);
+            calcDiv.classList.toggle('show');
         }
 
         function showError(message) {
@@ -178,6 +331,11 @@
             document.getElementById('numberInput').value = '';
             document.getElementById('results').classList.add('hidden');
             document.getElementById('error').classList.add('hidden');
+            
+            // Hide all calculation steps
+            document.querySelectorAll('.calculation-steps').forEach(calc => {
+                calc.classList.remove('show');
+            });
         }
 
         // Allow Enter key to trigger calculation
