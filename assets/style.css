@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
@@ -110,6 +110,7 @@ button:last-child {
     border-left: 4px solid #667eea;
     transition: all 0.3s ease;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .stat-card:hover {
@@ -130,6 +131,28 @@ button:last-child {
     font-size: 1rem;
     margin-bottom: 10px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show-calculation {
+    background: transparent;
+    border: 1px solid #667eea;
+    color: #667eea;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    margin: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-calculation:hover {
+    background: #667eea;
+    color: white;
+    transform: none;
+    box-shadow: none;
 }
 
 .result-value {
@@ -141,11 +164,36 @@ button:last-child {
     background: #f8f9ff;
     border-radius: 8px;
     border: 1px solid #e3e8ff;
+    margin-bottom: 10px;
+}
+
+.calculation-steps {
+    background: #f1f3f4;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    line-height: 1.8;
+    border-left: 3px solid #34495e;
+    margin-top: 10px;
+    display: none;
+    white-space: pre-wrap;
+}
+
+.calculation-steps.show {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 300px; }
 }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
     margin-top: 24px;
 }
@@ -200,9 +248,8 @@ button:last-child {
     }
     
     .container {
-        height: 95vh;
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 15px;
     }
     
     header h1 {
@@ -224,11 +271,20 @@ button:last-child {
         padding: 20px;
         margin-bottom: 20px;
     }
+
+    .stat-card h4 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .show-calculation {
+        align-self: flex-end;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
-        height: 98vh;
         padding: 15px;
     }
     
@@ -255,5 +311,10 @@ button:last-child {
     button {
         padding: 10px 20px;
         font-size: 0.85rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 }
