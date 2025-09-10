@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Máy Tính Thống Kê</title>
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -80,41 +82,41 @@
     <script>
         function parseInput(input) {
             return input.split(/[,\s]+/)
-                       .map(num => num.trim())
-                       .filter(num => num !== '')
-                       .map(num => parseInt(num))
-                       .filter(num => !isNaN(num));
+                .map(num => num.trim())
+                .filter(num => num !== '')
+                .map(num => parseFloat(num))   // <-- parseFloat thay vì parseInt
+                .filter(num => !isNaN(num));
         }
-
         function calculateMean(arr) {
             return arr.reduce((sum, num) => sum + num, 0) / arr.length;
         }
 
         function calculateMedian(sortedArr) {
             const mid = Math.floor(sortedArr.length / 2);
-            return sortedArr.length % 2 === 0 
-                ? (sortedArr[mid - 1] + sortedArr[mid]) / 2 
+            return sortedArr.length % 2 === 0
+                ? (sortedArr[mid - 1] + sortedArr[mid]) / 2
                 : sortedArr[mid];
         }
 
         function calculateMode(arr) {
             const frequency = {};
             arr.forEach(num => frequency[num] = (frequency[num] || 0) + 1);
-            
+
             const maxFreq = Math.max(...Object.values(frequency));
             const modes = Object.keys(frequency).filter(key => frequency[key] === maxFreq);
-            
+
             if (modes.length === arr.length) {
                 return "Không có mode";
             }
-            
+
             return modes.map(Number).sort((a, b) => a - b).join(', ');
         }
 
         function calculateVariance(arr, mean) {
             const sumSquaredDiffs = arr.reduce((sum, num) => sum + Math.pow(num - mean, 2), 0);
-            return sumSquaredDiffs / arr.length;
+            return sumSquaredDiffs / (arr.length - 1);
         }
+
 
         function calculateStats() {
             const input = document.getElementById('numberInput').value;
@@ -179,11 +181,12 @@
         }
 
         // Allow Enter key to trigger calculation
-        document.getElementById('numberInput').addEventListener('keypress', function(e) {
+        document.getElementById('numberInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 calculateStats();
             }
         });
     </script>
 </body>
+
 </html>
